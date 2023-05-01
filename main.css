@@ -1,4 +1,15 @@
-.container {
-width: 800px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer base {
+html {
+    font-family: 'DM Sans', 'Helvetica', 'Arial', sans-serif;
+  }
+}
+
+#chat {
+    animation-name: fadeInOut, moveUp300px;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
 }
