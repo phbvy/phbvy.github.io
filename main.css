@@ -14,8 +14,13 @@ opacity: 0;
 .animate.slide { 
   opacity: 1;
   animation-name: animate-slide;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
   transition-timing-function: ease-in;
+ }
+
+ .animate.slide.no2{
+  transition-delay: 0.3s;
+  animation-duration: 1.1s;
  }
 
 @keyframes animate-slide {
