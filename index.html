@@ -207,12 +207,24 @@
                 <div class="bg-gray-50 rounded-xl overflow-hidden p-4 col-start-1 col-span-2 border border-slate-100">
                     <a class="underline text-blue-800" href="https://www.linkedin.com/in/vyp/">Linkedin</a>
                 </div>
-            </div>
-    
-            <div id="displaymessagecontainer" class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate">
-                <p id="sandboxwarning" class="hidden col-start-2 col-span-3">This is a sandbox for you to play with, so I can't read your messages. <br> Let's talk through <a class="underline text-blue-800" href="mailto:phbvy@gmail.com">email</a> or <a class="underline text-blue-800" href="https://www.linkedin.com/in/vyp/">Linkedin</a> instead :D</p>
+            </div>      
+
+            <div id="displaymessagecontainer" class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate"></div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
+                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-50 rounded-xl overflow-hidden p-4 border border-slate-100 animate">
+                    <p>This is a sandbox for you to play with, so I can't read your messages.</p>            
+                </div>
+                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-50 rounded-xl overflow-hidden p-4 border border-slate-100 animate no2">
+                    <p>Let's talk through <a class="underline text-blue-800" href="mailto:phbvy@gmail.com">email</a> or <a class="underline text-blue-800" href="https://www.linkedin.com/in/vyp/">Linkedin</a> instead :D</p>            
+                </div>
+                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-50 rounded-xl overflow-hidden p-4 border border-slate-100 animate no2">
+                    <p>Feel free to continue playing with it though!</p>            
+                </div>
             </div>
 
+            <div id="displaymessagecontainer2" class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate"></div>
+            
             <form class="flex flex-row space-x-2" id="commentform">
 
                 <input type="text" onclick=typingEffect() id="messagecontent" name="usermesssage" placeholder="Reply to Vy here..." class="grow flex flex-col justify-center bg-gray-50 rounded-xl overflow-hidden p-4 border border-blue-800 text-blue-800 text-xl placeholder-shown:italic">

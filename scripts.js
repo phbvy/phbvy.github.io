@@ -17,14 +17,19 @@ function createChatBubble(comment) {
     if (comment != "") {
         const messageBubble = document.createElement("div");
         messageBubble.innerHTML += comment;
-        messageBubble.classList.add("bg-blue-800", "rounded-xl", "overflow-hidden", "p-4", "col-start-3", "col-span-2",  "border", "border-slate-100", "text-slate-100", "text-3xl", "font-bold","animate", "slide", "italic");
+        messageBubble.classList.add("bg-blue-800", "rounded-xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3",  "border", "border-slate-100", "text-slate-100", "text-3xl", "font-bold","animate", "slide");
         return messageBubble;
     }
 }
 
 function addChatBubble(chatbubble) {
     const messageContainer = document.querySelector("#displaymessagecontainer");
-    messageContainer.appendChild(chatbubble);
+    if (messageContainer.children.length==1) {
+        const messageContainer2 = document.querySelector("#displaymessagecontainer2")
+        messageContainer2.appendChild(chatbubble)
+    } else {
+        messageContainer.appendChild(chatbubble);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,6 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const chatbubble = createChatBubble(comment);
       addChatBubble(chatbubble);
       createCommentForm.reset();
-      document.querySelector("#sandboxwarning").classList.remove('hidden');
+
+      setTimeout(()=> {const warnings = document.querySelectorAll(".sandboxwarning")
+      warnings.forEach(warning => {
+        warning.classList.remove('hidden');
+      }
+    )}, 500)
+      
     })
   })   
