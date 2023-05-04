@@ -209,11 +209,16 @@
                 </div>
             </div>
     
-            <div class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate">
-                <div class="bg-blue-800 rounded-xl overflow-hidden p-4 col-start-3 col-span-2 border border-slate-100">
-                    <p class="text-slate-100 text-3xl font-bold italic">Viewer is typing...</p>
-                </div>
+            <div id="displaymessagecontainer" class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate">
+                <p id="sandboxwarning" class="hidden col-start-2 col-span-3">This is a sandbox for you to play with, so I can't read your messages. <br> Let's talk through <a class="underline text-blue-800" href="mailto:phbvy@gmail.com">email</a> or <a class="underline text-blue-800" href="https://www.linkedin.com/in/vyp/">Linkedin</a> instead :D</p>
             </div>
+
+            <form class="flex flex-row space-x-2" id="commentform">
+
+                <input type="text" onclick=typingEffect() id="messagecontent" name="usermesssage" placeholder="Reply to Vy here..." class="grow flex flex-col justify-center bg-gray-50 rounded-xl overflow-hidden p-4 border border-blue-800 text-blue-800 text-xl placeholder-shown:italic">
+        
+                <button type="submit" class="flex flex-col justify-center bg-blue-800 rounded-xl overflow-hidden p-4 border border-slate-100 text-slate-100 text-xl font-bold hover:bg-blue-900">Send</button>
+            </form>
             
         </div>
     
