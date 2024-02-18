@@ -20,7 +20,7 @@ function createChatBubble(comment) {
         messageBubble.classList.add("bg-blue-800", "rounded-xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3",  "border", "border-slate-100", "text-slate-100", "text-3xl", "font-bold","animate", "slide");
         return messageBubble;
     }
-}
+};
 
 function addChatBubble(chatbubble) {
     const messageContainer = document.querySelector("#displaymessagecontainer");
@@ -30,7 +30,7 @@ function addChatBubble(chatbubble) {
     } else {
         messageContainer.appendChild(chatbubble);
     }
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -51,4 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     )}, 500)
       
     })
-  })   
+  });
+  
+  
