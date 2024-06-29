@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Vy's Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" href="../main.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../scripts.js"></script>
@@ -11,13 +12,19 @@
 </head>
 
 <body>
-    <div class="md:container mx-auto p-8 space-y-20 xl:w-4/5 w-auto">
-        <nav class="flex justify-end space-x-4" id="nav">
-            <a class="p-2" href="../index.html">Home</a>
-            <a class="p-2" href="../index.html#by">Portfolio</a>
-            <a class="p-2" href="../index.html#about">About</a>
-            <a class="p-2" href="../index.html#contact">Contact</a>
+    <div id="start"></div>
+        <a class="hover:bg-gray-100 bg-gray-50 text-slate-50 p-2 w-fit text-center rounded-xl" href="#start" id="backToTopBtn" title="Go to top"><img class="rounded-xl h-[32px]" src="case-img/align top.png"></a>
 
+        <div class="pt-4"></div>
+
+
+    <div class="md:container mx-auto p-6 space-y-20 xl:w-4/5 w-auto"> 
+        <nav class="bg-gray-50 mx-auto space-x-2 md:py-2 md:px-6 py-1 px-2 rounded-xl w-fit flex justify-end">
+            <a  class="hover:bg-gray-200 hover:rounded-xl py-2 px-6" href="../index.html">Home</a>
+            <a class="hover:bg-gray-200 hover:rounded-xl py-2 px-6" href="../index.html#by">Portfolio</a>
+            <a class="hover:bg-gray-200 hover:rounded-xl py-2 px-6" href="../index.html#about">About</a>
+            <a class="hover:bg-gray-200 hover:rounded-xl py-2 px-6" href="../index.html#contact">Contact</a>
+    
         </nav>
 
 
@@ -168,7 +175,7 @@
             class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 space-y-2 col-start-1 col-span-4 w-full border border-slate-100 animate">
             <h2 class="text-3xl font-bold">Check out other works from Vy: </h2>
 
-            <div class="rounded-xl overflow-hidden p-2 flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-2">
+            <div class="rounded-xl overflow-hidden p-2 flex md:flex-row flex-col md:space-x-2 md:space-y-0 space-y-2">
                 <a href="vy-for-canda.html" class="bg-white rounded-xl border border-slate-100 basis-1/4">
                     <div class="rounded-t-xl overflow-hidden h-32 bg-cover bg-center bg-[url('case-img/canda-3.png')]"></div>
                     <div class="rounded-xl overflow-hidden p-3 md:p-4 space-y-1">

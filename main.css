@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-html {
-    font-family: 'DM Sans', 'Helvetica', 'Arial', sans-serif;
-  }
-}
 
 .animate {
 opacity: 0;
@@ -45,3 +40,14 @@ opacity: 0;
   animation: d1 1s steps(4) infinite;
 }
 @keyframes d1 {to{clip-path: inset(0 -34% 0 0)}}
+
+#backToTopBtn {
+  display: block; /* Display the button */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Place the button 20px from the bottom */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap other elements */
+  text-align: center; /* Center the text */
+  cursor: pointer; /* Add a mouse pointer on hover  */
+  text-decoration: none; /* Remove underline */
+}

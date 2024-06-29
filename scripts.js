@@ -18,6 +18,7 @@ function createChatBubble(comment) {
         const messageBubble = document.createElement("div");
         messageBubble.innerHTML += comment;
         messageBubble.classList.add("bg-blue-800", "rounded-xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3",  "border", "border-slate-100", "text-slate-100", "text-3xl", "font-bold","animate", "slide");
+        messageBubble.style.backgroundColor = "#1F38FA";
         return messageBubble;
     }
 };
@@ -32,7 +33,19 @@ function addChatBubble(chatbubble) {
     }
 };
 
+function scrollTopVisibility() {
+    var button = document.getElementById('backToTopBtn');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+window.onscroll = scrollTopVisibility;
+
 document.addEventListener('DOMContentLoaded', () => {
+    scrollTopVisibility();
 
     document.querySelector("#displaymessage")
     const createCommentForm = document.querySelector("#commentform")
@@ -52,5 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
     })
   });
+
   
   
+

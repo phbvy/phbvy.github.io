@@ -4,20 +4,26 @@
         <meta charset="utf-8">
         <title>Vy's Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="main.css" />
+        <link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="scripts.js"></script>
 
     </head>
     
-    <body class="bg-gray-50"> 
+    <body>
+        <div id="start"></div>
+        <a class="hover:bg-gray-100 bg-gray-50 text-slate-50 p-2 w-fit text-center rounded-xl" href="#start" id="backToTopBtn" title="Go to top"><img class="rounded-xl h-[32px]" src="cases/case-img/align top.png"></a>
+
+        <div class="pt-6"></div>
         <div class="md:container mx-auto p-8 md:p-4 space-y-10 xl:w-4/5 w-auto">
     
-        <nav class="flex justify-end space-x-4">
-            <a class="p-2" href="#meet">Home</a>
-            <a class="p-2" href="#by">Portfolio</a>
-            <a class="p-2" href="#about">About</a>
-            <a class="p-2" href="#contact">Contact</a>
+        <nav class="bg-gray-50 mx-auto space-x-2 p-2 rounded-xl w-fit flex justify-end">
+            <a style="background-color: #1F38FA;" class=" rounded-xl text-slate-50 md:py-2 md:px-6 py-1 px-2 w-fit text-center" href="#meet">Home</a>
+            <a class="hover:bg-gray-200 hover:rounded-xl py-2 px-6" href="#by">Portfolio</a>
+            <a class="hover:bg-gray-200 hover:rounded-xl py-2 px-6" href="#about">About</a>
+            <a class="hover:bg-gray-200 hover:rounded-xl py-2 px-6" href="#contact">Contact</a>
     
         </nav>
     
@@ -26,18 +32,18 @@
     
                 <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2 w-ful">
     
-                    <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100" id="chat">
+                    <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100" id="chat">
                         <h1 class="text-3xl font-bold">Meet Vy</h1>
                     </div>
         
-                    <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 w-full border border-slate-100">
+                    <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 w-full border border-slate-100">
                         <p class="w-full">I am a Experience & Product Designer with a strategic flair to create designs that bridge business goals and user needs. I have done so across 3 continents 🇸🇪🇫🇮🇳🇿🇻🇳🇰🇷.</p>
                     </div>
                 </div>
         
                 <div class="grid grid-cols-4 justify-items-end space-y-2">
         
-                    <div class="bg-blue-800 rounded-xl overflow-hidden p-3 md:p-4 col-start-3 col-span-2 animate">
+                    <div style="background-color: #1F38FA;" class=" rounded-xl overflow-hidden p-3 md:p-4 col-start-3 col-span-2 animate">
                         <p class="text-slate-100 text-3xl font-bold ">Hi Vy👋</p>
                     </div>
             </div>
@@ -50,14 +56,14 @@
     
             <div class="grid grid-cols-3 justify-items-start space-y-2">
     
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-4 border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-4 border border-slate-100">
                     <h2 class="text-3xl font-bold">By Vy</h2>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden space-y-4 p-3 md:p-4 col-start-1 col-span-3 border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden space-y-4 p-3 md:p-4 col-start-1 col-span-3 border border-slate-100">
                     <p>Check out some case studies on my work for organizations and their users from various sectors below:</p>
         
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden space-y-4 p-3 md:p-4 col-start-1 col-span-4 w-full border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden space-y-4 p-3 md:p-4 col-start-1 col-span-4 w-full border border-slate-100">
 
                     <div class="rounded-xl overflow-hidden flex flex-col md:grid md:grid-cols-2 md:space-x-4 md:space-y-0 space-y-2">
                         
@@ -70,7 +76,7 @@
                             </div>
                         </a>
 
-                        <a href="cases/vy-for-bruce.html" class="bg-white rounded-xl border  border-slate-100 basis-1/2">
+                        <a href="cases/vy-for-bruce.html" class="bg-white  rounded-xl border  border-slate-100 basis-1/2">
                             <div class="rounded-t-xl overflow-hidden h-60 bg-cover bg-center bg-[url('cases/case-img/bruce-1.png')]"></div>
                             <div class="rounded-xl overflow-hidden p-4 md:p-6 space-y-2">
                                 <p class="text-xl font-bold">Creating User-Centric Design for User Retention</p>
@@ -84,7 +90,7 @@
 
                     <div class="rounded-xl overflow-hidden flex flex-col md:grid md:grid-cols-2 md:space-x-4 md:space-y-0 space-y-2">
                         
-                        <a href="cases/vy-for-hetki.html" class="bg-white rounded-xl border  border-slate-100 basis-1/2">
+                        <a href="cases/vy-for-hetki.html" class="bg-white  rounded-xl border  border-slate-100 basis-1/2">
                             <div class="rounded-t-xl overflow-hidden h-60 bg-cover bg-center bg-[url('cases/case-img/Hetki-cover.png')]"></div>
                             <div class="rounded-xl overflow-hidden p-4 md:p-6 space-y-2">
                                 <p class="text-xl font-bold">Navigating Competitive AI Landscape with Design</p>
@@ -106,7 +112,7 @@
                     <div class="rounded-xl overflow-hidden flex flex-col md:grid md:grid-cols-2 md:space-x-4 md:space-y-0 space-y-2">
             
 
-                        <a href="cases/vy-for-publy.html" class="bg-white rounded-xl border  border-slate-100 basis-1/2">
+                        <a href="cases/vy-for-publy.html" class="bg-white  rounded-xl border  border-slate-100 basis-1/2">
                             <div class="rounded-t-xl overflow-hidden h-60 bg-cover bg-center bg-[url('cases/case-img/careerly-cover.png')]"></div>
                             <div class="rounded-xl overflow-hidden p-4 md:p-6 space-y-2">
                                 <p class="text-xl font-bold">Localizing with a User-and-Design-Driven Approach</p>
@@ -121,7 +127,7 @@
                     </div>
         
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden space-y-4 p-3 md:p-4 col-start-1 col-span-4 w-full border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden space-y-4 p-3 md:p-4 col-start-1 col-span-4 w-full border border-slate-100">
                     <p>You know how NDAs can be 😉, (spoiler) I also worked on projects for:</p>
                     <div class="rounded-xl overflow-hidden flex flex-row space-x-8 items-center">
                         <img class="w-[56px] md:w-auto md:h-[80px]" src="cases/case-img/tv4-logo.png">
@@ -134,11 +140,11 @@
 
     
             <div class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2">
-                <div class="bg-blue-800 rounded-xl overflow-hidden p-3 md:p-4 col-start-3 col-span-2 animate">
+                <div style="background-color: #1F38FA;" class="rounded-xl overflow-hidden p-3 md:p-4 col-start-3 col-span-2 animate">
                     <p class="text-slate-100 text-3xl font-bold">Wow Vy! Cool stuff🔥</p>
                 </div>
                 
-                <div class="bg-blue-800 rounded-xl overflow-hidden p-3 md:p-4 col-start-2 col-span-3 animate no2">
+                <div style="background-color: #1F38FA;" class="rounded-xl overflow-hidden p-3 md:p-4 col-start-2 col-span-3 animate no2">
                     <p class="text-slate-100 text-3xl font-bold">Where did you learn all that?!</p>
                 </div>
             </div>
@@ -154,19 +160,19 @@
     
             <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
                 
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
                     <h2 class="text-3xl font-bold">About Vy</h2>
                 </div>
             
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 space-y-2 col-start-1 col-span-4 w-full border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 space-y-2 col-start-1 col-span-4 w-full border border-slate-100">
                     <p>Here's an overview of my professional experience:</p>
     
-                    <div class="rounded-xl overflow-hidden flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-4 ">
+                    <div class="rounded-xl overflow-hidden flex md:flex-row flex-col md:space-x-2 md:space-y-0 space-y-4 ">
                         <div class="basis-1/4 flex flex-col space-y-2">
                             <p class="font-bold">2024</p>
                             
                             <div class="bg-black rounded-xl overflow-hidden p-3 md:p-4 space-y-1">
-                                <p class="font-bold text-slate-100">Experience Strategy Designer</p>
+                                <p class="font-bold text-slate-100">CX/UX Designer</p>
                                 <p class="text-slate-100 italic">@SCHMACK, Sweden</p>
                             </div>
     
@@ -175,7 +181,7 @@
                         <div class="basis-1/4 flex flex-col space-y-2">
                             <p class="font-bold">2023</p>
                             <div class="bg-black rounded-xl overflow-hidden p-3 md:p-4 space-y-1">
-                                <p class="font-bold text-slate-100">Experience Strategy Designer</p>
+                                <p class="font-bold text-slate-100">CX/UX Designer</p>
                                 <p class="text-slate-100 italic">@SCHMACK, Sweden</p>
                             </div>
                             <div class="bg-black rounded-xl overflow-hidden p-3 md:p-4 space-y-1">
@@ -212,17 +218,17 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100 animate">Want more details?</div>
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100 animate">Want more details?</div>
     
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 space-y-2 col-start-1 col-span-2 flex flex-col border border-slate-100 animate no2">
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 space-y-2 col-start-1 col-span-2 flex flex-col border border-slate-100 animate no2">
                     <p class="italic">Attachment:</p>
-                    <a class="underline text-3xl font-bold text-blue-700" target=”_blank”  href="https://drive.google.com/file/d/1dw75q7IGML_zM46VFcP7OhHHZeQ7bBRv/view">Get my resume</a>
+                    <a style="color: #1F38FA;" class="underline text-3xl font-bold" target=”_blank”  href="https://drive.google.com/file/d/1dw75q7IGML_zM46VFcP7OhHHZeQ7bBRv/view">Get my resume</a>
                 </div>
         
             </div>
     
             <div class="grid grid-cols-2 md:grid-cols-4 justify-items-end">
-                <div class="bg-blue-800 rounded-xl overflow-hidden p-3 md:p-4 col-start-3 col-span-2 border border-slate-100 animate no2">
+                <div style="background-color: #1F38FA;"class="rounded-xl overflow-hidden p-3 md:p-4 col-start-3 col-span-2 border border-slate-100 animate no2">
                     <p class="text-slate-100 text-3xl font-bold">Let's keep in touch!</p>
                 </div>
             </div>
@@ -234,33 +240,33 @@
         <div class="overflow-hidden py-8 space-y-4" id="contact">
             <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
     
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
                     <h2 class="text-3xl font-bold">Contact Vy</h2>
                 </div>
     
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
                     <p>Drop me a line:</p>            
                 </div>
     
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
-                    <a class="underline text-blue-700" href="mailto:phbvy@gmail.com">phbvy.g@gmail.com</a>        
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
+                    <a style="color: #1F38FA;" class="underline" href="mailto:phbvy@gmail.com">phbvy.g@gmail.com</a>        
                 </div>
         
-                <div class="bg-white rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
-                    <a class="underline text-blue-700" href="https://www.linkedin.com/in/vyp/">Linkedin</a>
+                <div class="bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 col-start-1 col-span-2 border border-slate-100">
+                    <a style="color: #1F38FA;" class="underline" href="https://www.linkedin.com/in/vyp/">Linkedin</a>
                 </div>
             </div>      
 
             <div id="displaymessagecontainer" class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate"></div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
-                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-white rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 animate no2">
+                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 animate no2">
                     <p>This is a sandbox for you to play with, so I can't read your messages.</p>            
                 </div>
-                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-white rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 animate no2">
-                    <p>Let's talk through <a class="underline text-blue-700" href="mailto:phbvy@gmail.com">email</a> or <a class="underline text-blue-700" href="https://www.linkedin.com/in/vyp/">Linkedin</a> instead :D</p>            
+                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 animate no2">
+                    <p>Let's talk through <a style="color: #1F38FA;" class="underline" href="mailto:phbvy@gmail.com">email</a> or <a style="color: #1F38FA;" class="underline" href="https://www.linkedin.com/in/vyp/">Linkedin</a> instead :D</p>            
                 </div>
-                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-white rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 animate no2">
+                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 animate no2">
                     <p>Feel free to continue playing with it though!</p>            
                 </div>
             </div>
@@ -269,9 +275,9 @@
             
             <form class="flex flex-row space-x-2" id="commentform">
 
-                <input type="text" onclick=typingEffect() id="messagecontent" name="usermesssage" placeholder="Reply to Vy here..." class="grow flex flex-col justify-center bg-white rounded-xl overflow-hidden p-3 md:p-4 border border-[rgba(30,64,175,0.3)] text-blue-700 text-xl placeholder-shown:italic">
+                <input type="text" onclick=typingEffect() id="messagecontent" name="usermesssage" placeholder="Reply to Vy here..." style="color: #1F38FA;" class="grow flex flex-col justify-center bg-gray-50 rounded-xl overflow-hidden p-3 md:p-4 border border-[rgba(30,64,175,0.3)] text-xl placeholder-shown:italic">
         
-                <button type="submit" class="flex flex-col justify-center bg-blue-800 rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 text-slate-100 text-xl font-bold hover:bg-blue-900">Send</button>
+                <button style="background-color: #1F38FA;" type="submit" class="flex flex-col justify-center rounded-xl overflow-hidden p-3 md:p-4 border border-slate-100 text-slate-100 text-xl font-bold hover:bg-blue-900">Send</button>
             </form>
             
         </div>
@@ -287,10 +293,6 @@
             </div>
             <p>I try to make the best of my international life by taking film photos of places I have been to.</p>
     
-        </div>
-    
-        <div class="flex justify-center">
-            <a class="underline text-blue-700" href="#meet">Back to top</a>
         </div>
     
         
