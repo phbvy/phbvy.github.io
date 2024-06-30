@@ -17,7 +17,7 @@ function createChatBubble(comment) {
     if (comment != "") {
         const messageBubble = document.createElement("div");
         messageBubble.innerHTML += comment;
-        messageBubble.classList.add("bg-blue-800", "rounded-xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3",  "border", "border-slate-100", "text-slate-100", "text-3xl", "font-bold","animate", "slide");
+        messageBubble.classList.add("bg-blue-800", "rounded-xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3", "text-slate-100", "text-3xl", "font-bold","animate", "slide");
         messageBubble.style.backgroundColor = "#1F38FA";
         return messageBubble;
     }
