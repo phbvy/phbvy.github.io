@@ -42,7 +42,7 @@ function scrollTopVisibility() {
     }
 };
 
-window.onscroll = scrollTopVisibility;
+window.addEventListener("scroll", scrollTopVisibility);
 
 document.addEventListener('DOMContentLoaded', () => {
     scrollTopVisibility();
