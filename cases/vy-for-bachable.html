@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Vy's Portfolio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
+    <link rel="stylesheet" href="../main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+</head>
+
+<body>
+    <div id="start"></div>
+    <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start"
+        id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up" class="w-6 h-6 text-gray-900"></i></a>
+
+    <div class="md:pt-6 pt-2"></div>
+
+    <div class="md:container mx-auto p-4 mb-20 space-y-20 xl:w-4/5 w-auto">
+        <nav class="bg-white border border-gray-200 shadow-sm mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center gap-1">
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700" href="../index.html">Home</a>
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700" href="../index.html#by">Portfolio</a>
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700" href="../index.html#about">About</a>
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700" href="../index.html#contact">Contact</a>
+        </nav>
+
+        <div class="flex flex-col items-center space-y-4">
+            <p class="text-center text-2xl">Vy for Bachable.io</p>
+            <h1 class="md:text-6xl text-4xl font-semibold text-center md:w-3/4">Building a Design System for Faster Design to 
+                Shipping</h1>
+            <div class="space-y-4 pt-4">
+
+                <div class="flex flex-wrap gap-2 pt-4 w-full justify-center">
+                    <p class="rounded-full bg-[#f54a00] text-slate-50 py-1 px-4 text-sm w-fit text-center">Design
+                        Systems</p>
+                    <p class="rounded-full bg-[#f54a00] text-slate-50 py-1 px-4 text-sm w-fit text-center">UI Design</p>
+                    <p class="rounded-full bg-[#f54a00] text-slate-50 py-1 px-4 text-sm w-fit text-center">Design-Dev
+                        Collaboration</p>
+                    <p class="rounded-full bg-[#f54a00] text-slate-50 py-1 px-4 text-sm w-fit text-center">Component
+                        Library</p>
+                </div>
+            </div>
+
+        </div>
+
+        <video class="w-full md:rounded-3xl rounded-xl" src="case-img/bachable-0.mp4" autoplay loop muted
+playsinline></video>
+        <div class="md:grid md:grid-cols-3 md:space-x-8 flex-col space-y-4 md:space-y-0">
+
+            <div class="space-y-8 col-start-1 col-span-2">
+                <h2 class="text-3xl font-semibold">Problem Description:</h2>
+                <p>Bachable.io is a browser-based music notation tool. Write, collaborate, and publish professional
+                    sheet music with no local setup. The UI is complex: score editors, playback controls, export flows,
+                    real-time collaboration.</p>
+                <p>I built a design system from scratch using <b>shadcn/ui</b> to give the team a shared foundation from
+                    day one: fast to use, consistent in output, and directly connected to the codebase.</p>
+            </div>
+
+            <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-8 col-start-3 col-span-1">
+                <i data-lucide="music" class="w-10 h-10"></i>
+                <h2 class="text-md font-semibold">About Bachable.io</h2>
+                <p>Browser-based music notation powered by LilyPond. Publication-quality scores, instant preview,
+                    multi-format export. No installation required.</p>
+            </div>
+        </div>
+
+        <div class="flex-col space-y-8">
+            <h2 class="text-3xl font-semibold">Context</h2>
+            <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
+                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                    <i data-lucide="users" class="w-10 h-10"></i>
+                    <h2 class="text-md font-semibold">The Team</h2>
+                    <p>A tiny cross-functional team of 1 designer and 1 developer. With limited resources, speed and
+                        consistency were both non-negotiable.</p>
+                </div>
+                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                    <i data-lucide="code-2" class="w-10 h-10"></i>
+                    <h2 class="text-md font-semibold">The Tech Stack</h2>
+                    <p>React, Tailwind CSS, and <b>shadcn/ui</b>. The techstack that enables small teams to ship beautiful and usable products fast.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <h2 class="text-3xl font-semibold">Challenges</h2>
+
+            <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
+
+                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                    <div class="bg-gray-900 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">1
+                    </div>
+                    <h3 class="text-md font-semibold">No shared foundation from day one</h3>
+                    <p>Without a system in place, designer and developer risked <b>solving the same UI problems
+                            independently</b> and diverging as the product grew.</p>
+                </div>
+
+                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                    <div class="bg-gray-900 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">2
+                    </div>
+                    <h3 class="text-md font-semibold">Scaling Design with a Small Team</h3>
+                    <p>The team needed to design and ship new screens quickly <b>without rebuilding the same patterns
+                            each time</b>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-10">
+            <h2 class="text-3xl font-semibold">Project Overview</h2>
+
+            <div class="space-y-4">
+                <h3 class="text-2xl font-semibold">1. Foundation</h3>
+                <p>Starting from scratch meant making the right decisions upfront. The first step was scoping what the
+                    system needed and how it would connect to the dev workflow.</p>
+
+                <div class="space-y-4">
+                    <div class="flex-col space-y-4">
+                        <div class="flex flex-row space-x-2">
+                            <div
+                                class="bg-gray-900 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">
+                                1</div>
+                            <p class="space-y-4 rounded-3xl bg-gray-100 p-4 w-fit"><b>Developer alignment:</b> Spoke
+                                with the frontend team early on how they wanted to consume components, so the system
+                                would feel natural rather than imposed.</p>
+                        </div>
+                        <div class="flex flex-row space-x-2">
+                            <div
+                                class="bg-gray-900 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">
+                                2</div>
+                            <p class="space-y-4 rounded-3xl bg-gray-100 p-4 w-fit"><b>Choose the base:</b> Selected
+                                shadcn/ui: aligned with the React and Tailwind stack, zero adoption friction, and
+                                components developer can own and modify directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+
+                <h3 class="text-2xl font-semibold">2. Design Token Architecture</h3>
+                <p>Tokens map semantic decisions (colors, type, spacing) to Tailwind CSS variables. Every choice in
+                    Figma maps (to the extent possible) to code. Each color has a role, not just a value. Designer and
+                    developer uses the same name, so no back-and-forth needed.</p>
+
+                <div class="rounded-3xl bg-gray-100 p-6 space-y-4">
+
+                    <!-- Desktop header -->
+                    <div class="hidden md:flex items-center pb-2">
+                        <p class="text-sm font-semibold text-gray-700 text-center flex-1">Designer in Figma</p>
+                        <div class="flex-1"></div>
+                        <div class="w-32"></div>
+                        <div class="flex-1"></div>
+                        <p class="text-sm font-semibold text-gray-700 text-center flex-1">Developer in Code</p>
+                    </div>
+
+                    <!-- Color token row -->
+                    <div class="space-y-1">
+                        <!-- Desktop -->
+                        <div class="hidden md:flex items-center">
+                            <div class="bg-white rounded-2xl px-4 py-3 flex-1">
+                                <p class="text-xs text-gray-400">Color token name</p>
+                                <p class="font-semibold text-sm">color/fg-primary</p>
+                            </div>
+                            <div class="flex-1 h-px bg-gray-300"></div>
+                            <div class="flex-shrink-0 w-32 flex justify-center">
+                                <div class="w-8 h-8 rounded-lg" style="background:#f54a00"></div>
+                            </div>
+                            <div class="flex-1 h-px bg-gray-300"></div>
+                            <div class="bg-white rounded-2xl px-4 py-3 flex-1">
+                                <p class="text-xs text-gray-400">Color reference</p>
+                                <p class="font-semibold text-sm">fg-primary</p>
+                            </div>
+                        </div>
+                        <!-- Mobile -->
+                        <div class="md:hidden space-y-2">
+                            <div class="flex items-center justify-center gap-2">
+                                <div class="w-8 h-8 rounded-lg" style="background:#f54a00"></div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white rounded-2xl px-4 py-3">
+                                    <p class="text-xs text-gray-400">Color token name in Figma</p>
+                                    <p class="font-semibold text-sm">color/fg-primary</p>
+                                </div>
+                                <div class="bg-white rounded-2xl px-4 py-3">
+                                    <p class="text-xs text-gray-400">Color referenced in code</p>
+                                    <p class="font-semibold text-sm">fg-primary</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="hidden md:block text-xs text-gray-400 text-center">Primary color</p>
+                    </div>
+
+                    <!-- Component row -->
+                    <div class="space-y-1">
+                        <!-- Desktop -->
+                        <div class="hidden md:flex items-center">
+                            <div class="bg-white rounded-2xl px-4 py-3 flex-1">
+                                <p class="text-xs text-gray-400">Component name</p>
+                                <p class="font-semibold text-sm">Button/variant=primary</p>
+                            </div>
+                            <div class="flex-1 h-px bg-gray-300"></div>
+                            <div class="flex-shrink-0 w-32 flex justify-center">
+                                <button class="rounded-md px-3 py-2 text-xs font-semibold text-white flex items-center whitespace-nowrap gap-1.5" style="background:#f54a00"><i data-lucide="music" class="w-3 h-3" stroke-width="3"></i>Save score</button>
+                            </div>
+                            <div class="flex-1 h-px bg-gray-300"></div>
+                            <div class="bg-white rounded-2xl px-4 py-3 flex-1">
+                                <p class="text-xs text-gray-400">Component reference</p>
+                                <p class="font-semibold text-sm">&lt;Button variant="primary"&gt;</p>
+                            </div>
+                        </div>
+                        <!-- Mobile -->
+                        <div class="md:hidden space-y-2">
+                            <div class="flex items-center justify-center gap-2">
+                                <button class="rounded-md px-3 py-2 text-xs font-semibold text-white flex items-center w-fit gap-1.5 whitespace-nowrap" style="background:#f54a00"><i data-lucide="music" class="w-3 h-3" stroke-width="3"></i>Save score</button>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-white rounded-2xl px-4 py-3">
+                                    <p class="text-xs text-gray-400">Component name in Figma</p>
+                                    <p class="font-semibold text-sm">Button/variant=primary</p>
+                                </div>
+                                <div class="bg-white rounded-2xl px-4 py-3">
+                                    <p class="text-xs text-gray-400">Component referenced in code</p>
+                                    <p class="font-semibold text-sm">&lt;Button variant="primary"&gt;</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="hidden md:block text-xs text-gray-400 text-center">Primary button</p>
+                    </div>
+
+                    <div>
+                        <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-2.png">
+                        <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-3.png">
+                    </div>
+
+                </div>
+                
+            </div>
+
+
+            <div>
+
+            </div>
+
+            <div class="space-y-4">
+
+                <h3 class="text-2xl font-semibold">3. Implementation</h3>
+                <p>New screens were assembled from components, not designed from scratch. Design-to-code required
+                    minimal interpretation.</p>
+
+                <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
+
+                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                    <p class="text-2xl font-semibold">1×</p>
+                    <p>Each decision made once, reused everywhere</p>
+                </div>
+
+                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                    <p class="text-2xl font-semibold">0</p>
+                    <p>Back-and-forth on "what shade of orange is this?".</p>
+                </div>
+
+                 <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                    <p class="text-2xl font-semibold">Any</p>
+                    <p>Screen built from the same source of truth</p>
+                </div>
+                
+            </div>
+
+               
+                <video class="w-full md:rounded-3xl rounded-xl" src="case-img/bachable-1.webm" autoplay loop muted
+                    playsinline></video>
+                
+
+                
+
+
+            </div>
+
+
+        </div>
+
+        <div class="space-y-4 col-start-1 col-span-4 w-full animate">
+            <h2 class="text-2xl font-semibold">Check out other works from Vy: </h2>
+
+            <div class="flex md:flex-row flex-col md:space-x-4 md:space-y-0 space-y-4">
+                <a href="vy-for-canda.html" class="bg-white rounded-2xl border border-slate-200 md:basis-1/4 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer">
+                    <div class="rounded-t-2xl overflow-hidden h-48 bg-cover bg-center bg-[url('case-img/canda-cover.png')]"></div>
+                    <div class="p-4 space-y-2">
+                        <p class="font-semibold">Enhancing Offline Shopping Experience with Digital In-store Assistant</p>
+                        <p class="italic text-gray-500">@C&A, Germany</p>
+                    </div>
+                </a>
+                <a href="vy-for-bruce.html" class="bg-white rounded-2xl border border-slate-200 md:basis-1/4 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer">
+                    <div class="rounded-t-2xl overflow-hidden h-48 bg-cover bg-center bg-[url('case-img/bruce-mockup-bg.png')]"></div>
+                    <div class="p-4 space-y-2">
+                        <p class="font-semibold">Redesign Membership Cancellation process to improve User Retention</p>
+                        <p class="italic text-gray-500">@Bruce, Sweden</p>
+                    </div>
+                </a>
+                <a href="vy-for-hetki.html" class="bg-white rounded-2xl border border-slate-200 md:basis-1/4 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer">
+                    <div class="rounded-t-2xl overflow-hidden h-48 bg-cover bg-center bg-[url('case-img/Hetki-cover.png')]"></div>
+                    <div class="p-4 space-y-2">
+                        <p class="font-semibold">Navigating Competitive AI Landscape with Design</p>
+                        <p class="italic text-gray-500">@Hetki.ai, Finland</p>
+                    </div>
+                </a>
+                <a href="vy-for-homebase.html" class="bg-white rounded-2xl border border-slate-200 md:basis-1/4 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer">
+                    <div class="rounded-t-2xl overflow-hidden h-48 bg-cover bg-center bg-[url('case-img/homebase-cover.png')]"></div>
+                    <div class="p-4 space-y-2">
+                        <p class="font-semibold">Design for a New Identity</p>
+                        <p class="italic text-gray-500">@Homebase, Vietnam</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
