@@ -71,12 +71,6 @@ body {
 }
 
 
-.chat-bubble-left {
-  border-radius: 22px;
-}
-.chat-bubble-right {
-  border-radius: 22px;
-}
 
 #backToTopBtn {
   display: block; /* Display the button */
