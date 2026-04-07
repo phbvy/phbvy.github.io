@@ -247,14 +247,11 @@
                 </div>
             </div>
 
-            <form class="flex flex-row space-x-2" id="commentform">
-
-                <input type="text" onclick=typingEffect() id="messagecontent" name="usermesssage" placeholder="Reply to Vy here..." style="color: #1F38FA;" class="grow flex flex-col justify-center bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 border border-[rgba(30,64,175,0.3)] text-xl placeholder-shown:italic">
-        
-                 
-                <button style="background-color: #1F38FA;" type="submit" class="flex flex-col justify-center rounded-3xl py-2 px-4 md:px-6 border border-blue-400 shadow-sm w-fit text-white text-xl font-semibold hover:ring-4 hover:ring-blue-400/40">Send</button>
+            <form class="flex flex-row flex-wrap gap-2 justify-end" id="commentform">
+                <input type="text" oninput=typingEffect() id="messagecontent" name="usermesssage" placeholder="Reply to Vy here..." style="color: #1F38FA;" class="grow w-32 max-w-full text-ellipsis bg-gray-100 rounded-3xl py-3 px-5 border border-[rgba(30,64,175,0.3)] text-xl placeholder-shown:italic">
+                <button class="rounded-3xl py-2 px-4 md:px-6 border border-blue-400 shadow-sm w-fit text-white text-xl font-semibold hover:ring-4 hover:ring-blue-400/40" style="background-color: #1F38FA;" type="submit">Send</button>
             </form>
-            
+
         </div>
     
         <div class = "mx-auto overflow-hidden py-8 space-y-2 w-full">
