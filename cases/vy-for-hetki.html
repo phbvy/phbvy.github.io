@@ -11,12 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
 </head>
 
 <body style="background-color: #FCFCFC;">
     <div id="start"></div>
-        <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start" id="backToTopBtn" title="Go to top"><img class="rounded-3xl h-[32px]" src="case-img/align top.png"></a>
+        <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start"
+        id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up" class="w-6 h-6 text-gray-900"></i></a>
 
 
    <div class="md:container mx-auto md:py-12 py-6 px-4 mb-20 space-y-20 xl:w-4/5 w-auto"> 
@@ -45,48 +47,44 @@
 
         <img class="rounded-3xl" src="case-img/Hetki-cover.png">
 
-        
-        <div class="space-y-2">
-            <h2 class="text-3xl font-semibold">Problem Description:</h2>
-            <p>Hetki.ai, a new Finnish startup, wanted to have an overhaul of their digital presence and improve product design to prepare for the upcoming relaunch after pivoting their B2B product. </p>
-            <p>Information was omitted and modified due to NDA.</p>
-        </div>
-        
-         
-        <div class="flex-col space-y-8">
-            <h2 class="text-3xl font-semibold">Context</h2>
-            <div class="md:grid md:grid-cols-2 md:space-x-8 flex-col space-y-4 md:space-y-0">
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <img class="rounded-3xl h-[48px]" src="../img/hetki.png">
-                    <h2 class="text-md font-semibold">About Hetki.ai</h2>
-                    
-                    <p>A Finnish startup offering an AI-powered tool that analyze conversations between front-facing professionals and customers</p>
-                    
-                </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6 h-full">
-                    <img class="rounded-3xl h-[48px]" src="case-img/account-outline.png">
-                    <h2 class="text-md font-semibold">Users</h2>
-                    
-                    <p>Customer-facing roles (sales reps, customer success reps, etc)</p>
-                    
+        <div class="md:grid md:grid-cols-3 md:space-x-8 flex-col space-y-4 md:space-y-0  ">
+
+            <div class="space-y-8 col-start-1 col-span-2">
+                <h2 class="text-3xl font-semibold">Problem Description:</h2>
+                    <p>Hetki.ai, a new Finnish startup, wanted to have an overhaul of their digital presence and improve product design to prepare for the upcoming relaunch after pivoting their B2B product. </p>
+                
+            </div>
+
+            <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
+                <img class="h-[32px] w-auto self-start" src="../img/hetki.png">
+                <div class="pt-8 space-y-1">
+                    <h2 class="font-semibold">About Hetki.ai</h2>
+                    <p class="text-gray-500">A Finnish startup offering an AI-powered tool that analyze conversations between front-facing professionals and customers</p>
                 </div>
             </div>
+
+
         </div>
-       
+        
+
+        
 
         <div class="flex-col space-y-8">
             <h2 class="text-3xl font-semibold">Challenges</h2>
             <div class="md:grid md:grid-cols-2 md:space-x-8 flex-col space-y-4 md:space-y-0">
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <h3 class="text-md font-semibold">Pivoting</h3>
-                    <p>Pivoting amidst AI exponential growth</p>
-                    
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h3 class="font-semibold">Pivoting</h3>
+                        <p class="text-gray-500">Pivoting amidst AI exponential growth</p>
+                    </div>
                 </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <h3 class="text-md font-semibold">New Hire Designer</h3>
-                    <p>A lot to catch up with the current product and its future path after pivoting
-
-                    </p>
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="user-round-plus" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h3 class="font-semibold">New Hire Designer</h3>
+                        <p class="text-gray-500">A lot to catch up with the current product and its future path after pivoting</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,32 +102,41 @@
             </div>
             
             <div class="md:grid md:grid-cols-5 md:space-x-4 flex-col space-y-4 md:space-y-0">
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-4">
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-4">
                     <div class="bg-blue-800 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">1</div>
-                    <h3 class="text-md font-semibold">Understanding</h3>
-                    <p>Understanding users and markets' demand for pivoting</p>
-                    
+                    <div class="space-y-1 mt-4">
+                        <h3 class="font-semibold">Understanding</h3>
+                        <p class="text-gray-500">Understanding users and markets' demand for pivoting</p>
+                    </div>
                 </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-4">
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-4">
                     <div class="bg-blue-800 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">2</div>
-                    <h3 class="text-md font-semibold">Define</h3>
-                    <p>Defining the needed works to be done on the design-front of the product</p>
+                    <div class="space-y-1 mt-4">
+                        <h3 class="font-semibold">Define</h3>
+                        <p class="text-gray-500">Defining the needed works to be done on the design-front of the product</p>
+                    </div>
                 </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-4">
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-4">
                     <div class="bg-blue-800 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">3</div>
-                    <h3 class="text-md font-semibold">Design</h3>
-                    <p>Designing the product and scaling Hetki.ai's design maturity</p>
+                    <div class="space-y-1 mt-4">
+                        <h3 class="font-semibold">Design</h3>
+                        <p class="text-gray-500">Designing the product and scaling Hetki.ai's design maturity</p>
+                    </div>
                 </div>
 
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-4">
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-4">
                     <div class="bg-blue-800 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">4</div>
-                    <h3 class="text-md font-semibold">Build</h3>
-                    <p>Building the product iteratively alongside Design</p>
+                    <div class="space-y-1 mt-4">
+                        <h3 class="font-semibold">Build</h3>
+                        <p class="text-gray-500">Building the product iteratively alongside Design</p>
+                    </div>
                 </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-4">
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-4">
                     <div class="bg-blue-800 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">5</div>
-                    <h3 class="text-md font-semibold">Test</h3>
-                    <p>Testing the product with external and internal users</p>
+                    <div class="space-y-1 mt-4">
+                        <h3 class="font-semibold">Test</h3>
+                        <p class="text-gray-500">Testing the product with external and internal users</p>
+                    </div>
                 </div>
             </div>
 
@@ -163,23 +170,25 @@
                     
                     <h3 class="text-2xl font-semibold">Design + Build Collaboration Strategies</h3>
                     <div class="md:grid md:grid-cols-2 md:space-x-8 flex-col space-y-4 md:space-y-0">
-                        <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                            <h3 class="text-md font-semibold">Tool kit</h3>
-                            <div class="flex flex-col space-y-4">
-                                <img class="max-w-60" src="case-img/jira.png">
-                                <img class="max-w-40" src="case-img/figma.png">
-                                <img class="max-w-40" src="case-img/slack.png">
+                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                            <div class="space-y-1">
+                                <h3 class="font-semibold">Tool kit</h3>
                             </div>
-                            
-                            
+                            <div class="flex flex-col space-y-4 pt-12">
+                                <img class="max-w-40" src="case-img/jira.png">
+                                <img class="max-w-20" src="case-img/figma.png">
+                                <img class="max-w-24" src="case-img/slack.png">
+                            </div>
                         </div>
-                        
-                        <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                            <h3 class="text-md font-semibold">Principles</h3>
-                            <p>Agile Team
-                            </p>
-                            <p>Synchronous and Asynchronous communication                                </p>
-                            <p>Frequent and short feedback loop</p>
+
+                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                                <h3 class="font-semibold">Principles</h3>
+
+                            <div class="space-y-1 pt-12">
+                                <p class="text-gray-500">Agile Team</p>
+                                <p class="text-gray-500">Synchronous and Asynchronous communication</p>
+                                <p class="text-gray-500">Frequent and short feedback loop</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,24 +198,25 @@
 
                     <h3 class="text-2xl font-semibold">Testing Strategies</h3>
                     <div class="md:grid md:grid-cols-3 md:space-x-8 flex-col space-y-4 md:space-y-0">
-                        <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                            <h3 class="text-md font-semibold">Competitors</h3>
-                            <p>UX/UI designer (me) reviews competitor products and identify their strength and weaknesses</p>
-                            
+                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                            <div class="space-y-1">
+                                <h3 class="font-semibold">Competitors</h3>
+                                <p class="text-gray-500">UX/UI designer (me) reviews competitor products and identify their strength and weaknesses</p>
+                            </div>
                         </div>
-                        
-                        <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                            <h3 class="text-md font-semibold">External Users</h3>
-                            <p>Due to time difference with users, the PM conducts interviews and usability studies. UX/UI designer (me) reviews the scripts and reports to produce action plans.
-        
-                            </p>
+
+                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                            <div class="space-y-1">
+                                <h3 class="font-semibold">External Users</h3>
+                                <p class="text-gray-500">Due to time difference with users, the PM conducts interviews and usability studies. UX/UI designer (me) reviews the scripts and reports to produce action plans.</p>
+                            </div>
                         </div>
-    
-                        <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                            <h3 class="text-md font-semibold">Internal Users</h3>
-                            <p>As internal sales reps also use the tool, UX/UI designer and PM both conducts interviews with internal users.
-        
-                            </p>
+
+                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                            <div class="space-y-1">
+                                <h3 class="font-semibold">Internal Users</h3>
+                                <p class="text-gray-500">As internal sales reps also use the tool, UX/UI designer and PM both conducts interviews with internal users.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,4 +288,5 @@
         
       
     </div>
+    <script>lucide.createIcons();</script>
 </body>

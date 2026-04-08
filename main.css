@@ -7,6 +7,10 @@ body {
   font-family: 'Inter Tight', sans-serif;
 }
 
+b {
+  font-weight: 400;
+}
+
 .animate {
   opacity: 0;
 }

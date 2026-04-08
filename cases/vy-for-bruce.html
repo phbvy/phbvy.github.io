@@ -11,12 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
 </head>
 
 <body style="background-color: #FCFCFC;">
     <div id="start"></div>
-        <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start" id="backToTopBtn" title="Go to top"><img class="rounded-3xl h-[32px]" src="case-img/align top.png"></a>
+     <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start"
+        id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up" class="w-6 h-6 text-gray-900"></i></a>
 
 
     <div class="md:container mx-auto md:py-12 py-6 px-4 mb-20 space-y-20 xl:w-4/5 w-auto"> 
@@ -56,12 +58,11 @@
                 
             </div>
 
-            <div class="flex flex-col rounded-3xl bg-gray-100 border-slate-100 p-6 col-span-1">
+            <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
                 <img class="h-[32px] w-auto self-start" src="case-img/bruce-logo.png">
-                <div class="mt-8 space-y-2">
-                    <h2 class="text-md font-semibold">About Bruce</h2>
-                    <p>Bruce offers all-in-one subscription for access to multiple workout studios and classes in Sweden, Norway and Denmark.</p>
-                    
+                <div class="pt-8 space-y-1">
+                    <h2 class="font-semibold">About Bruce</h2>
+                    <p class="text-gray-500">Bruce offers all-in-one subscription for access to multiple workout studios and classes in Sweden, Norway and Denmark.</p>
                 </div>
             </div>
 
@@ -79,24 +80,26 @@
 
             <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
                 
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <img class="rounded-3xl h-[48px]" src="case-img/chart-box-outline.png">
-
-                    <h3 class="text-md font-semibold">Quantitative User Survey</h3>
-                    <p>Bruce sent out user survey to receive feedbacks on how the product can be improved.</p>
-                    
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h3 class="font-semibold">Quantitative User Survey</h3>
+                        <p class="text-gray-500">Bruce sent out user survey to receive feedbacks on how the product can be improved.</p>
+                    </div>
                 </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <img class="rounded-3xl h-[48px]" src="case-img/account-outline.png">
-                    <h3 class="text-md font-semibold">Stakeholders Interviews</h3>
-                    <p>I conducted interviews with Bruce's major stakeholders (CEO, CPO, CSO, CMO) to align UX improvements with business objectives.</p>
-                    
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h3 class="font-semibold">Stakeholders Interviews</h3>
+                        <p class="text-gray-500">I conducted interviews with Bruce's major stakeholders (CEO, CPO, CSO, CMO) to align UX improvements with business objectives.</p>
+                    </div>
                 </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <img class="rounded-3xl h-[48px]" src="case-img/note-stack.png">
-                    <h3 class="text-md font-semibold">Affinity Mapping</h3>
-                    <p>I hosted a co-ideating workshop to explore problem space with CRM Lead, Product Manager and CPO.</p>
-                    
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="layers" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h3 class="font-semibold">Affinity Mapping</h3>
+                        <p class="text-gray-500">I hosted a co-ideating workshop to explore problem space with CRM Lead, Product Manager and CPO.</p>
+                    </div>
                 </div>
                 
             </div>
@@ -207,4 +210,5 @@
         
 
     </div>
+    <script>lucide.createIcons();</script>
 </body>

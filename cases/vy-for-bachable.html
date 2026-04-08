@@ -65,12 +65,11 @@ playsinline></video>
             </div>
 
 
-            <div class="flex flex-col rounded-3xl bg-gray-100 border-slate-100 p-6 col-span-1">
+            <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
                 <img class="h-[48px] w-auto self-start" src="case-img/bachable-logo.png">
-                <div class="md:mt-auto mt-8 space-y-2">
-                    <h2 class="text-md font-semibold">About Bachable.io</h2>
-                    <p>Browser-based music notation powered by LilyPond. Publication-quality scores, instant preview, collaboration-first music notation editor.
-                    
+                <div class="space-y-1">
+                    <h2 class="font-semibold">About Bachable.io</h2>
+                    <p class="text-gray-500">Browser-based music notation powered by LilyPond. Publication-quality scores, instant preview, collaboration-first music notation editor.</p>
                 </div>
             </div>
 
@@ -79,17 +78,19 @@ playsinline></video>
         <div class="flex-col space-y-8">
             <h2 class="text-3xl font-semibold">Context</h2>
             <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <i data-lucide="users" class="w-10 h-10"></i>
-                    <h2 class="text-md font-semibold">The Team</h2>
-                    <p>A tiny cross-functional team of 1 designer and 1 developer. With limited resources, speed and
-                        consistency were both non-negotiable.</p>
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h2 class="font-semibold">The Team</h2>
+                        <p class="text-gray-500">A tiny cross-functional team of 1 designer and 1 developer. With limited resources, speed and consistency were both non-negotiable.</p>
+                    </div>
                 </div>
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <i data-lucide="code-2" class="w-10 h-10"></i>
-                    <h2 class="text-md font-semibold">The Tech Stack</h2>
-                    <p>React, Tailwind CSS, and <b>shadcn/ui</b>. The techstack that enables small teams to ship beautiful and usable products fast.
-                    </p>
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="code-2" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h2 class="font-semibold">The Tech Stack</h2>
+                        <p class="text-gray-500">React, Tailwind CSS, and <b>shadcn/ui</b>. The techstack that enables small teams to ship beautiful and usable products fast.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,20 +100,22 @@ playsinline></video>
 
             <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
 
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
                     <div class="bg-gray-900 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">1
                     </div>
-                    <h3 class="text-md font-semibold">No shared foundation from day one</h3>
-                    <p>Without a system in place, designer and developer risked <b>solving the same UI problems
-                            independently</b> and diverging as the product grew.</p>
+                    <div class="space-y-1 mt-4">
+                        <h3 class="font-semibold">No shared foundation from day one</h3>
+                        <p class="text-gray-500">Without a system in place, designer and developer risked <b>solving the same UI problems independently</b> and diverging as the product grew.</p>
+                    </div>
                 </div>
 
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
                     <div class="bg-gray-900 rounded-3xl p-2 text-slate-50 w-[40px] h-[40px] text-center font-semibold">2
                     </div>
-                    <h3 class="text-md font-semibold">Scaling Design with a Small Team</h3>
-                    <p>The team needed to design and ship new screens quickly <b>without rebuilding the same patterns
-                            each time</b>.</p>
+                    <div class="space-y-1 mt-4">
+                        <h3 class="font-semibold">Scaling Design with a Small Team</h3>
+                        <p class="text-gray-500">The team needed to design and ship new screens quickly <b>without rebuilding the same patterns each time</b>.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,7 +157,7 @@ playsinline></video>
                     Figma maps (to the extent possible) to code. Each color has a role, not just a value. Designer and
                     developer uses the same name, so no back-and-forth needed.</p>
 
-                <div class="rounded-3xl bg-gray-100 p-6 space-y-4">
+                <div class="rounded-2xl bg-gray-100 p-6 space-y-4">
 
                     <!-- Desktop header -->
                     <div class="hidden md:flex items-center pb-2">
@@ -261,19 +264,25 @@ playsinline></video>
 
                 <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
 
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <p class="text-2xl font-semibold">1×</p>
-                    <p>Each decision made once, reused everywhere</p>
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                    <div class="space-y-1">
+                        <p class="text-2xl font-semibold">1×</p>
+                        <p class="text-gray-500">Each decision made once, reused everywhere</p>
+                    </div>
                 </div>
 
-                <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <p class="text-2xl font-semibold">0</p>
-                    <p>Back-and-forth on "what shade of orange is this?".</p>
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                    <div class="space-y-1">
+                        <p class="text-2xl font-semibold">0</p>
+                        <p class="text-gray-500">Back-and-forth on "what shade of orange is this?".</p>
+                    </div>
                 </div>
 
-                 <div class="flex-col space-y-4 rounded-3xl bg-gray-100 border-slate-100 p-6">
-                    <p class="text-2xl font-semibold">Any</p>
-                    <p>Screen built from the same source of truth</p>
+                <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                    <div class="space-y-1">
+                        <p class="text-2xl font-semibold">Any</p>
+                        <p class="text-gray-500">Screen built from the same source of truth</p>
+                    </div>
                 </div>
                 
             </div>
