@@ -1,243 +1,388 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <meta charset="utf-8">
-        <title>Vy's Portfolio</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="scripts.js"></script>
-        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Vy's Portfolio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
 
-    </head>
-    
-    <body style="background-color: #FCFCFC;">
-        <div id="start"></div>
-        <a class="bg-white shadow-xs border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start" id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up" class="w-6 h-6 text-gray-900"></i></a>
+</head>
 
-        <div class="md:container mx-auto md:py-12 py-6 px-4 space-y-8 xl:w-4/5 w-auto">
-    
-            <nav class="bg-white shadow-xs border border-gray-200 shadow-sm mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
-                <a style="background-color: #1F38FA;" class="rounded-3xl text-slate-50 py-2 px-4 md:px-6 md:w-fit w-fill border border-blue-400 shadow-sm" href="#start">Home</a>
-                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700" href="#by">Portfolio</a>
-                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700" href="#about">About</a>
-                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700" href="#contact">Contact</a>
-            </nav>
-            
-    
-        <div class="rounded-3xl overflow-hidden p-5 space-y-2 h-[70vh] md:h-[70vh] bg-cover bg-center bg-[url('img/hero-img.small.jpg')] grid content-end" id="meet">
-    
-                <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2 w-ful">
-    
-                    <div class="bg-white shadow-xs rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2 " id="chat">
-                        <h1 class="text-3xl font-medium">Meet Vy</h1>
-                    </div>
-        
-                    <div class="bg-white shadow-xs rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2 w-full ">
-                        <p class="w-full">I am an Experience & Product Designer with a strategic flair and great stakeholder management skills. I work cross-functional to create designs that bridge business goals and user needs. I have done so across 3 continents 🇸🇪🇫🇮🇳🇿🇻🇳🇰🇷.</p>
-                    </div>
+<body style="background-color: #fbfbfb;">
+    <div id="start"></div>
+    <a style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class="border border-slate-200 bg-white hover:border-slate-400 p-2 w-fit text-center rounded-full transition-all duration-300"
+        href="#start" id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up"
+            class="w-6 h-6 text-slate-900"></i></a>
+
+    <div class="md:container mx-auto md:py-12 py-6 px-4 space-y-8 xl:w-3/4 w-auto">
+
+        <nav style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
+            <a style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #1F38FA;"
+                        class="border border-blue-800 rounded-3xl text-slate-50 py-2 px-4 md:px-6 md:w-fit w-fill border border-blue-800"
+                href="#start">Home</a>
+            <a class="hover:bg-slate-100 bg-white rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-700"
+                href="#by">Portfolio</a>
+            <a class="hover:bg-slate-100 bg-white rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-700"
+                href="#about">About</a>
+            <a class="hover:bg-slate-100 bg-white rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-700"
+                href="#contact">Contact</a>
+        </nav>
+
+
+        <div class="rounded-3xl overflow-hidden p-5 space-y-2 h-[70vh] md:h-[70vh] bg-cover bg-center bg-[url('img/hero-img.small.jpg')] grid content-end"
+            id="meet">
+
+            <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2 w-ful">
+
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2 "
+                    id="chat">
+                    <h1 class="text-3xl font-medium">Meet Vy</h1>
                 </div>
-        
-                <div class="grid grid-cols-4 justify-items-end space-y-2">
-        
-                    <div style="background-color: #1F38FA;" class=" rounded-3xl overflow-hidden py-3 px-5 col-start-3 col-span-2 animate">
-                        <p class="text-white text-3xl font-medium ">Hi Vy👋</p>
-                    </div>
+
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2 w-full ">
+                    <p class="w-full">I am an Experience & Product Designer with a strategic flair and great stakeholder
+                        management skills. I work cross-functional to create designs that bridge business goals and user
+                        needs. I have done so across 3 continents 🇸🇪🇫🇮🇳🇿🇻🇳🇰🇷.</p>
+                </div>
             </div>
-            
-            
-            
+
+            <div class="grid grid-cols-4 justify-items-end space-y-2">
+
+                <div style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #1F38FA;"
+                    class="border border-blue-800 rounded-3xl overflow-hidden py-3 px-5 col-start-3 col-span-2 animate">
+                    <p class="text-white text-3xl font-medium ">Hi Vy👋</p>
+                </div>
+            </div>
+
+
+
         </div>
-        
+
         <div class="rounded-3xl py-8 space-y-4" id="by">
-    
+
             <div class="grid grid-cols-3 justify-items-start space-y-2">
-    
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-4 animate">
+                <div style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-4 animate">
                     <h2 class="text-3xl font-medium ">By Vy</h2>
                 </div>
-                <div class="bg-gray-100 rounded-3xl overflow-hidden space-y-4 py-3 px-5 col-start-1 col-span-3 animate ">
-                    <p>Check out some case studies on my work for organizations and their users from various sectors below:</p>
-        
+                <div style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white  bg-white rounded-3xl overflow-hidden space-y-4 py-3 px-5 col-start-1 col-span-3 animate ">
+                    <p>Check out some case studies on my work for organizations and their users from various sectors
+                        below:</p>
+
                 </div>
-                <div class="space-y-4 md:gap-4 col-start-1 col-span-4 w-full">
+            </div>
+            <div class="space-y-4 md:gap-4 col-start-1 col-span-4 w-full">
 
-                    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0 ">
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
 
-                        
-                           
-                        <a href="cases/vy-for-canda.html" class="bg-white shadow-xs rounded-3xl border border-slate-200 basis-1/2 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer animate no2">
-                            <div class="rounded-t-3xl overflow-hidden h-80 bg-cover bg-center bg-[url('cases/case-img/canda-cover.png')]"></div>
-                            <div class="rounded-3xl overflow-hidden px-4 py-6 md:p-6 space-y-2">
-                                <p style="background-color: #1F38FA;" class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center">Fashion</p>
-                                <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital In-store Assistant</p>
-                                <p class="italic">@C&A, Germany</p>
+                    <a href="cases/vy-for-canda.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class=" bg-white rounded-3xl border border-slate-200 transition-all duration-300 ease-out hover:border-slate-300 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-2xl overflow-hidden">
+                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/canda-cover.png')]">
                             </div>
-                        </a>
-
-                        <a href="cases/vy-for-bruce.html" class="bg-white shadow-xs rounded-3xl border border-slate-200 basis-1/2 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer animate no2">
-                            <div class="rounded-t-3xl overflow-hidden h-80 bg-cover bg-center bg-[url('cases/case-img/bruce-mockup-bg.png')]"></div>
-                            <div class="rounded-3xl overflow-hidden px-4 py-6 md:p-6 space-y-2">
-                                <p style="background-color: #1F38FA;" class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center">Fitnesstech</p>
-                                <p class="text-xl font-medium">Redesign Membership Cancellation process to improve User Retention</p>
-                                <p class="italic">@Bruce, Sweden</p>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Fashion</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital
+                                    In-store Assistant</p>
+                                <p class="text-slate-500">@C&A, Germany</p>
                             </div>
-                        </a>
-                        
-                        
-                                            
-                    </div>
 
-                    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
-                        <a href="cases/vy-for-bachable.html" class="bg-white shadow-xs rounded-3xl border border-slate-200 basis-1/2 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer animate no2">
-                            <div class="rounded-t-3xl overflow-hidden h-80 bg-cover bg-center bg-[url('cases/case-img/bachable-cover.png')]"></div>
-                            <div class="rounded-3xl overflow-hidden px-4 py-6 md:p-6 space-y-2">
-                                <p style="background-color: #1F38FA;" class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center">Musical Notation Editor</p>
-                                <p class="text-xl font-medium">Building a Design System for Faster Design to Shipping</p>
-                                <p class="italic">@Bachable, Sweden</p>
+                        </div>
+                    </a>
+
+                    <a href="cases/vy-for-bruce.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class=" bg-white border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-slate-300 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-2xl overflow-hidden">
+                            <div
+                                class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/bruce-mockup-bg.png')]">
                             </div>
-                        </a>
-                        <a href="cases/vy-for-workflw.html" class="bg-white shadow-xs rounded-3xl border border-slate-200 basis-1/2 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer animate no2">
-                            <div class="rounded-t-3xl overflow-hidden h-80 bg-cover bg-center bg-[url('cases/case-img/workflw-mockup-bg.png')]"></div>
-                            <div class="rounded-3xl overflow-hidden px-4 py-6 md:p-6 space-y-2">
-                                <p style="background-color: #1F38FA;" class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center">To-do App</p>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+
+                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Fitnesstech</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Redesign Membership Cancellation process to improve User
+                                    Retention</p>
+                                <p class="text-slate-500">@Bruce, Sweden</p>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
+
+                    <a href="cases/vy-for-bachable.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-slate-300 hover:shadow-sm hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-2xl overflow-hidden">
+                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/bachable-cover.png')]">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Musical Notation Editor</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Building a Design System for Faster Design to Shipping
+                                </p>
+                                <p class="text-slate-500">@Bachable, Sweden</p>
+                            </div>
+
+
+                        </div>
+                    </a>
+
+                    <a href="cases/vy-for-workflw.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-slate-300 hover:shadow-sm  cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-2xl overflow-hidden">
+                            <div
+                                class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/workflw-mockup-bg.png')]">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">To-do App</span>
+                            <div class="space-y-1">
                                 <p class="text-xl font-medium">A User Engagement Take on The Classic To-do App</p>
-                                <p class="italic">@KTH, Sweden</p>
+                                <p class="text-slate-500">@KTH, Sweden</p>
                             </div>
-                        </a>
-                        
-                        
 
-                       
-                        
-                        
-                    </div>
 
-                    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
-            
-                        <a href="cases/vy-for-homebase.html" class="bg-white shadow-xs rounded-3xl border border-slate-200 basis-1/2 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer animate no2">
-                            <div class="rounded-t-3xl overflow-hidden h-80 bg-cover bg-center bg-[url('cases/case-img/homebase-cover.png')]"></div>
-                            <div class="rounded-3xl overflow-hidden px-4 py-6 md:p-6 space-y-2">
-                                <p style="background-color: #1F38FA;" class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center">Fintech</p>
-                                <p class="text-xl font-medium">Building Digital Trust in Financial Service with Design</p>
-                                <p class="italic">@Homebase, Vietnam</p>
-                            </div>
-                        </a>
-                    
-                        <a href="cases/vy-for-hetki.html" class="bg-white shadow-xs rounded-3xl border border-slate-200 basis-1/2 transition-all duration-300 ease-out hover:border-slate-300 cursor-pointer animate no2">
-                            <div class="rounded-t-3xl overflow-hidden h-80 bg-cover bg-center bg-[url('cases/case-img/Hetki-cover.png')]"></div>
-                            <div class="rounded-3xl overflow-hidden px-4 py-6 md:p-6 space-y-2">
-                                <p style="background-color: #1F38FA;" class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center">AI Sales Assistant</p>
-                                <p class="text-xl font-medium">Navigating Competitive AI Landscape with Design</p>
-                                <p class="italic">@Hetki.ai, Finland</p>
-                            </div>
-                        </a>
-        
-                        
-                        
-                        
-                    </div>
-        
+                        </div>
+                    </a>
+
                 </div>
 
-                
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
+
+                    <a href="cases/vy-for-homebase.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 2px 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-slate-300 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-2xl overflow-hidden">
+                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/homebase-cover.png')]">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Fintech</span>
+
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Building Digital Trust in Financial Service with Design
+                                </p>
+                                <p class="text-slate-500">@Homebase, Vietnam</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="cases/vy-for-hetki.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-slate-300 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-2xl overflow-hidden">
+                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/Hetki-cover.png')]">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">AI Sales Assistant</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Navigating Competitive AI Landscape with Design</p>
+                                <p class="text-slate-500">@Hetki.ai, Finland</p>
+                            </div>
+
+                        </div>
+                    </a>
+
+                </div>
+
             </div>
 
-    
+
+
+
+
             <div class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2">
-                <div style="background-color: #1F38FA;" class="rounded-3xl overflow-hidden py-3 px-5 col-start-3 col-span-2 animate">
+                <div style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #1F38FA;"
+                    class="border border-blue-800 rounded-3xl overflow-hidden py-3 px-5 col-start-3 col-span-2 animate">
                     <p class="text-white text-3xl font-medium">Wow Vy! Cool stuff🔥</p>
                 </div>
-                
-                <div style="background-color: #1F38FA;" class="rounded-3xl overflow-hidden py-3 px-5 col-start-2 col-span-3 animate no2">
+
+                <div style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #1F38FA;"
+                    class="border border-blue-800 rounded-3xl overflow-hidden py-3 px-5 col-start-2 col-span-3 animate no2">
                     <p class="text-white text-3xl font-medium">Where did you learn all that?!</p>
                 </div>
             </div>
-            
-    
-            
-            
-        </div>
-        
 
-        
-        
-        <div class="overflow-hidden py-8 space-y-4" id="about">
-    
-            <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
-                
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2 animate ">
+
+
+
+        </div>
+
+
+
+
+        <div class="py-8 space-y-4" id="about">
+
+            <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start gap-2 w-ful">
+
+                <div style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2 animate ">
                     <h2 class="text-3xl font-medium">About Vy</h2>
                 </div>
-            
 
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate no2">Want more details?</div>
-    
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 space-y-2 col-start-1 col-span-2 flex flex-col animate no2">
-                    <p class="italic">Attachment:</p>
-                    <a style="color: #1F38FA;" class="underline text-3xl font-medium" target="_blank"  href="https://drive.google.com/file/d/1dw75q7IGML_zM46VFcP7OhHHZeQ7bBRv/view">Get my resume</a>
-                </div>
-        
-            
-    
-                <div class="grid grid-cols-2 md:grid-cols-4 justify-items-end col-start-1 col-span-2 md:col-span-4 w-full">
-                    <div style="background-color: #1F38FA;" class="rounded-3xl overflow-hidden py-3 px-5 col-start-3 col-span-2 animate no2">
-                    <p class="text-white text-3xl font-medium">Let's keep in touch!</p>
+
+                <div style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white  bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate no2">
+                    Much of what I learned came from working in cross-functional teams building from SaaS to consumer
+                    products.</div>
+
+                <a href="https://drive.google.com/file/d/1dw75q7IGML_zM46VFcP7OhHHZeQ7bBRv/view" target="_blank"
+                    style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class="border border-slate-200 bg-white rounded-3xl overflow-hidden col-start-1 col-span-2 flex flex-col gap-4  p-3 animate no2 hover:border-slate-300 transition-all duration-200 w-fit">
+                    <div class="bg-slate-50 rounded-xl px-4 py-3 flex-shrink-0 w-80 space-y-2">
+                        <!-- Name / header -->
+                        <div class="flex items-center gap-2 pb-2 border-b border-slate-200">
+                            <div class="w-6 h-6 rounded-full bg-slate-300 flex-shrink-0"></div>
+                            <div class="space-y-1 flex-1">
+                                <div class="h-2 bg-slate-300 rounded-full w-2/5"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-1/4"></div>
+                            </div>
+                            <div class="space-y-1">
+                                <div class="h-1.5 bg-slate-200 rounded-full w-12"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-10"></div>
+                            </div>
+                        </div>
+                        <!-- Two columns: left body, right sidebar -->
+                        <div class="flex gap-3">
+                            <div class="flex-1 space-y-1.5">
+                                <div class="h-1.5 bg-slate-300 rounded-full w-1/3"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-full"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-5/6"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-4/6"></div>
+                            </div>
+                            <div class="w-16 space-y-1.5">
+                                <div class="h-1.5 bg-slate-300 rounded-full w-2/3"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-full"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <div class="flex-1 space-y-1.5">
+                                <div class="h-1.5 bg-slate-300 rounded-full w-1/3"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-full"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-5/6"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-4/6"></div>
+                            </div>
+                            <div class="w-16 space-y-1.5">
+                                <div class="h-1.5 bg-slate-300 rounded-full w-2/3"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-full"></div>
+                                <div class="h-1.5 bg-slate-200 rounded-full w-3/4"></div>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="flex flex-col px-2 pb-2 min-w-0">
+                        <span class="text-sm text-slate-400">Attachment</span>
+                        <span class="font-medium text-xl truncate">Vy_Resume.pdf</span>
+
+                    </div>
+                </a>
+
+
+
+
+
+                <div
+                    class="grid grid-cols-2 md:grid-cols-4 justify-items-end col-start-1 col-span-2 md:col-span-4 w-full">
+                    <div style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #1F38FA;"
+                        class="border border-blue-800 rounded-3xl overflow-hidden py-3 px-5 col-start-3 col-span-2 animate no2">
+                        <p class="text-white text-3xl font-medium">Let's keep in touch!</p>
                     </div>
 
                 </div>
+
             </div>
-        
+
         </div>
-        
-    
-    
+
+
+
         <div class="py-8 space-y-4" id="contact">
             <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
-    
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate ">
+
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate ">
                     <h2 class="text-3xl font-medium">Contact Vy</h2>
                 </div>
-    
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate ">
-                    <p>Drop me a line:</p>            
-                </div>
-    
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate no2">
-                    <a style="color: #1F38FA;" class="underline" href="mailto:phbvy@gmail.com">phbvy.g@gmail.com</a>        
-                </div>
-        
-                <div class="bg-gray-100 rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate no2">
-                    <a style="color: #1F38FA;" class="underline" href="https://www.linkedin.com/in/vyp/">Linkedin</a>
-                </div>
-            </div>      
 
-            <div id="displaymessagecontainer" class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate"></div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
-                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-100 rounded-3xl overflow-hidden py-3 px-5  animate no2">
-                    <p>This is a sandbox for you to play with, so I can't read your messages.</p>            
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate ">
+                    <p>Drop me a line:</p>
                 </div>
-                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-100 rounded-3xl overflow-hidden py-3 px-5  animate no2">
-                    <p>Let's talk through <a style="color: #1F38FA;" class="underline" href="mailto:phbvy@gmail.com">email</a> or <a style="color: #1F38FA;" class="underline" href="https://www.linkedin.com/in/vyp/">Linkedin</a> instead :D</p>            
+
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate no2">
+                    <a style="color: #1F38FA;" class="underline" href="mailto:phbvy@gmail.com">phbvy.g@gmail.com</a>
                 </div>
-                <div class="sandboxwarning hidden col-start-1 col-span-3 bg-gray-100 rounded-3xl overflow-hidden py-3 px-5  animate no2">
-                    <p>Feel free to continue playing with it though!</p>            
+
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white rounded-3xl overflow-hidden py-3 px-5 col-start-1 col-span-2  animate no2">
+                    <a style="color: #1F38FA;" class="underline" href="https://www.linkedin.com/in/vyp/">Linkedin</a>
                 </div>
             </div>
 
-            <div id="displaymessagecontainer2" class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate"></div>
+            <div id="displaymessagecontainer"
+                class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate"></div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 justify-items-start space-y-2">
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white sandboxwarning hidden col-start-1 col-span-3  rounded-3xl overflow-hidden py-3 px-5  animate no2">
+                    <p>This is a sandbox for you to play with, so I can't read your messages.</p>
+                </div>
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white sandboxwarning hidden col-start-1 col-span-3  rounded-3xl overflow-hidden py-3 px-5  animate no2">
+                    <p>Let's talk through <a style="color: #1F38FA;" class="underline hover:font-medium"
+                            href="mailto:phbvy@gmail.com">email</a> or <a style="color: #1F38FA;" class="underline hover:font-medium"
+                            href="https://www.linkedin.com/in/vyp/">Linkedin</a> instead :D</p>
+                </div>
+                <div style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                    class=" border border-slate-100 bg-white sandboxwarning hidden col-start-1 col-span-3  rounded-3xl overflow-hidden py-3 px-5  animate no2">
+                    <p>Feel free to continue playing with it though!</p>
+                </div>
+            </div>
+
+            <div id="displaymessagecontainer2"
+                class="grid grid-cols-2 md:grid-cols-4 justify-items-end space-y-2 animate"></div>
 
             <div id="typingBubble" class="hidden grid grid-cols-2 md:grid-cols-4 justify-items-end">
-                <div class="bg-gray-100 rounded-3xl py-3 px-4 col-start-2 md:col-start-4 col-span-1">
+                <div
+                    class=" border border-slate-100 shadow-sm bg-white rounded-3xl py-3 px-4 col-start-2 md:col-start-4 col-span-1">
                     <div class="typing-dots">
                         <span></span>
                         <span></span>
@@ -247,27 +392,63 @@
             </div>
 
             <form class="flex flex-row flex-wrap gap-2 justify-end" id="commentform">
-                <input type="text" oninput=typingEffect() id="messagecontent" name="usermesssage" placeholder="Reply to Vy here..." style="color: #1F38FA;" class="shadow-sm grow w-32 max-w-full text-ellipsis rounded-3xl py-3 px-5 border border-[rgba(30,64,175,0.3)] text-xl placeholder-shown:italic">
-                <button class="rounded-3xl py-2 px-4 md:px-6 border border-blue-400 shadow-md w-fit text-white text-xl font-medium hover:ring-4 hover:ring-blue-400/40" style="background-color: #1F38FA;" type="submit">Send</button>
+                <input type="text" oninput=typingEffect() id="messagecontent" name="usermesssage"
+                    placeholder="Try this..." style="color: #1F38FA;"
+                    style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class="border border-slate-200 bg-white grow w-32 max-w-full text-ellipsis rounded-3xl py-3 px-5 hover:border-slate-300 text-xl placeholder-shown:italic">
+                <button style="background-color: #1F38FA;"
+                    class="border border-blue-800 rounded-3xl py-2 px-4 md:px-6 shadow-md w-fit text-white text-xl font-medium hover:ring-4 hover:ring-blue-400/40 transition-all duration-200"
+                    type="submit">Send</button>
             </form>
 
+            
+
         </div>
-    
-        <div class = "mx-auto overflow-hidden py-8 space-y-2 w-full">
-            <div class="rounded-3xl overflow-hidden flex flex-row">
-                <div class="basis-1/6 h-[30vh] bg-cover bg-center bg-[url('img/1.small.jpg')]"></div>
-                <div class="basis-1/6 h-[30vh] bg-cover bg-center bg-[url('img/2.small.jpg')]"></div>
-                <div class="basis-1/6 h-[30vh] bg-cover bg-center bg-[url('img/3.small.jpg')]"></div>
-                <div class="basis-1/6 h-[30vh] bg-cover bg-center bg-[url('img/4.small.jpg')]"></div>
-                <div class="basis-1/6 h-[30vh] bg-cover bg-center bg-[url('img/5.small.jpg')]"></div>
-                <div class="basis-1/6 h-[30vh] bg-cover bg-center bg-[url('img/6.small.jpg')]"></div>
+
+        <div class="mx-auto w-full">
+
+            <div class="col-span-full w-full relative h-[320px] mt-8" id="photo-stack">
+                <!-- inner wrapper centered: total spread ~1140px, offset by half -->
+                <div class="absolute top-0 left-1/2" style="transform: translateX(-570px);">
+                    <div class="absolute top-0 left-0 w-[220px] h-[280px] rounded-2xl overflow-hidden bg-cover bg-center bg-[url('img/1.small.jpg')] shadow-lg
+                            rotate-[-8deg] translate-x-[0px] translate-y-[10px] z-[1]
+                            transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]
+                            hover:scale-[1.06] hover:-translate-y-[5px] hover:shadow-2xl cursor-pointer">
+                    </div>
+                    <div class="absolute top-0 left-0 w-[230px] h-[290px] rounded-2xl overflow-hidden bg-cover bg-center bg-[url('img/5.small.jpg')] shadow-lg
+                            rotate-[-5deg] translate-x-[180px] translate-y-[5px] z-[2]
+                            transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]
+                            hover:scale-[1.06] hover:-translate-y-[5px] hover:shadow-2xl cursor-pointer">
+                    </div>
+                    <div class="absolute top-0 left-0 w-[225px] h-[285px] rounded-2xl overflow-hidden bg-cover bg-center bg-[url('img/4.small.jpg')] shadow-lg
+                            rotate-[-2deg] translate-x-[360px] translate-y-[15px] z-[3]
+                            transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]
+                            hover:scale-[1.06] hover:-translate-y-[5px] hover:shadow-2xl cursor-pointer">
+                    </div>
+                    <div class="absolute top-0 left-0 w-[228px] h-[288px] rounded-2xl overflow-hidden bg-cover bg-center bg-[url('img/3.small.jpg')] shadow-lg
+                            rotate-[2deg] translate-x-[540px] -translate-y-[5px] z-[4]
+                            transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]
+                            hover:scale-[1.06] hover:-translate-y-[20px] hover:shadow-2xl cursor-pointer">
+                    </div>
+                    <div class="absolute top-0 left-0 w-[232px] h-[292px] rounded-2xl overflow-hidden bg-cover bg-center bg-[url('img/2.small.jpg')] shadow-xl
+                            rotate-[5deg] translate-x-[720px] translate-y-[10px] z-[5]
+                            transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]
+                            hover:scale-[1.06] hover:-translate-y-[5px] hover:shadow-2xl cursor-pointer">
+                    </div>
+                    <div class="absolute top-0 left-0 w-[240px] h-[300px] rounded-2xl overflow-hidden bg-cover bg-center bg-[url('img/6.small.jpg')] shadow-2xl
+                            rotate-[8deg] translate-x-[900px] -translate-y-[5px] z-[6]
+                            transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]
+                            hover:scale-[1.06] hover:-translate-y-[20px] hover:shadow-2xl cursor-pointer">
+                    </div>
+                </div>
             </div>
-            <p>I try to make the best of my international life by taking film photos of places I have been to.</p>
-    
+            <p class="text-center text-slate-500 text-sm mt-4">I take photos sometimes in my free time.</p>
+
         </div>
-    
+
 
     </div>
     <script>lucide.createIcons();</script>
-    </body>
+</body>
+
 </html>

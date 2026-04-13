@@ -75,6 +75,11 @@ b {
 }
 
 
+
+#photo-stack div:hover {
+  z-index: 20 !important;
+}
+
 #backToTopBtn {
   display: block; /* Display the button */
   position: fixed; /* Fixed position */
