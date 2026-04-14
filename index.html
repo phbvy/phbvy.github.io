@@ -407,9 +407,10 @@
 
         <div class="mx-auto w-full">
 
-            <div class="col-span-full w-full relative h-[320px] mt-8" id="photo-stack">
+            <!-- Desktop + Mobile: spread layout, cropped on mobile -->
+            <div class="block col-span-full relative h-[360px] mt-8 overflow-hidden md:overflow-visible -mx-4 md:-mx-12 xl:-mx-32" id="photo-stack">
                 <!-- inner wrapper centered: total spread ~1140px, offset by half -->
-                <div class="absolute top-0 left-1/2" style="transform: translateX(-570px);">
+                <div class="absolute left-1/2" style="transform: translateX(-570px); top: 30px;">
                     <div class="absolute top-0 left-0 w-[220px] h-[280px] rounded-2xl overflow-hidden bg-cover bg-center bg-[url('img/1.small.jpg')] shadow-lg
                             rotate-[-8deg] translate-x-[0px] translate-y-[10px] z-[1]
                             transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.4,0.64,1)]
@@ -442,6 +443,7 @@
                     </div>
                 </div>
             </div>
+
             <p class="text-center text-slate-500 text-sm mt-4">I take photos sometimes in my free time.</p>
 
         </div>
