@@ -11,6 +11,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        a.animate.no2:hover { box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.4) !important; }
+    </style>
     <script src="../scripts.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
@@ -25,55 +28,60 @@
     <div class="md:container mx-auto md:py-12 py-6 px-4 mb-32 space-y-28 xl:w-3/4 w-auto">
         <div class="space-y-8">
             <nav style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
-                class="border border-slate-100 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
-                <a class="hover:bg-slate-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-700"
+                class="border border-gray-100 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
                     href="../index.html">Home</a>
-                <a class="hover:bg-slate-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-700"
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
                     href="../index.html#by">Portfolio</a>
-                <a class="hover:bg-slate-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-700"
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
                     href="../index.html#about">About</a>
-                <a class="hover:bg-slate-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-700"
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
                     href="../index.html#contact">Contact</a>
             </nav>
 
-            <div class="rounded-3xl overflow-hidden bg-white border border-slate-100 md:h-[70vh] flex flex-col"
+            <div class="rounded-3xl overflow-hidden bg-white border border-gray-100 md:h-[70vh] flex flex-col"
                 style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);">
                 <!-- Main content area -->
-                <div class="flex flex-col md:flex-row md:items-stretch p-8 md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-16 md:flex-1 md:min-h-0">
+                <div class="flex flex-col md:flex-row md:items-stretch p-8  md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-8 md:flex-1 md:min-h-0">
                     <!-- Text -->
                     <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10">
                         <!-- Tag -->
                         <div class="flex gap-2 flex-wrap">
                             <span style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #1F38FA;"
-                                class="border border-blue-700 text-white text-sm py-1 px-4 rounded-full mb-4">Financial Services</span>
+                                class="border border-orange-700 text-white text-sm py-1 px-4 rounded-full mb-4">Financial Services</span>
                         </div>
                         <!-- Heading + description -->
                         <div class="space-y-3 md:pb-12">
                             <h1 class="text-3xl md:text-4xl font-medium leading-tight">Building Trust in Financial Services through Design</h1>
-                            <p class="text-slate-500 text-base">Homebase (YC W21) needed a website that earned trust from real-estate financing customers. I led research and redesign of their website to improve usability and credibility.</p>
+                            <p class="text-gray-500 text-base">Homebase (YC W21) needed a website that earned trust from real-estate financing customers. I led research and redesign of their website to improve usability and credibility.</p>
+                            
                         </div>
                     </div>
                     <!-- Hero image -->
-                    <div class="w-full md:w-1/2 rounded-xl md:rounded-2xl md:rounded-bl-none md:rounded-r-none md:h-auto overflow-hidden flex-shrink-0">
-                        <img src="case-img/homebase-cover.png" class="w-full h-auto md:h-full object-contain md:object-cover md:object-top">
+                    <div class="w-full md:w-3/5 rounded-xl md:rounded-2xl md:rounded-bl-none md:rounded-r-none md:h-auto overflow-hidden flex-shrink-0 relative" style="background-color: #1D2C63;">
+                        <img src="case-img/homebase-mockup.png"
+                            class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
+                            alt="Homebase mockup">
                     </div>
                 </div>
                 <!-- Bottom feature strip -->
-                <div class="border-t border-slate-100 grid grid-cols-3 divide-x divide-slate-100">
+                <div class="border-t border-gray-100 grid grid-cols-3 divide-x divide-gray-100">
                     <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-12 py-4">
-                        <i data-lucide="users" class="w-4 h-4 text-slate-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-slate-500">User Research</span>
+                        <i data-lucide="users" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
+                        <span class="text-xs md:text-sm text-gray-500">User Research</span>
                     </div>
                     <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="layout" class="w-4 h-4 text-slate-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-slate-500">UX Design</span>
+                        <i data-lucide="pen-tool" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
+                        <span class="text-xs md:text-sm text-gray-500">UI Design</span>
                     </div>
                     <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="pen-tool" class="w-4 h-4 text-slate-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-slate-500">UI Design</span>
+                        <i data-lucide="layout" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
+                        <span class="text-xs md:text-sm text-gray-500">UX Design</span>
                     </div>
                 </div>
             </div>
+
+
         </div>
 
         <div class="px-8 md:px-12 space-y-28">
@@ -87,6 +95,11 @@
                     trustworthy light. Trust is vital in the financial services industry. During my time at Homebase, I
                     helped the company to improve the usability of the site and revamp its look to evoke trust among its
                     customers and prospective customers.</p>
+            </div>
+
+            <div class="rounded-2xl p-4 bg-gray-100 space-y-4">
+                    <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-7.png">
+                    <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-9.png">
             </div>
         </div>
 
@@ -111,7 +124,7 @@
                 website's traffic information, ads metrics and lead data to understand the general patterns of usage:
                 where users come from, what type of devices users use, what users do on the websites, …</p>
             <div class="space-y-2">
-                <p class="rounded-full bg-[#1F38FA] text-slate-50 py-1 px-3 text-sm w-fit font-medium">How we empathize</p>
+                <p class="rounded-full bg-[#1F38FA] text-gray-50 py-1 px-3 text-sm w-fit font-medium">How we empathize</p>
 
                 <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
 
@@ -142,7 +155,7 @@
 
 
             <div class="space-y-2">
-                <p class="rounded-full bg-[#1F38FA] text-slate-50 py-1 px-3 text-sm w-fit font-medium">Outcome</p>
+                <p class="rounded-full bg-[#1F38FA] text-gray-50 py-1 px-3 text-sm w-fit font-medium">Outcome</p>
 
 
                 <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
@@ -213,10 +226,14 @@
         </div>
 
         <div class="space-y-4">
-            <img class="rounded-3xl" src="case-img/homebase-6.png">
-            <img class="rounded-3xl" src="case-img/homebase-7.png">
-            <img class="rounded-3xl" src="case-img/homebase-8.png">
-            <img class="rounded-3xl" src="case-img/homebase-9.png">
+
+            <div class="rounded-2xl p-4 bg-gray-100 space-y-4">
+                    <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-10.png">
+                    <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-8.png">
+                    <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-6.png">
+                    <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-9.png">
+            </div>
+
         </div>
 
         <div class="space-y-8 col-start-1 col-span-4 w-full animate">
@@ -228,18 +245,21 @@
 
                     <a href="vy-for-canda.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                        class=" bg-white rounded-3xl border border-slate-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        class=" bg-white rounded-3xl border border-gray-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div class="relative h-72 bg-cover bg-center bg-[url('case-img/canda-cover.png')]">
+                            <div class="relative h-72 overflow-hidden flex items-center justify-center" style="background-color: #F8F7F2;">
+                                <img src="case-img/canda-mockup.png"
+                                    class="w-[70%] max-w-none flex-shrink-0"
+                                    alt="C&A mockup">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
-                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
                                 style="background-color: #1F38FA;">Fashion</span>
                             <div class="space-y-1">
                                 <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital
                                     In-store Assistant</p>
-                                <p class="text-slate-500">@C&A, Germany</p>
+                                <p class="text-gray-500">@C&A, Germany</p>
                             </div>
 
                         </div>
@@ -247,19 +267,19 @@
 
                     <a href="cases/vy-for-bruce.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                        class=" bg-white border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        class=" bg-white border border-gray-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
                             <div class="relative h-72 bg-cover bg-center bg-[url('case-img/bruce-mockup-bg.png')]">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
 
-                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
                                 style="background-color: #1F38FA;">Fitnesstech</span>
                             <div class="space-y-1">
                                 <p class="text-xl font-medium">Redesign Membership Cancellation process to improve User
                                     Retention</p>
-                                <p class="text-slate-500">@Bruce, Sweden</p>
+                                <p class="text-gray-500">@Bruce, Sweden</p>
                             </div>
 
                         </div>
@@ -271,18 +291,21 @@
 
                     <a href="vy-for-bachable.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                        class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        class=" bg-white rounded-3xl border border-gray-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm hover:shadow-sm cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div class="relative h-72 bg-cover bg-center bg-[url('case-img/bachable-cover.png')]">
+                            <div class="relative h-72 overflow-hidden" style="background-color: #FF4D00;">
+                                <img src="case-img/bachable-mockup.png"
+                                    class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
+                                    alt="Bachable mockup">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
-                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
                                 style="background-color: #1F38FA;">Musical Notation Editor</span>
                             <div class="space-y-1">
                                 <p class="text-xl font-medium">Building a Design System for Faster Design to Shipping
                                 </p>
-                                <p class="text-slate-500">@Bachable, Sweden</p>
+                                <p class="text-gray-500">@Bachable, Sweden</p>
                             </div>
 
 
@@ -291,17 +314,20 @@
 
                     <a href="vy-for-workflw.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                        class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm  cursor-pointer block animate no2 p-3 ">
+                        class=" bg-white rounded-3xl border border-gray-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm  cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div class="relative h-72 bg-cover bg-center bg-[url('case-img/workflw-mockup-bg.png')]">
+                            <div class="relative h-72 overflow-hidden flex items-center justify-center" style="background-color: #F2EEFF;">
+                                <img src="case-img/workflw-mockup.png"
+                                    class="w-[70%] max-w-none flex-shrink-0"
+                                    alt="Workflw mockup">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
-                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
                                 style="background-color: #1F38FA;">To-do App</span>
                             <div class="space-y-1">
                                 <p class="text-xl font-medium">A User Engagement Take on The Classic To-do App</p>
-                                <p class="text-slate-500">@KTH, Sweden</p>
+                                <p class="text-gray-500">@KTH, Sweden</p>
                             </div>
 
 

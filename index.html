@@ -15,6 +15,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        a.animate.no2:hover,
+        input:hover,
+        input:focus,
+        button:hover,
+        button:focus { box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.4) !important; outline: none; }
+    </style>
     <script src="scripts.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
@@ -95,10 +102,13 @@
                 <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
 
                     <a href="cases/vy-for-canda.html"
-                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                    class=" bg-white rounded-3xl border border-slate-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);;"
+                    class="hover:border-blue-500 bg-white rounded-3xl border border-slate-200 transition-all duration-300 ease-out cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/canda-cover.png')]">
+                            <div class="relative h-72 overflow-hidden flex items-center justify-center" style="background-color: #F8F7F2;">
+                                <img src="cases/case-img/canda-mockup.png"
+                                    class="w-[70%] max-w-none flex-shrink-0"
+                                    alt="C&A mockup">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
@@ -115,10 +125,9 @@
 
                     <a href="cases/vy-for-bruce.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                    class=" bg-white border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                    class="hover:border-blue-500 bg-white border border-slate-200 rounded-3xl transition-all duration-300 ease-out cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div
-                                class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/bruce-mockup-bg.png')]">
+                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/bruce-mockup-bg.png')]">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
@@ -140,9 +149,12 @@
 
                     <a href="cases/vy-for-bachable.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                    class="hover:border-blue-500 bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div class="object-cover object-top relative h-72 bg-cover bg-center bg-[url('cases/case-img/bachable-cover.png')]">
+                            <div class="relative h-72 overflow-hidden" style="background-color: #FF4D00;">
+                                <img src="cases/case-img/bachable-mockup.png"
+                                    class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
+                                    alt="Bachable mockup">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
@@ -160,10 +172,12 @@
 
                     <a href="cases/vy-for-workflw.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm  cursor-pointer block animate no2 p-3 ">
+                    class="hover:border-blue-500 bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out  cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div
-                                class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/workflw-mockup-bg.png')]">
+                            <div class="relative h-72 overflow-hidden flex items-center justify-center" style="background-color: #F2EEFF;">
+                                <img src="cases/case-img/workflw-mockup.png"
+                                    class="w-[70%] max-w-none flex-shrink-0"
+                                    alt="Workflw mockup">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
@@ -184,9 +198,12 @@
 
                     <a href="cases/vy-for-homebase.html"
                         style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 2px 2px 4px rgb(0 0 0 / 0.02);"
-                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                    class="hover:border-blue-500 bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out cursor-pointer block animate no2 p-3 ">
                         <div class="rounded-2xl overflow-hidden">
-                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/homebase-cover.png')]">
+                            <div class="relative h-72 overflow-hidden" style="background-color: #1D2C63;">
+                                <img src="cases/case-img/homebase-mockup.png"
+                                    class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
+                                    alt="Homebase mockup">
                             </div>
                         </div>
                         <div class="px-2 py-6 space-y-2">
@@ -201,23 +218,7 @@
                         </div>
                     </a>
 
-                    <a href="cases/vy-for-hetki.html"
-                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                    class=" bg-white rounded-3xl border border-slate-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
-                        <div class="rounded-2xl overflow-hidden">
-                            <div class="relative h-72 bg-cover bg-center bg-[url('cases/case-img/Hetki-cover.png')]">
-                            </div>
-                        </div>
-                        <div class="px-2 py-6 space-y-2">
-                            <span class="text-xs rounded-full text-slate-50 py-1 px-3 w-fit text-center inline-block"
-                                style="background-color: #1F38FA;">AI Sales Assistant</span>
-                            <div class="space-y-1">
-                                <p class="text-xl font-medium">Navigating Competitive AI Landscape with Design</p>
-                                <p class="text-slate-500">@Hetki.ai, Finland</p>
-                            </div>
-
-                        </div>
-                    </a>
+                    
 
                 </div>
 
@@ -393,11 +394,11 @@
 
             <form class="flex flex-row flex-wrap gap-2 justify-end" id="commentform">
                 <input type="text" oninput=typingEffect() id="messagecontent" name="usermesssage"
-                    placeholder="Try this..." style="color: #1F38FA;"
-                    style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                    class="border border-slate-200 bg-white grow w-32 max-w-full text-ellipsis rounded-3xl py-3 px-5 hover:border-blue-500 text-xl placeholder-shown:italic">
+                    placeholder="Try this..."
+                    style="color: #1F38FA; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                    class="border border-slate-200 bg-white grow w-32 max-w-full text-ellipsis rounded-3xl py-3 px-5 hover:border-blue-500 text-xl placeholder-shown:italic transition-all duration-300 ease-out">
                 <button style="background-color: #1F38FA;"
-                    class="border border-blue-800 rounded-3xl py-2 px-4 md:px-6 shadow-md w-fit text-white text-xl font-medium hover:ring-4 hover:ring-blue-400/40 transition-all duration-200"
+                    class="border border-blue-800 rounded-3xl py-2 px-4 md:px-6 shadow-md w-fit text-white text-xl font-medium transition-all duration-200"
                     type="submit">Send</button>
             </form>
 
