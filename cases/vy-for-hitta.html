@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Vy's Portfolio</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
+    <link rel="stylesheet" href="../main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        a.animate.no2:hover { box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.4) !important; }
+    </style>
+    <script src="../scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+</head>
+
+<body style="background-color: #FCFCFC;">
+    <div id="start"></div>
+    <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300"
+        href="#start" id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up"
+            class="w-6 h-6 text-gray-900"></i></a>
+
+
+    <div class="md:container mx-auto md:py-12 py-6 px-4 mb-32 md:space-y-28 space-y-16 xl:w-3/4 w-auto">
+        <div class="space-y-8">
+            <nav style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);"
+                class="border border-gray-100 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
+                    href="../index.html">Home</a>
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
+                    href="../index.html#by">Portfolio</a>
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
+                    href="../index.html#about">About</a>
+                <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
+                    href="../index.html#contact">Contact</a>
+            </nav>
+
+            <div class="rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-100 md:h-[70vh] max-h-[720px] flex flex-col"
+                style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);">
+                <!-- Main content area -->
+                <div class="flex flex-col md:flex-row md:items-stretch p-8 md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-8 md:flex-1 md:min-h-0">
+                    <!-- Text -->
+                    <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10">
+                        <!-- Tag -->
+                        <div class="flex gap-2 flex-wrap">
+                            <span style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #13B5B1;"
+                                class="border border-teal-700 text-white text-sm py-1 px-4 rounded-full mb-4">B2B SaaS</span>
+                        </div>
+                        <!-- Heading + description -->
+                        <div class="space-y-3 md:pb-12">
+                            <h1 class="text-3xl md:text-4xl font-medium leading-tight">One Platform Built for Swedish Businesses</h1>
+                            <p class="text-gray-500 text-base">Hitta.se is Sweden's leading people and business
+                                directory, used by millions of Swedes. Hitta.se also offers Swedish business owners
+                                a suite of tools that help them manage customer reviews and social posting in one
+                                place. As design lead, I shaped the product design in close collaboration with
+                                Hitta's product team and a digital designer.</p>
+                        </div>
+                    </div>
+                    <!-- Hero image -->
+                    <div class="w-full md:w-3/5 h-[300px] md:h-auto rounded-xl md:rounded-2xl md:rounded-bl-none md:rounded-r-none overflow-hidden flex-shrink-0 relative" style="background-color: #13B5B1;">
+                        <img src="case-img/hitta-1.png"
+                            class="absolute left-10 top-10 h-[110%] max-w-none rounded-t-xl"
+                            alt="Hitta platform mockup">
+                    </div>
+                </div>
+                <!-- Bottom feature strip -->
+                <div class="border-t border-gray-100 grid grid-cols-3 divide-x divide-gray-100">
+                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-12 py-4">
+                        <i data-lucide="signpost" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
+                        <span class="text-xs md:text-sm text-gray-500">Design Lead</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
+                        <i data-lucide="layout" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
+                        <span class="text-xs md:text-sm text-gray-500">UX Design</span>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
+                        <i data-lucide="layout" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
+                        <span class="text-xs md:text-sm text-gray-500">Product Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:px-12 md:space-y-28 space-y-16">
+
+        <div class="md:grid md:grid-cols-3 md:gap-12 flex-col space-y-6 md:space-y-0">
+
+            <div class="space-y-2 col-start-1 col-span-2">
+                <h2 class="text-2xl font-medium">Problem Description</h2>
+                <p class="text-lg text-gray-600">Hitta.se is Sweden's leading people and business directory, used by
+                    millions of Swedes. Hitta.se also offers Swedish business owners a suite of tools that help them
+                    manage and grow their online presence.</p>
+                <p class="text-lg text-gray-600">Business owners were struggling to manage two critical aspects
+                    of their online presence separately: responding to customer reviews spread across multiple
+                    platforms, and keeping up a consistent social media presence. I was brought in to design a
+                    unified B2B product that brings both workflows into a single, cohesive platform.</p>
+            </div>
+
+            <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
+                <img class="h-[48px] w-auto self-start" src="case-img/hitta-logo.png">
+                <div class="pt-12 space-y-1">
+                    <h2 class="font-medium">About Hitta.se</h2>
+                    <p class="text-gray-500">Sweden's leading online directory for finding people, businesses, and
+                        addresses &mdash; and a growing B2B platform helping businesses manage their digital
+                        presence.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex-col space-y-4">
+            <h2 class="text-2xl font-medium">Context</h2>
+
+            <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6 h-full">
+                    <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h2 class="font-medium">Who the Users Are</h2>
+                        <p class="text-gray-500">Small and medium business owners &mdash; restaurants, salons,
+                            clinics, retailers &mdash; who want to build their online reputation but lack the time
+                            or tools to manage reviews and social media separately.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <i data-lucide="puzzle" class="w-6 h-6"></i>
+                    <div class="pt-12 space-y-1">
+                        <h2 class="font-medium">The Opportunity</h2>
+                        <p class="text-gray-500">Hitta.se is already where customers look up businesses. The
+                            opportunity was to build a management layer on top of that, so businesses could control
+                            their presence right where the attention already is.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-col space-y-14">
+            <h2 class="text-2xl font-medium">Design</h2>
+
+            <div class="flex-col space-y-8">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-medium">Presence Overview</h3>
+                    <p class="text-lg text-gray-600">A summary dashboard showing average review rating, recent
+                        review activity, and upcoming scheduled posts &mdash; giving business owners a quick health
+                        check of their online presence at a glance.</p>
+                </div>
+                <img class="rounded-xl md:rounded-3xl w-full" src="case-img/hitta-1.png">
+            </div>
+
+            <div class="flex-col space-y-8">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-medium">Review Inbox</h3>
+                    <p class="text-lg text-gray-600">A unified inbox aggregating reviews from all connected
+                        platforms, with a clear unread/responded status so nothing slips through. Responding is a
+                        single inline action &mdash; no platform switching required.</p>
+                </div>
+                <img class="rounded-xl md:rounded-3xl w-full" src="case-img/hitta-2.png">
+            </div>
+
+            <div class="flex-col space-y-8">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-medium">Social Composer</h3>
+                    <p class="text-lg text-gray-600">A lightweight post composer that lets business owners write
+                        once and publish to multiple connected channels simultaneously, with an optional scheduling
+                        calendar for planned posts.</p>
+                </div>
+                <img class="rounded-xl md:rounded-3xl w-full" src="case-img/hitta-3.png">
+            </div>
+
+        </div>
+
+        <div class="space-y-8">
+            <div class="space-y-2">
+                <h3 class="text-xl font-medium">Afterthoughts</h3>
+                <p class="text-lg text-gray-600">Designing a B2B product for time-constrained business owners
+                    reinforced the importance of task focus over feature completeness:</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex flex-col space-y-4">
+
+                    <div class="flex flex-row space-x-2 items-start">
+                        <div class="bg-gray-900 rounded-full p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium flex items-center justify-center shrink-0">1</div>
+                        <p class="rounded-3xl bg-gray-100 px-4 py-2">B2B users are goal-oriented and time-scarce.
+                            Every extra step in a workflow has a real cost &mdash; B2B design must prioritise
+                            getting the user to completion as fast as possible.</p>
+                    </div>
+
+                    <div class="flex flex-row space-x-2 items-start">
+                        <div class="bg-gray-900 rounded-full p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium flex items-center justify-center shrink-0">2</div>
+                        <p class="rounded-3xl bg-gray-100 px-4 py-2">Combining two distinct workflows into one
+                            product only works if the unification creates genuine value. Reviews and social posting
+                            share the same underlying need &mdash; a business's public voice &mdash; which is what
+                            made the combination coherent rather than arbitrary.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-8 col-start-1 col-span-4 w-full animate">
+            <h2 class="text-2xl font-medium">Check out other works from Vy: </h2>
+
+            <div class="space-y-4 md:gap-4 col-start-1 col-span-4 w-full">
+
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
+
+                    <a href="vy-for-canda.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                        class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                            <div class="relative h-72 max-h-[240px]  overflow-hidden flex items-center justify-center" style="background-color: #F8F7F2;">
+                                <img src="case-img/canda-mockup.png"
+                                    class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
+                                    alt="C&A mockup">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Fashion</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital
+                                    In-store Assistant</p>
+                                <p class="text-gray-500">@C&A, Germany</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="vy-for-bruce.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                        class=" bg-white border border-gray-200 rounded-2xl md:rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                            <div class="relative h-72 max-h-[240px] overflow-hidden" style="background-color: #D8FD53;">
+                                <img src="case-img/bruce-mockup.png"
+                                    class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
+                                    alt="Bruce mockup">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Fitnesstech</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Redesign Membership Cancellation Process to Improve
+                                    User Retention</p>
+                                <p class="text-gray-500">@Bruce, Sweden</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
+
+                    <a href="vy-for-bachable.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                        class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                            <div class="relative h-72 max-h-[240px] overflow-hidden" style="background-color: #FF4D00;">
+                                <img src="case-img/bachable-mockup.png"
+                                    class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
+                                    alt="Bachable mockup">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Musical Notation Editor</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Building a Design System for Faster Design to
+                                    Shipping</p>
+                                <p class="text-gray-500">@Bachable, Sweden</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="vy-for-homebase.html"
+                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 2px 2px 4px rgb(0 0 0 / 0.02);"
+                        class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                            <div class="relative h-72 max-h-[240px]  overflow-hidden" style="background-color: #1D2C63;">
+                                <img src="case-img/homebase-mockup.png"
+                                    class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
+                                    alt="Homebase mockup">
+                            </div>
+                        </div>
+                        <div class="px-2 py-6 space-y-2">
+                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                style="background-color: #1F38FA;">Fintech</span>
+                            <div class="space-y-1">
+                                <p class="text-xl font-medium">Building Digital Trust in Financial Service with
+                                    Design</p>
+                                <p class="text-gray-500">@Homebase, Vietnam</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        </div><!-- end content wrapper -->
+
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</content>
+</invoke>
