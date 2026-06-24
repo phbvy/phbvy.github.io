@@ -42,27 +42,33 @@
             <div class="rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-100 md:h-[70vh] max-h-[720px] flex flex-col"
                 style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);">
                 <!-- Main content area -->
-                <div class="flex flex-col md:flex-row md:items-stretch p-8  md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-12 md:flex-1 md:min-h-0">
+                <div class="flex flex-col md:flex-row md:items-stretch p-8 pb-6 md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-12 md:flex-1 md:min-h-0">
                     <!-- Text -->
                     <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10">
                         <!-- Tag -->
                         <div class="flex gap-2 flex-wrap">
                             <span style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #1F38FA;"
-                                class="border border-blue-700 text-white text-sm py-1 px-4 rounded-full mb-4">Financial Services</span>
+                                class="border border-blue-700 text-white text-sm py-1 px-4 rounded-full mb-4">Fintech</span>
                         </div>
                         <!-- Heading + description -->
                         <div class="space-y-3 md:pb-12">
                             <h1 class="text-3xl md:text-4xl font-medium leading-tight">Building Trust in Financial Services through Design</h1>
                             <p class="text-gray-500 text-base">Homebase (YC W21) needed a website that earned trust from real-estate financing customers. I led research and redesign of their website to improve usability and credibility.</p>
-                            
+
                         </div>
                     </div>
-                    <!-- Hero image -->
-                    <div class="w-full md:w-3/5 h-[300px] md:h-auto rounded-xl md:rounded-2xl md:rounded-bl-none md:rounded-r-none overflow-hidden flex-shrink-0 relative" style="background-color: #1D2C63;">
+                    <!-- Desktop hero image (side by side) -->
+                    <div class="hidden md:block md:w-3/5 md:rounded-2xl md:rounded-bl-none md:rounded-r-none overflow-hidden flex-shrink-0 relative">
                         <img src="case-img/homebase-mockup.png"
                             class="absolute left-10 top-10 h-[110%] max-w-none rounded-t-xl"
                             alt="Homebase mockup">
                     </div>
+                </div>
+                <!-- Mobile hero image (full-width, outside padded area) -->
+                <div class="md:hidden h-[200px] overflow-hidden relative flex-shrink-0" style="background-color: #1D2C63;">
+                    <img src="case-img/homebase-mockup.png"
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-[130%] h-auto"
+                        alt="Homebase mockup">
                 </div>
                 <!-- Bottom feature strip -->
                 <div class="border-t border-gray-100 grid grid-cols-3 divide-x divide-gray-100">
@@ -306,7 +312,7 @@
                         </div>
                         <div class="px-2 py-6 space-y-2">
                             <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
-                                style="background-color: #1F38FA;">Musical Notation Editor</span>
+                                style="background-color: #1F38FA;">Music Notation Editor</span>
                             <div class="space-y-1">
                                 <p class="text-xl font-medium">Building a Design System for Faster Design to Shipping
                                 </p>

@@ -45,13 +45,13 @@
             <div class="rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-100 md:h-[70vh] max-h-[720px] flex flex-col"
                 style="box-shadow: 0 2px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.02);">
                 <!-- Main content area -->
-                <div class="flex flex-col md:flex-row md:items-stretch p-8  md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-8 md:flex-1 md:min-h-0">
+                <div class="flex flex-col md:flex-row md:items-stretch p-8 pb-6 md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-8 md:flex-1 md:min-h-0">
                     <!-- Text -->
                     <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10">
                         <!-- Tag -->
                         <div class="flex gap-2 flex-wrap">
                             <span style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05),inset 0 2px 4px rgb(0 0 0 / 0.1); background-color: #f54a00;"
-                                class="border border-orange-700 text-white text-sm py-1 px-4 rounded-full mb-4">Musical Notation Editor</span>
+                                class="border border-orange-700 text-white text-sm py-1 px-4 rounded-full mb-4">Music Notation Editor</span>
                         </div>
                         <!-- Heading + description -->
                         <div class="space-y-3 md:pb-12">
@@ -62,15 +62,21 @@
                                 shared foundation.</p>
                         </div>
                     </div>
-                    <!-- Hero image -->
-                    <div class="w-full md:w-3/5 h-[300px] md:h-auto rounded-xl md:rounded-2xl md:rounded-bl-none md:rounded-r-none overflow-hidden flex-shrink-0 relative" style="background-color: #FF4D00;">
+                    <!-- Desktop hero image (side by side) -->
+                    <div class="hidden md:block md:w-3/5 md:rounded-2xl md:rounded-bl-none md:rounded-r-none overflow-hidden flex-shrink-0 relative">
                         <img src="case-img/bachable-mockup.png"
                             class="absolute left-10 top-10 h-[110%] max-w-none rounded-t-xl"
                             alt="Bachable mockup">
                     </div>
                 </div>
+                <!-- Mobile hero image (full-width, outside padded area) -->
+                <div class="md:hidden h-[200px] rounded-t-xl overflow-hidden relative flex-shrink-0">
+                    <img src="case-img/bachable-mockup.png"
+                        class="absolute top-0 left-1/2 -translate-x-1/2 h-auto"
+                        alt="Bachable mockup">
+                </div>
                 <!-- Bottom feature strip -->
-                <div class="border-t border-gray-100 grid grid-cols-3 divide-x divide-gray-100">
+                <div class="border-t border-gray-100 grid grid-cols-2 divide-x divide-gray-100">
                     <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-12 py-4">
                         <i data-lucide="layers" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
                         <span class="text-xs md:text-sm text-gray-500">Design Systems</span>
@@ -78,10 +84,6 @@
                     <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
                         <i data-lucide="pen-tool" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
                         <span class="text-xs md:text-sm text-gray-500">UI Design</span>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="package" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">Component Library</span>
                     </div>
                 </div>
             </div>
@@ -344,10 +346,10 @@
                 </div>
 
 
-                <div class="rounded-2xl  pt-4 bg-gray-100 space-y-4">
+                <div class="rounded-2xl  md:pt-4 pt-2 bg-gray-100 space-y-4">
                     <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-2.png">
                 </div>
-                <div class="rounded-2xl bg-gray-100 pt-4  space-y-4">
+                <div class="rounded-2xl bg-gray-100 md:pt-4 pt-2 space-y-4">
                     <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-3.png">
                 </div>
 
