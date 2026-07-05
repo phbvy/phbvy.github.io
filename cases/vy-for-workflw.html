@@ -25,7 +25,7 @@
 
 
     <div class="md:container mx-auto md:py-12 py-6 px-4 mb-32 md:space-y-28 space-y-16 xl:w-3/4 w-auto">
-        <div class="space-y-8">
+        <div class="space-y-12">
             <nav style=""
                 class="border border-gray-200 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
                 <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
@@ -38,44 +38,27 @@
                     href="../index.html#contact">Contact</a>
             </nav>
 
-            <div class="rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-200 md:h-[70vh] max-h-[720px] flex flex-col"
-                style="">
-                <!-- Main content area -->
-                <div class="flex flex-col md:flex-row md:items-stretch p-8 pb-0 md:p-12 md:pb-0 gap-6 md:gap-16 md:flex-1 md:min-h-0">
-                    <!-- Text -->
-                    <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10 md:pb-12">
-                        <!-- Tag -->
-                        <div class="flex gap-2 flex-wrap">
-                            <span style="background-color: #1F38FA;"
-                                class="border border-gray-200 text-white text-sm py-1 px-4 rounded-full mb-4">To-do App</span>
-                        </div>
-                        <!-- Heading + description -->
-                        <div class="space-y-3">
-                            <h1 class="text-3xl md:text-4xl font-medium leading-tight">A User Engagement Take on The
-                                Classic To-do App</h1>
-                            <p class="text-gray-500 text-base">To-do apps should help people get things done, but
-                                maintaining one can feel like another task. I explored how gamification and UX design
-                                can make task management genuinely engaging and effective.</p>
-                        </div>
-                    </div>
-                    <!-- Hero image -->
-                    <div class="w-full md:w-1/3 h-[500px] md:h-auto overflow-hidden flex-shrink-0">
-                        <img src="case-img/workflw-hero.png" class="object-cover object-top">
+            <!-- Text section -->
+            <div class="space-y-14 md:px-12">
+                <div class="space-y-4">
+                    <span class="text-xs rounded-full text-white py-1 px-3 w-fit text-center inline-block" style="background-color: #1F38FA;">To-do App</span>
+                    <h1 class="text-3xl md:text-4xl font-medium leading-tight md:max-w-[70%]">A User Engagement Take on The Classic To-do App</h1>
+                </div>
+                <div class="md:grid md:grid-cols-3 md:gap-x-16 md:items-end flex-col space-y-4 md:space-y-0">
+                    <p class="text-lg text-gray-600 col-span-2">To-do apps should help people get things done, but maintaining one can feel like another task. I explored how gamification and UX design can make task management genuinely engaging and effective.</p>
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-gray-500 md:flex-col md:gap-1 md:items-end">
+                        <p>#UX Research</p>
+                        <p>#UX Design</p>
+                        <p>#Gamification</p>
                     </div>
                 </div>
-                <!-- Bottom feature strip -->
-                <div class="border-t border-gray-200 grid grid-cols-3 divide-x divide-gray-100">
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-12 py-4">
-                        <i data-lucide="search" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">UX Research</span>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="layout" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">UX Design</span>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="zap" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">Gamification</span>
+            </div>
+
+            <!-- Image card -->
+            <div class="md:px-12">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <div class="bg-[#F2EEFF] h-[280px] md:h-[400px] overflow-hidden rounded-2xl relative">
+                        <img src="case-img/workflw-mockup.png" class="absolute left-1/2 -translate-x-1/2 top-12 h-[125%] max-w-none" alt="Workflw mockup">
                     </div>
                 </div>
             </div>
@@ -83,8 +66,6 @@
 
         <div class="md:px-12 md:space-y-28 space-y-16">
 
-        <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-mockup.png">
-        <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-11-nobg.png">
 
 
     
@@ -93,7 +74,7 @@
                 <h2 class="text-xl font-medium">Problem Description</h2>
                 <p class="text-lg text-gray-600">To-do apps are created to help people complete things they need to do, however, sometimes mantaining a useful to-do app can be seen as creating another task for users.</p>
             </div>
-<img class="rounded-xl md:rounded-3xl" src="case-img/workflw-1.png">
+<div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-1.png"></div>
 
         </div>
 
@@ -108,9 +89,9 @@
             </div>
 
             
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-2.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-3.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-4.png">
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-2.png"></div>
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-3.png"></div>
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-4.png"></div>
             
 
         </div>
@@ -120,7 +101,7 @@
                 <h2 class="text-xl font-medium">Design Approach</h2>
                 <p class="text-lg text-gray-600">After gaining a better understanding of the target users' pain points, their needs and current alternatives, I arrived at the following How-Might-We statement that guided the design process.</p>
             </div>
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-5.png">
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-5.png"></div>
 
         </div>
 
@@ -129,8 +110,8 @@
                 <h2 class="text-xl font-medium">UX Design Theory: Gamification</h2>
                 <p class="text-lg text-gray-600">Games are the best at engaging users, therefore, I looked toward one of the most engaging/addictive game on the mobile game market for wisdoms that could be applicable for the design of this to-do app.</p>
             </div>
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-6.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-7.png">
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-6.png"></div>
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-7.png"></div>
             
         </div>
        
@@ -140,10 +121,11 @@
                 <h2 class="text-xl font-medium">Product Design</h2>
                 <p class="text-lg text-gray-600">An aha! moment occured as I realized that the easiest way help users maintain the habits of using to-do app is to make it feel like they are not using the app at all. Reducing the time users spend on the app is the best way to keep the users.</p>
             </div>
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-8.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-9.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-11.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/workflw-12.png">
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-8.png"></div>
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-9.png"></div>
+            
+                    <div class="bg-white border border-gray-200 p-2 md:p-12 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-11-nobg.png"></div>
+                    <div class="bg-white border border-gray-200 p-2 md:p-12 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-mockup.png"></div>
 
         </div>
 

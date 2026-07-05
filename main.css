@@ -81,12 +81,19 @@ b {
 }
 
 #backToTopBtn {
-  display: block; /* Display the button */
-  position: fixed; /* Fixed position */
-  bottom: 20px; /* Place the button 20px from the bottom */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap other elements */
-  text-align: center; /* Center the text */
-  cursor: pointer; /* Add a mouse pointer on hover  */
-  text-decoration: none; /* Remove underline */
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  #backToTopBtn {
+    right: auto;
+    left: 30px;
+  }
 }

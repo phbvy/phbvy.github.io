@@ -29,7 +29,7 @@
 
 
     <div class="md:container mx-auto md:py-12 py-6 px-4 mb-32 md:space-y-28 space-y-16 xl:w-3/4 w-auto">
-        <div class="space-y-8">
+        <div class="space-y-12">
             <nav style=""
                 class=" border border-gray-200 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
                 <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
@@ -42,59 +42,43 @@
                     href="../index.html#contact">Contact</a>
             </nav>
 
-            <div class="rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-200 md:h-[70vh] max-h-[720px] flex flex-col"
-                style="">
-                <!-- Main content area -->
-                <div class="flex flex-col md:flex-row md:items-stretch p-8 pb-0 md:p-12 md:pb-0 gap-6 md:gap-16 md:flex-1 md:min-h-0">
-                    <!-- Text -->
-                    <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10 md:pb-12">
-                        <!-- Tabs -->
-                        <div class="flex gap-2 flex-wrap">
-                            <span style="background-color: #1F38FA;"
-                        class="border border-gray-200 text-white text-sm py-1 px-4 rounded-full mb-4">Fashion Retail</span>
-                        </div>
-                        <!-- Heading + description -->
-                        <div class="space-y-3">
-                            <h1 class="text-3xl md:text-4xl font-medium leading-tight">Enhancing C&A Shopping
-                                Experience with Digital In-store Assistant</h1>
-                            <p class="text-gray-500 text-base">C&A customers struggle with locating items in their large
-                                stores. We saw an opportunity to empower customers and make information more accessible with
-                                a public version of the internal stock-checking tool.</p>
-                        </div>
-                    </div>
-                    <!-- Hero image -->
-                    <div class="w-full md:w-1/3 pb-6 md:pb-0 md:h-auto overflow-hidden flex-shrink-0">
-                        <img src="case-img/canda-hero.png" class="w-full md:w-auto md:h-auto object-cover object-top">
+            <!-- Text section -->
+            <div class="space-y-14 md:px-12">
+                <div class="space-y-4">
+                    <span class="text-xs rounded-full text-white py-1 px-3 w-fit text-center inline-block" style="background-color: #1F38FA;">Fashion Retail</span>
+                    <h1 class="text-3xl md:text-4xl font-medium leading-tight md:max-w-[70%]">Enhancing C&A Shopping Experience with Digital In-store Assistant</h1>
+                </div>
+                <div class="md:grid md:grid-cols-3 md:gap-x-16 md:items-end flex-col space-y-4 md:space-y-0">
+                    <p class="text-lg text-gray-600 col-span-2">C&A customers struggle with locating items in their large stores. We saw an opportunity to empower customers and make information more accessible with a public version of the internal stock-checking tool.</p>
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-gray-500 md:flex-col md:gap-1 md:items-end">
+                        <p>#UX Design</p>
+                        <p>#UX Research</p>
+                        <p>#CX Strategy</p>
                     </div>
                 </div>
-                <!-- Bottom feature strip -->
-                <div class="border-t border-gray-200 grid grid-cols-3 divide-x divide-gray-100">
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-12 py-4">
-                        <i data-lucide="layout" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">UX Design</span>
+            </div>
+
+            <!-- Image card -->
+            <div class="md:px-12">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <div class="bg-[#F8F7F2] h-[280px] md:h-[400px] overflow-hidden rounded-2xl relative">
+                        <img src="case-img/canda-mockup.png" class="absolute left-1/2 -translate-x-1/2 top-10 h-[125%] max-w-none" alt="C&A mockup">
                     </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="search" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">UX Research</span>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="map" class="w-4 h-4 text-gray-400 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">CX Strategy</span>
-                    </div>
-                    
                 </div>
             </div>
         </div>
 
         <div class="md:px-12 md:space-y-28 space-y-16">
-            <div class="flex flex-row space-x-4 max-h-min justify-center ">
-            <div class="flex-col space-y-4">
-                <img class="rounded-xl md:rounded-3xl w-[580px] " src="case-img/canda-7.png">
+            <div class="md:grid md:grid-cols-5 gap-4 items-stretch">
+                <div class="col-span-3 bg-white border border-gray-200 p-2 rounded-3xl flex-1 flex flex-col">
+                    <div class="overflow-hidden rounded-2xl flex-1">
+                        <img class="w-full h-full object-cover object-top" src="case-img/canda-7.png">
+                    </div>
+                </div>
+                <div class="col-span-2 bg-white border border-gray-200 p-2 rounded-3xl flex flex-col justify-center">
+                    <img class="w-full rounded-2xl" src="case-img/canda-10.gif">
+                </div>
             </div>
-            <div class="flex-col space-y-4">
-                <img class="rounded-xl md:rounded-3xl" src="case-img/canda-10.gif">
-            </div>
-        </div>
 
         <div class="md:grid md:grid-cols-3 md:gap-12 flex-col space-y-6 md:space-y-0">
 
@@ -134,24 +118,11 @@
                 <h2 class="text-2xl font-medium">Deliverables: Seamless Offline to Online Experience</h2>
             </div>
 
-            <div class="flex-col space-y-10">
-
-                <div class="flex flex-row space-x-4  justify-center rounded-3xl p-4 bg-gray-100">
-                    <div class="flex-col space-y-4">
-
-                        <img class="rounded-xl md:rounded-2xl" src="case-img/canda-step1.png">
-
-                    </div>
-                    <div class="flex-col space-y-4">
-
-                        <img class="rounded-xl md:rounded-2xl" src="case-img/canda-step2.png">
-
-                    </div>
-                    <div class="flex-col space-y-4">
-
-                        <img class="rounded-xl md:rounded-2xl" src="case-img/canda-step3.png">
-
-                    </div>
+            <div class="bg-white border border-gray-200 p-8 rounded-3xl">
+                <div class="flex flex-row gap-6 items-end">
+                    <div class="flex-1"><img class="w-full rounded-2xl" src="case-img/canda-step1.png"></div>
+                    <div class="flex-1"><img class="w-full rounded-2xl" src="case-img/canda-step2.png"></div>
+                    <div class="flex-1"><img class="w-full rounded-2xl" src="case-img/canda-step3.png"></div>
                 </div>
             </div>
 
@@ -287,7 +258,9 @@
                             </div>
                         </div>
 
-                        <img class="rounded-xl md:rounded-3xl" src="case-img/canda-1.png">
+                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                            <img class="w-full rounded-2xl" src="case-img/canda-1.png">
+                        </div>
 
                     </div>
 
@@ -315,7 +288,9 @@
                             </div>
                         </div>
 
-                        <img class="rounded-xl md:rounded-3xl" src="case-img/canda-2.png">
+                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                            <img class="w-full rounded-2xl" src="case-img/canda-2.png">
+                        </div>
 
                         <p class="text-center text-sm text-gray-400">C&A and other brands' availability feature in
                             product
@@ -341,7 +316,9 @@
                                     understanding of how they solve similar challenges.</p>
                             </div>
                         </div>
-                        <img class="rounded-xl md:rounded-3xl" src="case-img/canda-9.png">
+                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                            <img class="w-full rounded-2xl" src="case-img/canda-9.png">
+                        </div>
 
                         <p class="text-center text-sm text-gray-400">Uniqlo, a C&A competitor, provdies tailoring
                             services
@@ -445,7 +422,9 @@
                 </div>
 
                 <div class="space-y-4">
-                    <img class="rounded-xl md:rounded-3xl" src="case-img/canda-3.png">
+                    <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                        <img class="w-full rounded-2xl" src="case-img/canda-3.png">
+                    </div>
                     <p class="text-center text-sm text-gray-400">C&A denim blue used in In-store communication design
                         and
                         Digital Assitant interface design</p>
@@ -497,7 +476,7 @@
                         </div><!-- end sticky wrapper -->
                         <!-- Mockup on right -->
                         <div class="w-full md:w-2/5 flex-shrink-0 md:sticky md:top-8">
-                            <img class="rounded-2xl w-full" src="case-img/canda-10.png">
+                            <img class="w-full rounded-3xl" src="case-img/canda-10.png">
                         </div>
                     </div>
                 </div>
@@ -509,7 +488,9 @@
             </div>
 
             <div class="space-y-4 pt-8">
-                <img class="rounded-xl md:rounded-3xl" src="case-img/canda-5.png">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <img class="w-full rounded-2xl" src="case-img/canda-5.png">
+                </div>
                 <p class="text-center text-sm text-gray-400">Digital Assistant Design</p>
 
             </div>

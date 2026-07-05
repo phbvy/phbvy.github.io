@@ -26,7 +26,7 @@
 
 
     <div class="md:container mx-auto md:py-12 py-6 px-4 mb-32 md:space-y-28 space-y-16 xl:w-3/4 w-auto">
-        <div class="space-y-8">
+        <div class="space-y-12">
             <nav style=""
                 class="border border-gray-200 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
                 <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
@@ -39,54 +39,30 @@
                     href="../index.html#contact">Contact</a>
             </nav>
 
-            <div class="rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-200 md:h-[70vh] max-h-[720px] flex flex-col"
-                style="">
-                <!-- Main content area -->
-                <div class="flex flex-col md:flex-row md:items-stretch p-8 pb-6 md:p-12 md:pr-0 md:pb-0 gap-6 md:gap-12 md:flex-1 md:min-h-0">
-                    <!-- Text -->
-                    <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10">
-                        <!-- Tag -->
-                        <div class="flex gap-2 flex-wrap">
-                            <span style="background-color: #1F38FA;"
-                                class="border border-blue-700 text-white text-sm py-1 px-4 rounded-full mb-4">Fintech</span>
-                        </div>
-                        <!-- Heading + description -->
-                        <div class="space-y-3 md:pb-12">
-                            <h1 class="text-3xl md:text-4xl font-medium leading-tight">Building Trust in Financial Services through Design</h1>
-                            <p class="text-gray-500 text-base">Homebase (YC W21) needed a website that earned trust from real-estate financing customers. I led research and redesign of their website to improve usability and credibility.</p>
-
-                        </div>
-                    </div>
-                    <!-- Desktop hero image (side by side) -->
-                    <div class="hidden md:block md:w-3/5 md:rounded-2xl md:rounded-bl-none md:rounded-r-none overflow-hidden flex-shrink-0 relative">
-                        <img src="case-img/homebase-mockup.png"
-                            class="absolute left-10 top-10 h-[110%] max-w-none rounded-t-xl"
-                            alt="Homebase mockup">
-                    </div>
+            <!-- Text section -->
+            <div class="space-y-14 md:px-12">
+                <div class="space-y-4">
+                    <span class="text-xs rounded-full text-white py-1 px-3 w-fit text-center inline-block" style="background-color: #1F38FA;">Fintech</span>
+                    <h1 class="text-3xl md:text-4xl font-medium leading-tight md:max-w-[70%]">Building Trust in Financial Services through Design</h1>
                 </div>
-                <!-- Mobile hero image (full-width, outside padded area) -->
-                <div class="md:hidden h-[200px] overflow-hidden relative flex-shrink-0" style="background-color: #1D2C63;">
-                    <img src="case-img/homebase-mockup.png"
-                        class="absolute top-0 left-1/2 -translate-x-1/2 w-[130%] h-auto"
-                        alt="Homebase mockup">
-                </div>
-                <!-- Bottom feature strip -->
-                <div class="border-t border-gray-200 grid grid-cols-3 divide-x divide-gray-100">
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-12 py-4">
-                        <i data-lucide="users" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">User Research</span>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="pen-tool" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">UI Design</span>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="layout" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">UX Design</span>
+                <div class="md:grid md:grid-cols-3 md:gap-x-16 md:items-end flex-col space-y-4 md:space-y-0">
+                    <p class="text-lg text-gray-600 col-span-2">Homebase (YC W21) needed a website that earned trust from real-estate financing customers. I led research and redesign of their website to improve usability and credibility.</p>
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-gray-500 md:flex-col md:gap-1 md:items-end">
+                        <p>#User Research</p>
+                        <p>#UI Design</p>
+                        <p>#UX Design</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Image card -->
+            <div class="md:px-12">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <div class="bg-[#1D2C63] h-[280px] md:h-[360px] overflow-hidden rounded-2xl relative">
+                        <img src="case-img/homebase-mockup.png" class="absolute left-1/2 -translate-x-1/2 top-8 h-[120%] max-w-none" alt="Homebase mockup">
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -113,9 +89,13 @@
 
         </div>
 
-        <div class="rounded-xl md:rounded-2xl p-4 bg-gray-100 space-y-4">
-            <img class="rounded-xl md:rounded-xl" src="case-img/homebase-7.png">
-            <img class="rounded-xl md:rounded-xl" src="case-img/homebase-9.png">
+        <div class="space-y-4">
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                <img class="w-full rounded-2xl" src="case-img/homebase-7.png">
+            </div>
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                <img class="w-full rounded-2xl" src="case-img/homebase-9.png">
+            </div>
         </div>
 
 
@@ -197,7 +177,7 @@
                 worked for Homebase out of the belief that homeownership should be accessible.</p>
             <p class="text-lg text-gray-600">Having a persona defined, we have a more concrete goal to work towards: creating an experience that this
                 specific persona would find easy to use and trustworthy.</p>
-                <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-3.png">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/homebase-3.png"></div>
         </div>
 
         
@@ -220,8 +200,8 @@
                 a new Mortgage Repayment Calculator and Contact Form. I also redesigned the Information Architecture for
                 the company's Blog and Help Center.</p>
                 <div class="space-y-4">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-4.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/homebase-5.png">
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/homebase-4.png"></div>
+            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/homebase-5.png"></div>
         </div>
         </div>
         
@@ -242,11 +222,19 @@
                 implementation of design using the no-code platform Webflow. </p>
 
 
-            <div class="md:rounded-2xl rounded-xl p-4 bg-gray-100 space-y-4">
-                    <img class="rounded-xl md:rounded-xl" src="case-img/homebase-10.png">
-                    <img class="rounded-xl md:rounded-xl" src="case-img/homebase-8.png">
-                    <img class="rounded-xl md:rounded-xl" src="case-img/homebase-6.png">
-                    <img class="rounded-xl md:rounded-xl" src="case-img/homebase-9.png">
+            <div class="space-y-4">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <img class="w-full rounded-2xl" src="case-img/homebase-10.png">
+                </div>
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <img class="w-full rounded-2xl" src="case-img/homebase-8.png">
+                </div>
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <img class="w-full rounded-2xl" src="case-img/homebase-6.png">
+                </div>
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <img class="w-full rounded-2xl" src="case-img/homebase-9.png">
+                </div>
             </div>
 
             </div>

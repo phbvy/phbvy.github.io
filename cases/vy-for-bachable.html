@@ -14,7 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        a.animate.no2:hover { box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.4) !important; }
+        a.animate.no2:hover {
+            box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.4) !important;
+        }
     </style>
     <script src="../scripts.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -29,7 +31,7 @@
 
 
     <div class="md:container mx-auto md:py-12 py-6 px-4 mb-32 md:space-y-28 space-y-16 xl:w-3/4 w-auto">
-        <div class="space-y-8">
+        <div class="space-y-12">
             <nav style=""
                 class="border border-gray-200 bg-white mx-auto p-2 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
                 <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
@@ -41,175 +43,171 @@
                 <a class="hover:bg-gray-100 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-gray-700"
                     href="../index.html#contact">Contact</a>
             </nav>
+                
 
-            <div class="rounded-2xl md:rounded-3xl overflow-hidden bg-white border border-gray-200 md:h-[70vh] max-h-[720px] flex flex-col"
-                style="">
-                <!-- Main content area -->
-                <div class="flex-1 flex flex-col md:flex-row md:items-stretch p-8 pb-0 md:p-12 md:pr-0 md:pb-0 justify-between md:justify-start gap-6 md:gap-8 md:min-h-0">
-                    <!-- Text -->
-                    <div class="flex flex-col md:justify-between flex-1 min-w-0 gap-6 md:gap-10">
-                        <!-- Tag -->
-                        <div class="flex gap-2 flex-wrap">
-                            <span style="background-color: #f54a00;"
-                                class="border border-orange-700 text-white text-sm py-1 px-4 rounded-full mb-4">Music Notation Editor</span>
+                <!-- Image card -->
+               
+
+                <!-- Text section -->
+                <div class="space-y-6 md:px-12">
+                    <!-- Tag + title -->
+                    <div class="space-y-4">
+                        <span class="text-xs rounded-full text-white py-1 px-3 w-fit text-center inline-block" style="background-color: #FF4D00;">Music Notation Editor</span>
+                        <h1 class="text-3xl md:text-4xl font-medium leading-tight md:max-w-[70%]">Building a Design System for Faster Design to Shipping</h1>
+                    </div>
+                    <!-- Description + hashtags -->
+                    <div class="md:grid md:grid-cols-5 md:space-x-14 md:items-end flex-col space-y-4 md:space-y-0">
+                        <p class="text-lg text-gray-600 col-span-3">As a founding designer of Bachable.io, I built a design system to give the team a shared foundation from day one: fast to use, consistent in output, and directly connected to the codebase.</p>
+                        <div class="flex flex-wrap gap-x-3 gap-y-1 text-gray-500 md:flex-col md:gap-1 md:items-end col-span-2">
+                            <p>#Design Systems</p>
+                            <p>#UI Design</p>
+                            <p>#Developer Collaboration</p>
+                            <p>#shadcn</p>
                         </div>
-                        <!-- Heading + description -->
-                        <div class="space-y-3 md:pb-12">
-                            <h1 class="text-3xl md:text-4xl font-medium leading-tight">Building a Design System for
-                                Faster Design to Shipping</h1>
-                            <p class="text-gray-500 text-base">Bachable.io is a browser-based music notation tool with
-                                complex UI. I built a design system based on shadcn/ui to give the team a
-                                shared foundation.</p>
+                    </div>
+                </div>
+
+                 <div class="md:px-12">
+                    <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                        <div class="bg-[#FF4D00] h-[280px] md:h-[360px] overflow-hidden rounded-2xl relative">
+                            <img src="case-img/bachable-mockup.png"
+                                class="absolute left-1/2 -translate-x-1/2 top-10 h-[120%] max-w-none rounded-2xl"
+                                alt="Bachable mockup">
                         </div>
                     </div>
-                    <!-- Desktop hero image (side by side) -->
-                    <div class="hidden md:block md:w-3/5 md:rounded-2xl md:rounded-bl-none md:rounded-r-none overflow-hidden flex-shrink-0 relative">
-                        <img src="case-img/bachable-mockup.png"
-                            class="absolute left-10 top-10 h-[110%] max-w-none rounded-t-xl"
-                            alt="Bachable mockup">
-                    </div>
-                    <!-- Mobile hero image (bottom of content area) -->
-                    <div class="md:hidden h-[200px] overflow-hidden relative flex-shrink-0 -mx-8">
-                        <img src="case-img/bachable-mockup.png"
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[130%] h-auto"
-                            alt="Bachable mockup">
-                    </div>
                 </div>
-                <!-- Bottom feature strip -->
-                <div class="border-t border-gray-200 grid grid-cols-2 divide-x divide-gray-100">
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-12 py-4">
-                        <i data-lucide="layers" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">Design Systems</span>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start gap-2 px-4 md:px-8 py-4">
-                        <i data-lucide="pen-tool" class="w-4 h-4 text-gray-500 flex-shrink-0"></i>
-                        <span class="text-xs md:text-sm text-gray-500">UI Design</span>
-                    </div>
-                </div>
-            </div>
         </div>
-
-        <div class="md:px-12 md:space-y-28 space-y-16">
-            
-            
-        <div class="md:grid md:grid-cols-3 md:space-x-8 flex-col space-y-4 md:space-y-0">
-
-            <div class="space-y-2 col-start-1 col-span-2">
-                <h2 class="text-2xl font-medium">Context</h2>
-                <p class="text-lg text-gray-600">Bachable.io is a browser-based music notation tool. Write, collaborate,
-                    and publish professional
-                    sheet music with no local setup. The UI is complex: score editors, playback controls, export flows,
-                    real-time collaboration.</p>
-                <p class="text-lg text-gray-600">A good design is only as good as the product that is launched. I built
-                    a design system from scratch using <span class="font-medium">shadcn/ui</span> to give the team a shared foundation from
-                    day one: fast to use, consistent in output, and directly connected to the codebase. This project
-                    demonstrates my strength in collaborating with technical stakeholders to ship products in a fast and
-                    scaleable way.</p>
-            </div>
-
-
-            <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
-                <img class="h-[48px] w-auto self-start" src="case-img/bachable-logo.png">
-                <div class="pt-12 space-y-1">
-                    <h2 class="font-medium">About Bachable.io</h2>
-                    <p class="text-gray-500">Browser-based music notation powered by LilyPond. Publication-quality
-                        scores, instant preview, collaboration-first music notation editor.</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="space-y-6">
-                <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-1.png">
-            <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-1.2.png">
 
         
+        <div class="md:px-12 md:space-y-28 space-y-16">
+
+
+
+
+
+
+            <div class="md:grid md:grid-cols-5 md:space-x-14 flex-col space-y-4 md:space-y-0">
+
+                <div class="space-y-2 col-start-1 col-span-3">
+                    <h2 class="text-2xl font-medium">Context</h2>
+                    <p class="text-lg text-gray-600">Bachable makes music notation with markdown accessible to musicians with no coding experience, so the product needs to feel intuitive from day one. <br> <br> As a founding team of one designer and one developer, a solid design system meant we could ship and iterate fast without losing consistency.</p>
+                </div>
+
+
+                <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-2">
+                    <img class="h-[48px] w-auto self-start" src="case-img/bachable-logo.png">
+                    <div class="pt-4 space-y-1">
+                        <h2 class="font-medium">About Bachable.io</h2>
+                        <p class="text-gray-500">Collaboration-first music notation powered by LilyPond that allow users to create publication-quality
+                            scores from the browsers.</p>
+                    </div>
+                </div>
+
             </div>
 
-        <div class="flex-col space-y-4">
-            <h2 class="text-2xl font-medium">Context</h2>
-            <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
-                    <i data-lucide="users" class="w-6 h-6"></i>
-                    <div class="pt-12 space-y-1">
-                        <h2 class="font-medium">The Team</h2>
-                        <p class="text-gray-500">A tiny cross-functional team of 1 designer and 1 developer. With
-                            limited resources, speed and consistency were both non-negotiable.</p>
+            <div class="space-y-6">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <div class="bg-[#FF4D00] overflow-hidden rounded-2xl">
+                        <img class="w-full" src="case-img/bachable-1.png">
                     </div>
                 </div>
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
-                    <i data-lucide="code-2" class="w-6 h-6"></i>
-                    <div class="pt-12 space-y-1">
-                        <h2 class="font-medium">The Tech Stack</h2>
-                        <p class="text-gray-500">React, Tailwind CSS, and <span class="font-medium">shadcn/ui</span>. The techstack that enables
-                            small teams to ship beautiful and usable products fast.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex-col space-y-4">
-            <h2 class="text-2xl font-medium">Challenges</h2>
-
-            <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
-
-                <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
-                    <div class="bg-gray-900 rounded-3xl p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium">1
-                    </div>
-                    <div class="space-y-1 mt-4">
-                        <h3 class="font-medium">No shared foundation from day one</h3>
-                        <p class="text-gray-500">Without a system in place, designer and developer risked <span class="font-medium">solving the
-                                same UI problems independently</span> and diverging as the product grew.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
-                    <div class="bg-gray-900 rounded-3xl p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium">2
-                    </div>
-                    <div class="space-y-1 mt-4">
-                        <h3 class="font-medium">Scaling Design with a Small Team</h3>
-                        <p class="text-gray-500">The team needed to design and ship new screens quickly <span class="font-medium">without
-                                rebuilding the same patterns each time</span>.</p>
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <div class="bg-[#FF4D00] overflow-hidden rounded-2xl">
+                        <img class="w-full" src="case-img/bachable-1.2.png">
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="flex-col space-y-8">
-            <h2 class="text-2xl font-medium">Project Overview</h2>
-
-            <div class="space-y-4">
-                <h3 class="text-xl font-medium">1. Foundation</h3>
-                <p class="text-lg text-gray-600">Starting from scratch meant making the right decisions upfront. The
-                    first step was scoping what the
-                    system needed and how it would connect to the dev workflow.</p>
-
-
-                <div class="flex-col space-y-4">
-                    <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
-                        <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
-                            <i data-lucide="handshake" class="w-6 h-6"></i>
-                            <div class="pt-12 space-y-1">
-                                <h2 class="font-medium">Developer alignment</h2>
-                                <p class="text-gray-500"> Spoke
-                                    with the developer early on how they wanted to consume components, so the system
-                                    would feel natural rather than imposed.</p>
-                            </div>
+            <div class="flex-col space-y-4">
+                <h2 class="text-2xl font-medium">Team & Stack</h2>
+                <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
+                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                        <div class="pt-12 space-y-1">
+                            <h2 class="font-medium">The Team</h2>
+                            <p class="text-gray-500">A tiny cross-functional team of 1 designer and 1 developer. With
+                                limited resources, speed and consistency were both non-negotiable.</p>
                         </div>
-                        <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
-                            <i data-lucide="puzzle" class="w-6 h-6"></i>
-                            <div class="pt-12 space-y-1">
-                                <h2 class="font-medium">Choose the base</h2>
-                                <p class="text-gray-500">Selected
-                                    shadcn/ui: aligned with the React and Tailwind stack, zero adoption friction, and
-                                    components developer can own and modify directly.</p>
-                            </div>
+                    </div>
+                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                        <div class="pt-12 space-y-1">
+                            <h2 class="font-medium">The Tech Stack</h2>
+                            <p class="text-gray-500">React, Tailwind CSS, and <span
+                                    class="font-medium">shadcn/ui</span>. The techstack that enables
+                                small teams to ship beautiful and usable products fast.</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+            <div class="flex-col space-y-4">
+                <h2 class="text-2xl font-medium">Challenges</h2>
+
+                <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
+
+                    <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                        <div class="bg-gray-900 rounded-3xl p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium">
+                            1
+                        </div>
+                        <div class="space-y-1 mt-4">
+                            <h3 class="font-medium">No shared foundation from day one</h3>
+                            <p class="text-gray-500">Without a system in place, designer and developer risked <span
+                                    class="font-medium">solving the
+                                    same UI problems independently</span> and diverging as the product grew.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                        <div class="bg-gray-900 rounded-3xl p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium">
+                            2
+                        </div>
+                        <div class="space-y-1 mt-4">
+                            <h3 class="font-medium">Scaling Design with a Small Team</h3>
+                            <p class="text-gray-500">The team needed to design and ship new screens quickly <span
+                                    class="font-medium">without
+                                    rebuilding the same patterns each time</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-col space-y-8">
+                <h2 class="text-2xl font-medium">Project Overview</h2>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-medium">1. Foundation</h3>
+                    <p class="text-lg text-gray-600">Starting from scratch meant making the right decisions upfront. The
+                        first step was scoping what the
+                        system needed and how it would connect to the dev workflow.</p>
+
+
+                    <div class="flex-col space-y-4">
+                        <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
+                            <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                                <i data-lucide="handshake" class="w-6 h-6"></i>
+                                <div class="pt-12 space-y-1">
+                                    <h2 class="font-medium">Developer alignment</h2>
+                                    <p class="text-gray-500"> Spoke
+                                        with the developer early on how they wanted to consume components, so the system
+                                        would feel natural rather than imposed.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                                <i data-lucide="puzzle" class="w-6 h-6"></i>
+                                <div class="pt-12 space-y-1">
+                                    <h2 class="font-medium">Choose the base</h2>
+                                    <p class="text-gray-500">Selected
+                                        shadcn/ui: aligned with the React and Tailwind stack, zero adoption friction,
+                                        and
+                                        components developer can own and modify directly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
 
             </div>
 
@@ -320,7 +318,7 @@
             <div class="space-y-6">
                 <div class="space-y-2">
                     <h3 class="text-xl font-medium">3. Implementation</h3>
-                    <p class="text-lg text-gray-600">New screens were assembled from components, not designed from
+                    <p class="text-lg text-gray-600">The product had a complex UI with the markdown editor, multi-files free and compile logs. New screens were assembled from components, not designed from
                         scratch.
                         Design-to-code required
                         minimal interpretation.</p>
@@ -350,22 +348,34 @@
                     </div>
 
                 </div>
-                <div class="rounded-2xl  md:pt-4 pt-2 bg-gray-100 space-y-4">
-                    <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-2.png">
+
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-2xl flex items-center justify-center py-16 px-8">
+                        <img class="w-full max-w-sm md:rounded-2xl rounded-l" src="case-img/bachable-4.png">
+                    </div>
                 </div>
-                <div class="rounded-2xl bg-gray-100 md:pt-4 pt-2 space-y-4">
-                    <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-4.png">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
+                    <div class="bg-gray-100 px-0 pt-1 pb-0 md:px-2 md:pt-4 md:pb-0 overflow-hidden rounded-2xl">
+                        
+                        <img class="w-full" src="case-img/bachable-2.png">
+                    </div>
                 </div>
                 
-                <div class="rounded-2xl bg-gray-100 md:pt-4 pt-2 space-y-4">
-                    <img class="rounded-xl md:rounded-3xl" src="case-img/bachable-3.png">
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
+                    <div class="bg-gray-100 px-0 pt-1 pb-0 md:px-2 md:pt-4 md:pb-0 overflow-hidden rounded-2xl">
+                   
+                        <img class="w-full" src="case-img/bachable-3.png">
+                    </div>
                 </div>
 
 
 
 
-                <video class="w-full md:rounded-3xl rounded-xl" src="case-img/bachable-1.webm" autoplay loop muted
-                    playsinline></video>
+                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
+                    <div class="overflow-hidden rounded-2xl">
+                        <video class="w-full" src="case-img/bachable-1.webm" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
 
 
 
@@ -375,110 +385,116 @@
 
 
 
-        <div class="space-y-8 col-start-1 col-span-4 w-full animate">
-            <h2 class="text-2xl font-medium">Check out other works from Vy: </h2>
+            <div class="space-y-8 col-start-1 col-span-4 w-full animate">
+                <h2 class="text-2xl font-medium">Check out other works from Vy: </h2>
 
-            <div class="space-y-4 md:gap-4 col-start-1 col-span-4 w-full">
+                <div class="space-y-4 md:gap-4 col-start-1 col-span-4 w-full">
 
-                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
+                    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
 
-                    <a href="vy-for-canda.html"
-                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                        class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
-                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
-                            <div class="relative h-72 max-h-[240px]  overflow-hidden flex items-center justify-center" style="background-color: #F8F7F2;">
-                                <img src="case-img/canda-mockup.png"
-                                    class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
-                                    alt="C&A mockup">
+                        <a href="vy-for-canda.html"
+                            style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                            class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                            <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                                <div class="relative h-72 max-h-[240px]  overflow-hidden flex items-center justify-center"
+                                    style="background-color: #F8F7F2;">
+                                    <img src="case-img/canda-mockup.png"
+                                        class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
+                                        alt="C&A mockup">
+                                </div>
                             </div>
-                        </div>
-                        <div class="px-2 py-6 space-y-2">
-                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
-                                style="background-color: #1F38FA;">Fashion</span>
-                            <div class="space-y-1">
-                                <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital
-                                    In-store Assistant</p>
-                                <p class="text-gray-500">@C&A, Germany</p>
+                            <div class="px-2 py-6 space-y-2">
+                                <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                    style="background-color: #1F38FA;">Fashion</span>
+                                <div class="space-y-1">
+                                    <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital
+                                        In-store Assistant</p>
+                                    <p class="text-gray-500">@C&A, Germany</p>
+                                </div>
+
                             </div>
+                        </a>
 
-                        </div>
-                    </a>
-
-                    <a href="vy-for-bruce.html"
-                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                        class=" bg-white border border-gray-200 rounded-2xl md:rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
-                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
-                            <div class="relative h-72 max-h-[240px] overflow-hidden" style="background-color: #D8FD53;">
-                                <img src="case-img/bruce-mockup.png"
-                                    class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
-                                    alt="Bruce mockup">
+                        <a href="vy-for-bruce.html"
+                            style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                            class=" bg-white border border-gray-200 rounded-2xl md:rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                            <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                                <div class="relative h-72 max-h-[240px] overflow-hidden"
+                                    style="background-color: #D8FD53;">
+                                    <img src="case-img/bruce-mockup.png"
+                                        class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
+                                        alt="Bruce mockup">
+                                </div>
                             </div>
-                        </div>
-                        <div class="px-2 py-6 space-y-2">
+                            <div class="px-2 py-6 space-y-2">
 
-                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
-                                style="background-color: #1F38FA;">Fitnesstech</span>
-                            <div class="space-y-1">
-                                <p class="text-xl font-medium">Redesign Membership Cancellation process to improve User
-                                    Retention</p>
-                                <p class="text-gray-500">@Bruce, Sweden</p>
+                                <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                    style="background-color: #1F38FA;">Fitnesstech</span>
+                                <div class="space-y-1">
+                                    <p class="text-xl font-medium">Redesign Membership Cancellation process to improve
+                                        User
+                                        Retention</p>
+                                    <p class="text-gray-500">@Bruce, Sweden</p>
+                                </div>
+
                             </div>
+                        </a>
 
-                        </div>
-                    </a>
+                    </div>
 
+                    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
+
+                        <a href="vy-for-homebase.html"
+                            style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 2px 2px 4px rgb(0 0 0 / 0.02);"
+                            class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
+                            <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                                <div class="relative h-72 max-h-[240px]  overflow-hidden"
+                                    style="background-color: #1D2C63;">
+                                    <img src="case-img/homebase-mockup.png"
+                                        class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
+                                        alt="Homebase mockup">
+                                </div>
+                            </div>
+                            <div class="px-2 py-6 space-y-2">
+                                <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                    style="background-color: #1F38FA;">Fintech</span>
+
+                                <div class="space-y-1">
+                                    <p class="text-xl font-medium">Building Digital Trust in Financial Service with
+                                        Design
+                                    </p>
+                                    <p class="text-gray-500">@Homebase, Vietnam</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="vy-for-workflw.html"
+                            style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
+                            class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm  cursor-pointer block animate no2 p-3 ">
+                            <div class="rounded-xl md:rounded-2xl overflow-hidden">
+                                <div class="relative h-72 max-h-[240px] overflow-hidden flex items-center justify-center"
+                                    style="background-color: #F2EEFF;">
+                                    <img src="case-img/workflw-mockup.png"
+                                        class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
+                                        alt="Workflw mockup">
+                                </div>
+                            </div>
+                            <div class="px-2 py-6 space-y-2">
+                                <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
+                                    style="background-color: #1F38FA;">To-do App</span>
+                                <div class="space-y-1">
+                                    <p class="text-xl font-medium">A User Engagement Take on The Classic To-do App</p>
+                                    <p class="text-gray-500">@KTH, Sweden</p>
+                                </div>
+
+
+                            </div>
+                        </a>
+
+                    </div>
                 </div>
 
-                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4 space-y-4 md:space-y-0">
-
-                    <a href="vy-for-homebase.html"
-                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 2px 2px 4px rgb(0 0 0 / 0.02);"
-                    class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm cursor-pointer block animate no2 p-3 ">
-                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
-                            <div class="relative h-72 max-h-[240px]  overflow-hidden" style="background-color: #1D2C63;">
-                                <img src="case-img/homebase-mockup.png"
-                                    class="absolute left-10 top-10 w-[130%] max-w-none rounded-t-xl"
-                                    alt="Homebase mockup">
-                            </div>
-                        </div>
-                        <div class="px-2 py-6 space-y-2">
-                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
-                                style="background-color: #1F38FA;">Fintech</span>
-
-                            <div class="space-y-1">
-                                <p class="text-xl font-medium">Building Digital Trust in Financial Service with Design
-                                </p>
-                                <p class="text-gray-500">@Homebase, Vietnam</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="vy-for-workflw.html"
-                        style="box-shadow: 0 1px 1px 0 rgb(0 0 0 / 0.1),inset 4px 2px 8px rgb(0 0 0 / 0.02);"
-                        class=" bg-white rounded-2xl md:rounded-3xl border border-gray-200 rounded-3xl transition-all duration-300 ease-out hover:border-blue-500 hover:shadow-sm  cursor-pointer block animate no2 p-3 ">
-                        <div class="rounded-xl md:rounded-2xl overflow-hidden">
-                            <div class="relative h-72 max-h-[240px] overflow-hidden flex items-center justify-center" style="background-color: #F2EEFF;">
-                                <img src="case-img/workflw-mockup.png"
-                                    class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
-                                    alt="Workflw mockup">
-                            </div>
-                        </div>
-                        <div class="px-2 py-6 space-y-2">
-                            <span class="text-xs rounded-full text-gray-50 py-1 px-3 w-fit text-center inline-block"
-                                style="background-color: #1F38FA;">To-do App</span>
-                            <div class="space-y-1">
-                                <p class="text-xl font-medium">A User Engagement Take on The Classic To-do App</p>
-                                <p class="text-gray-500">@KTH, Sweden</p>
-                            </div>
-
-
-                        </div>
-                    </a>
-
-                </div>
             </div>
-
-        </div>
 
         </div><!-- end body wrapper -->
 
