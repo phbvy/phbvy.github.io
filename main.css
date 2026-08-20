@@ -84,7 +84,7 @@ b {
   display: block;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 99;
   text-align: center;
   cursor: pointer;
@@ -93,7 +93,7 @@ b {
 
 @media (min-width: 768px) {
   #backToTopBtn {
-    right: auto;
-    left: 30px;
+    left: auto;
+    right: 30px;
   }
 }
