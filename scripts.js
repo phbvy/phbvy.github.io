@@ -17,8 +17,8 @@ function createChatBubble(comment) {
     if (comment != "") {
         const messageBubble = document.createElement("div");
         messageBubble.innerHTML += comment;
-        messageBubble.classList.add("bg-blue-800", "rounded-3xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3", "text-white", "text-3xl", "font-semibold","animate", "slide");
-        messageBubble.style.backgroundColor = "#1F38FA";
+        messageBubble.classList.add("border", "border-[#1A2FD6]", "rounded-3xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3", "md:col-start-1", "md:col-span-full", "md:max-w-[calc(50cqw-8px)]", "text-white", "text-3xl", "font-semibold","animate", "slide");
+        messageBubble.style.cssText = "background: linear-gradient(to bottom, #1F38FA, #1C33E5); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.25);";
         return messageBubble;
     }
 };
