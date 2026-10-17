@@ -13,26 +13,42 @@ b {
 
 .animate {
   opacity: 0;
+  /* Bubbles grow out of their "tail" corner, like a messages app */
+  transform-origin: bottom left;
+}
+.animate.from-right {
+  transform-origin: bottom right;
 }
 .animate.slide {
   animation-name: animate-bubble;
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.34, 1.2, 0.64, 1);
   animation-fill-mode: forwards;
-}
-
-.animate.slide.no2 {
-  animation-delay: 0.18s;
 }
 
 @keyframes animate-bubble {
   0% {
     opacity: 0;
-    transform: translateY(20px) scale(0.85);
+    transform: translateY(6px) scale(0.85);
+  }
+  40% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate.slide {
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 }
 
@@ -71,7 +87,8 @@ b {
 }
 
 #typingBubble.show {
-  animation: animate-bubble 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: bottom left;
+  animation: animate-bubble 0.6s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
 }
 
 

@@ -1,12 +1,33 @@
-function slide() {
-    var slides = document.querySelectorAll(".animate");
+// Reveal bubbles as they scroll into view with a slight offset, like incoming messages.
+// The offset carries over between scroll events, but no bubble ever waits longer than revealMaxWait,
+// so a fast scroll never leaves bubbles blank while a long queue plays out.
+var revealGap = 0.3;      // seconds between consecutive bubbles
+var revealMaxWait = 0.3;  // longest any bubble waits before appearing
+var nextRevealAt = 0;     // timestamp (s) when the next bubble may start
 
-    for (var i=0; i < slides.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = slides[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-        if (elementTop < (windowHeight - elementVisible)) {
-            slides[i].classList.add("slide");
+function slide() {
+    var slides = document.querySelectorAll(".animate:not(.slide)");
+    var windowHeight = window.innerHeight;
+    var elementVisible = 150;
+    var now = performance.now() / 1000;
+
+    for (var i = 0; i < slides.length; i++) {
+        var el = slides[i];
+        if (el.getBoundingClientRect().top < (windowHeight - elementVisible)) {
+            // Blue bubbles (sent messages) grow from the bottom-right; everything else from the left
+            if (el.classList.contains("border-[#1A2FD6]")) {
+                el.classList.add("from-right");
+            }
+            // Already scrolled past it: show right away, don't hold up the queue
+            if (el.getBoundingClientRect().bottom < 0) {
+                el.style.animationDelay = "0s";
+                el.classList.add("slide");
+                continue;
+            }
+            var start = Math.min(Math.max(now, nextRevealAt), now + revealMaxWait);
+            el.style.animationDelay = (start - now) + "s";
+            el.classList.add("slide");
+            nextRevealAt = start + revealGap;
         }
     }
 }
@@ -17,7 +38,7 @@ function createChatBubble(comment) {
     if (comment != "") {
         const messageBubble = document.createElement("div");
         messageBubble.innerHTML += comment;
-        messageBubble.classList.add("border", "border-[#1A2FD6]", "rounded-3xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3", "md:col-start-1", "md:col-span-full", "md:max-w-[calc(50cqw-8px)]", "text-white", "text-3xl", "font-semibold","animate", "slide");
+        messageBubble.classList.add("border", "border-[#1A2FD6]", "rounded-3xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3", "md:col-start-1", "md:col-span-full", "md:max-w-[calc(50cqw-8px)]", "text-white", "text-3xl", "font-semibold","animate", "from-right", "slide");
         messageBubble.style.cssText = "background: linear-gradient(to bottom, #1F38FA, #1C33E5); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.25);";
         return messageBubble;
     }
@@ -85,8 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
       createCommentForm.reset();
 
       setTimeout(()=> {const warnings = document.querySelectorAll(".sandboxwarning")
-      warnings.forEach(warning => {
-        warning.classList.remove('hidden');
+      // Vy's replies arrive one by one, like incoming messages
+      warnings.forEach((warning, i) => {
+        warning.classList.remove('hidden', 'slide');
+        warning.style.animationDelay = (i * 0.6) + 's';
+        void warning.offsetWidth; // restart the animation
+        warning.classList.add('slide');
       }
     )}, 500)
       
