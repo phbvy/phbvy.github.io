@@ -114,3 +114,86 @@ b {
     right: 30px;
   }
 }
+
+/* Raised pill: soft sheen + light edges. Shared by the card cursor and the card category tags */
+.pill-raised {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05) 45%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25), 0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+/* Multiplayer-style cursor over case cards: an arrow at the pointer tip with a "View Project" label.
+   Colours come from each card via --cursor-bg / --cursor-text (set in scripts.js) */
+#cardCursor {
+  --cursor-bg: #27272a;
+  --cursor-text: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.6);
+  transform-origin: 0 0;
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+#cardCursor.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+#cardCursor .cursor-arrow {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  fill: var(--cursor-bg);
+  filter: drop-shadow(0 1px 1.5px rgba(0, 0, 0, 0.25));
+  transition: fill 0.3s ease;
+}
+#cardCursor .cursor-label {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  padding: 5px 12px;
+  /* Tighter corner next to the arrow, like a speech tail */
+  border-radius: 2px 16px 16px 16px;
+  background-color: var(--cursor-bg);
+  color: var(--cursor-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.12),
+    0 6px 16px -4px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.card-cursor-target,
+.card-cursor-target * {
+  cursor: none !important;
+}
+
+/* Site-wide cursor: the same arrow as the card cursor, in black with a white outline.
+   Tip sits at (2, 2). Text fields keep the text cursor; case cards swap to the "View Project" cursor. */
+*,
+*::before,
+*::after {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M2 2 L18 8.5 L10.5 10.5 L8.5 18 Z' fill='black' stroke='white' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 2 2, auto !important;
+}
+input:not([type="button"]):not([type="submit"]),
+textarea,
+[contenteditable="true"] {
+  cursor: text !important;
+}
+/* Clickable things (and everything inside them) keep the pointing hand.
+   Case cards are excluded: they get the "View Project" cursor instead. */
+a[href]:not(.card-cursor-target),
+a[href]:not(.card-cursor-target) *,
+button:not(:disabled),
+button:not(:disabled) *,
+[role="button"],
+[role="button"] *,
+label[for],
+select,
+summary,
+input[type="button"],
+input[type="submit"],
+.cursor-pointer:not(.card-cursor-target) {
+  cursor: pointer !important;
+}
