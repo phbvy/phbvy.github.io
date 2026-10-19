@@ -3,7 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&family=Borel&display=swap"
         rel="stylesheet">
     <meta charset="utf-8">
     <title>Vy's Portfolio</title>
@@ -52,13 +52,13 @@
                 <!-- Text section -->
                 <div class="space-y-6 md:px-12">
                     <!-- Tag + title -->
-                    <div class="space-y-4">
-                        <span class="text-xs rounded-full text-white py-1 px-3 w-fit text-center inline-block" style="background-color: #FF4D00;">Music Notation Editor</span>
-                        <h1 class="text-3xl md:text-4xl font-medium leading-tight md:max-w-[70%]">Building a Design System for Faster Design to Shipping</h1>
+                    <div class="space-y-1">
+                        <span class="inline-flex items-center w-fit text-xl leading-normal font-borel" style="color: #E52900;">Music Notation Editor</span>
+                        <h1 class="text-4xl md:text-5xl font-medium leading-tight md:max-w-[70%]">Building a Design System for Faster Design to Shipping</h1>
                     </div>
                     <!-- Description + hashtags -->
                     <div class="md:grid md:grid-cols-5 md:space-x-14 md:items-end flex-col space-y-4 md:space-y-0">
-                        <p class="text-lg text-gray-700 col-span-3">As a founding designer of Bachable.io, I built a design system to give the team a shared foundation from day one: fast to use, consistent in output, and directly connected to the codebase.</p>
+                        <p class="text-lg text-gray-800 col-span-3">As a founding designer of Bachable.io, I built a design system to give the team a shared foundation from day one: fast to use, consistent in output, and directly connected to the codebase.</p>
                         <div class="flex flex-wrap gap-2 md:flex-col md:items-end col-span-2">
                             <span class="rounded-full border border-gray-200 text-gray-700 py-1 px-3 text-sm w-fit">/design-systems</span>
                             <span class="rounded-full border border-gray-200 text-gray-700 py-1 px-3 text-sm w-fit">/ui-design</span>
@@ -90,8 +90,8 @@
             <div class="md:grid md:grid-cols-5 md:space-x-14 flex-col space-y-4 md:space-y-0">
 
                 <div class="space-y-2 col-start-1 col-span-3">
-                    <h2 class="text-2xl font-medium">Context</h2>
-                    <p class="text-lg text-gray-700">Bachable makes music notation with markdown accessible to musicians with no coding experience, so the product needs to feel intuitive from day one. <br> <br> As a founding team of one designer and one developer, a solid design system meant we could ship and iterate fast without losing consistency.</p>
+                    <h2 class="text-3xl font-medium">Context</h2>
+                    <p class="text-lg text-gray-800">Bachable makes music notation with markdown accessible to musicians with no coding experience, so the product needs to feel intuitive from day one. <br> <br> As a founding team of one designer and one developer, a solid design system meant we could ship and iterate fast without losing consistency.</p>
                 </div>
 
 
@@ -120,7 +120,7 @@
             </div>
 
             <div class="flex-col space-y-4">
-                <h2 class="text-2xl font-medium">Challenges & Stack</h2>
+                <h2 class="text-3xl font-medium">Challenges & Stack</h2>
                 <div class="md:grid md:grid-cols-2 md:gap-4 flex-col space-y-4 md:space-y-0">
                     <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
                         <i data-lucide="users" class="w-6 h-6"></i>
@@ -141,11 +141,11 @@
             </div>
 
             <div class="flex-col space-y-8">
-                <h2 class="text-2xl font-medium">Project Overview</h2>
+                <h2 class="text-3xl font-medium">Project Overview</h2>
 
                 <div class="space-y-4">
-                    <h3 class="text-xl font-medium">1. Foundation</h3>
-                    <p class="text-lg text-gray-700">Starting from scratch meant making the right decisions upfront. The
+                    <h3 class="text-2xl font-medium">1. Foundation</h3>
+                    <p class="text-lg text-gray-800">Starting from scratch meant making the right decisions upfront. The
                         first step was scoping what the
                         system needed and how it would connect to the dev workflow.</p>
 
@@ -182,18 +182,18 @@
 
             <div class="space-y-4">
 
-                <h3 class="text-xl font-medium">2. Design Token Architecture</h3>
-                <p class="text-lg text-gray-700">Tokens map semantic decisions (colors, type, spacing, radii, etc) to
+                <h3 class="text-2xl font-medium">2. Design Token Architecture</h3>
+                <p class="text-lg text-gray-800">Tokens map semantic decisions (colors, type, spacing, radii, etc) to
                     Tailwind CSS variables. Every choice in
                     Figma maps (to the extent possible) to code. Each color has a role, not just a value. Designer and
                     developer uses the same name, so no back-and-forth needed.</p>
                 <!-- Desktop header -->
                 <div class="hidden md:flex items-center pb-2">
-                    <p class="text-sm font-medium text-gray-700 text-center flex-1">Designer in Figma</p>
+                    <p class="text-sm font-medium text-gray-800 text-center flex-1">Designer in Figma</p>
                     <div class="flex-1"></div>
                     <div class="w-32"></div>
                     <div class="flex-1"></div>
-                    <p class="text-sm font-medium text-gray-700 text-center flex-1">Developer in Code</p>
+                    <p class="text-sm font-medium text-gray-800 text-center flex-1">Developer in Code</p>
                 </div>
 
                 <!-- Color token row -->
@@ -285,8 +285,8 @@
 
             <div class="space-y-6">
                 <div class="space-y-2">
-                    <h3 class="text-xl font-medium">3. Implementation</h3>
-                    <p class="text-lg text-gray-700">The product had a complex UI with the markdown editor, multi-files free and compile logs. New screens were assembled from components, not designed from
+                    <h3 class="text-2xl font-medium">3. Implementation</h3>
+                    <p class="text-lg text-gray-800">The product had a complex UI with the markdown editor, multi-files free and compile logs. New screens were assembled from components, not designed from
                         scratch.
                         Design-to-code required
                         minimal interpretation.</p>
@@ -296,21 +296,21 @@
 
                     <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
                         <div class="space-y-1">
-                            <p class="text-2xl font-medium">1×</p>
+                            <p class="text-3xl font-medium">1×</p>
                             <p class="text-gray-600">Each decision made once, reused everywhere</p>
                         </div>
                     </div>
 
                     <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
                         <div class="space-y-1">
-                            <p class="text-2xl font-medium">0</p>
+                            <p class="text-3xl font-medium">0</p>
                             <p class="text-gray-600">Back-and-forth on "what shade of orange is this?".</p>
                         </div>
                     </div>
 
                     <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
                         <div class="space-y-1">
-                            <p class="text-2xl font-medium">Any</p>
+                            <p class="text-3xl font-medium">Any</p>
                             <p class="text-gray-600">Screen built from the same source of truth</p>
                         </div>
                     </div>
@@ -354,7 +354,7 @@
 
 
             <div class="space-y-8 col-start-1 col-span-4 w-full animate">
-                <h2 class="text-2xl font-medium">Check out other works from Vy: </h2>
+                <h2 class="text-3xl font-medium">Check out other works from Vy: </h2>
 
                 <div class="space-y-4 md:gap-4 col-start-1 col-span-4 w-full">
 
@@ -372,10 +372,10 @@
                                             alt="C&A mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">Fashion</span>
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital
+                                <div class="px-4 pt-8 pb-6 space-y-0">
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #2271B3;">Fashion</span>
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">Enhancing Offline Shopping Experience with Digital
                                             In-store Assistant</p>
                                         <p class="text-gray-500">C&A, Germany</p>
                                     </div>
@@ -389,17 +389,17 @@
                                 <div
                                     class="rounded-2xl overflow-hidden border border-gray-100">
                                     <div class="relative h-72 max-h-[240px] overflow-hidden" style="background-color: #D8FD53;">
-                                        <div class="absolute inset-0 group-hover:backdrop-saturate-200 transition-all duration-300" data-hover-colour="#3A8000"></div>
+                                        <div class="absolute inset-0 group-hover:backdrop-saturate-200 transition-all duration-300" data-hover-colour="#1F6B35"></div>
                                         <img src="case-img/bruce-mockup.png"
                                             class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
                                             alt="bruce mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
+                                <div class="px-4 pt-8 pb-6 space-y-0">
 
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">Fitnesstech</span>
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">Redesign Membership Cancellation Process to Improve User Retention</p>
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #1F6B35;">Fitnesstech</span>
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">Redesign Membership Cancellation Process to Improve User Retention</p>
                                         <p class="text-gray-500">Bruce, Sweden</p>
                                     </div>
 
@@ -422,11 +422,11 @@
                                             alt="Homebase mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">Fintech</span>
+                                <div class="px-4 pt-8 pb-6 space-y-0">
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #0D2B99;">Fintech</span>
 
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">Building Digital Trust in Financial Service with Design
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">Building Digital Trust in Financial Service with Design
                                         </p>
                                         <p class="text-gray-500">Homebase, Vietnam</p>
                                     </div>
@@ -440,15 +440,15 @@
                                     class="rounded-2xl overflow-hidden border border-gray-100">
                                     <div class="relative h-72 max-h-[240px] overflow-hidden" style="background: url('case-img/hitta-bg.svg') center / cover, #F5F9FF;">
                                         <div class="absolute inset-0 group-hover:bg-[#0057FF]/[0.12] transition-colors duration-300" data-hover-colour="#0057FF"></div>
-                                        <img src="case-img/hitta-mockup-2.svg"
-                                            class="absolute left-10 top-10 h-[130%] w-auto max-w-none rounded-t-xl"
+                                        <img src="case-img/hitta-mockup-2.png"
+                                            class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
                                             alt="Hitta mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">B2B SaaS</span>
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">One Unified Design for Two Brands and Languages</p>
+                                <div class="px-4 pt-8 pb-6 space-y-0">
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #0057FF;">B2B SaaS</span>
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">One Unified Design for Two Brands and Languages</p>
                                         <p class="text-gray-500">Hitta.se, Sweden and Fonecta, Finland</p>
                                     </div>
                                 </div>

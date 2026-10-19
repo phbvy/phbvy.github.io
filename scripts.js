@@ -38,7 +38,7 @@ function createChatBubble(comment) {
     if (comment != "") {
         const messageBubble = document.createElement("div");
         messageBubble.innerHTML += comment;
-        messageBubble.classList.add("border", "border-[#1A2FD6]", "rounded-3xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3", "md:col-start-1", "md:col-span-full", "md:max-w-[calc(50cqw-8px)]", "text-white", "text-3xl", "font-semibold","animate", "from-right", "slide");
+        messageBubble.classList.add("border", "border-[#1A2FD6]", "rounded-3xl", "text-ellipsis", "break-word", "overflow-hidden", "p-4", "col-span-2", "col-start-3", "md:col-start-1", "md:col-span-full", "md:max-w-[calc(50cqw-8px)]", "text-white", "text-4xl", "font-medium","animate", "from-right", "slide");
         messageBubble.style.cssText = "background: linear-gradient(to bottom, #1F38FA, #1C33E5); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.25);";
         return messageBubble;
     }
@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '<span class="cursor-label pill-raised">View Project</span>';
     document.body.appendChild(cursor);
 
+
     // The arrow is the pointer, so it tracks the mouse exactly
     function moveTo(e) {
         cursor.style.left = e.clientX + 'px';
@@ -218,3 +219,152 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
     });
 });
+
+// Group stacked chat bubbles like a messages app: where two bubbles from the same side
+// sit right on top of each other, the corners they share on that side get tight.
+(function () {
+    const TIGHT = '6px';
+    const GAP = 20;         // max vertical gap (px) for two bubbles to count as one group
+
+    function pageOffset(el) {
+        // offsetTop/Left ignore transforms, so the reveal animation doesn't throw this off
+        let top = 0, left = 0, node = el;
+        while (node) { top += node.offsetTop; left += node.offsetLeft; node = node.offsetParent; }
+        return { top, left, bottom: top + el.offsetHeight, right: left + el.offsetWidth };
+    }
+
+    function bubbles() {
+        return [...document.querySelectorAll(
+            '.rounded-3xl.py-3.px-4, #displaymessagecontainer > *, #displaymessagecontainer2 > *, #bento, a[href*="drive.google"]'
+        )].filter((el) => el.offsetWidth > 0 && el.offsetHeight > 0 && !el.closest('nav, form'));
+    }
+
+    // Case cards on the home page.
+    // Phones (one column): fully rounded, no grouping. Desktop grid: every card gets the same
+    // tight top-left "tail" corner, and the first card joins the message above it.
+    function caseCards() {
+        const cards = [...document.querySelectorAll('#by a[href*="vy-for-"]')].filter((el) => el.offsetWidth > 0);
+        if (!cards.length) return [];
+        const boxes = cards.map((el) => ({ el, box: pageOffset(el) }));
+        const oneColumn = boxes.every((c) => Math.abs(c.box.left - boxes[0].box.left) < 4);
+        if (oneColumn) return []; // phones: cards stay fully rounded
+        boxes.forEach(({ el }) => { el.style.borderTopLeftRadius = TIGHT; });
+        boxes.sort((a, b) => a.box.top - b.box.top || a.box.left - b.box.left);
+        return [boxes[0]];
+    }
+
+    function group() {
+        // Reset every card, including ones that only group on phones
+        // Reset first, then set corners (so nothing set below gets wiped)
+        const all = [...bubbles(), ...document.querySelectorAll('#by a[href*="vy-for-"]')];
+        all.forEach((el) => {
+            el.style.borderTopLeftRadius = el.style.borderBottomLeftRadius = '';
+            el.style.borderTopRightRadius = el.style.borderBottomRightRadius = '';
+        });
+        const list = bubbles().map((el) => {
+            const sent = el.classList.contains('border-[#1A2FD6]');
+            return { el, sent, box: pageOffset(el) };
+        }).concat(caseCards().map((c) => ({ ...c, sent: false })))
+          .sort((a, b) => a.box.top - b.box.top);
+
+        list.forEach((cur, i) => {
+            // The closest bubble above on the same side, aligned to the same edge
+            for (let j = i - 1; j >= 0; j--) {
+                const prev = list[j];
+                if (prev.sent !== cur.sent) continue;
+                const aligned = cur.sent
+                    ? Math.abs(prev.box.right - cur.box.right) < 4
+                    : Math.abs(prev.box.left - cur.box.left) < 4;
+                if (!aligned) continue;
+                const gap = cur.box.top - prev.box.bottom;
+                if (gap >= 0 && gap <= GAP) {
+                    if (cur.sent) {
+                        prev.el.style.borderBottomRightRadius = TIGHT;
+                        cur.el.style.borderTopRightRadius = TIGHT;
+                    } else {
+                        prev.el.style.borderBottomLeftRadius = TIGHT;
+                        cur.el.style.borderTopLeftRadius = TIGHT;
+                    }
+                }
+                break;
+            }
+        });
+    }
+
+    let pending = false;
+    function schedule() {
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(() => { pending = false; group(); });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        schedule();
+        // Re-group when bubbles are added or shown (chat replies, typing bubble)
+        new MutationObserver(schedule).observe(document.body, {
+            childList: true, subtree: true, attributes: true, attributeFilter: ['class']
+        });
+    });
+    window.addEventListener('load', schedule);
+    window.addEventListener('resize', schedule);
+})();
+
+// Borel text: add a marker-style scribble underline that draws in on hover (see .scribble in main.css).
+// Each scribble is drawn at its real pixel size (no stretching), and its measured length drives the
+// draw-in animation. That avoids a WebKit bug with scaled strokes, and the hook back stays a
+// pen-sized flick on long labels.
+(function () {
+    // Small seeded random so each label always gets the same scribble (based on its text)
+    function seeded(text) {
+        let h = 2166136261;
+        for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
+        return () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 10000) / 10000; };
+    }
+
+    // Two marker styles (sweep + hook back, or a quick zig-zag), each with its own tilt and curve. Shapes are designed on a 12-unit-tall grid.
+    function scribblePath(w, h, text) {
+        const r = seeded(text);
+        const j = (amt) => (r() - 0.5) * 2 * amt;          // jitter in +/- amt
+        const y = (v) => (v * h / 12).toFixed(1);
+        const x = (v) => v.toFixed(1);
+        const tilt = j(1.4);                                  // overall rise or dip across the word
+        const style = Math.floor(r() * 2);
+        if (style === 0) {
+            // Sweep right, then hook back underneath itself
+            const hook = Math.min(w * (0.4 + r() * 0.25), 90);
+            return `M2 ${y(6.5 + tilt)} C ${x(w * 0.3)} ${y(4.6 + j(0.8))}, ${x(w * 0.65)} ${y(3.4 - tilt * 0.5 + j(0.8))}, ${x(w - 3)} ${y(4.2 - tilt)} ` +
+                   `C ${x(w - 1.4)} ${y(4.3 - tilt)}, ${x(w - 1.6)} ${y(5.4 - tilt)}, ${x(w - 3.4)} ${y(5.7 - tilt)} ` +
+                   `C ${x(w - hook * 0.35)} ${y(7.2 + j(0.6))}, ${x(w - hook * 0.7)} ${y(8.4 + j(0.6))}, ${x(w - hook)} ${y(9.2 + j(0.5))}`;
+        }
+        // Quick zig-zag: right, back left a little lower, then right again
+        const back = w * (0.55 + r() * 0.25);
+        return `M2 ${y(5.2 + tilt)} C ${x(w * 0.4)} ${y(4.2 + j(0.7))}, ${x(w * 0.7)} ${y(3.8 + j(0.7))}, ${x(w - 2)} ${y(4.4 - tilt)} ` +
+               `L ${x(w - back)} ${y(8 + j(0.6))} ` +
+               `C ${x(w - back * 0.6)} ${y(7.8 + j(0.6))}, ${x(w - back * 0.3)} ${y(7.6 + j(0.6))}, ${x(w - 6)} ${y(8.6 - tilt + j(0.5))}`;
+    }
+
+    function draw() {
+        // Only on clickable Borel text (inside a link or button), e.g. the case card tags
+        document.querySelectorAll('a .font-borel, button .font-borel').forEach((el) => {
+            let svg = el.querySelector('.scribble');
+            if (!svg) {
+                el.insertAdjacentHTML('beforeend', '<svg class="scribble" aria-hidden="true"><path/></svg>');
+                svg = el.querySelector('.scribble');
+            }
+            // offsetWidth ignores transforms, so cards mid pop-in still measure at full size
+            const w = Math.max(20, el.offsetWidth * 1.06);
+            const h = Math.max(6, parseFloat(getComputedStyle(el).fontSize) * 0.55);
+            svg.setAttribute('width', w.toFixed(1));
+            svg.setAttribute('height', h.toFixed(1));
+            svg.setAttribute('viewBox', `0 0 ${w.toFixed(1)} ${h.toFixed(1)}`);
+            const path = svg.querySelector('path');
+            path.setAttribute('d', scribblePath(w, h, el.textContent.trim()));
+            path.style.setProperty('--len', Math.ceil(path.getTotalLength() + 2));
+        });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        draw();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+    });
+    window.addEventListener('resize', draw);
+})();

@@ -3,7 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&family=Borel&display=swap"
         rel="stylesheet">
     <meta charset="utf-8">
     <title>Vy's Portfolio</title>
@@ -148,17 +148,16 @@
 
             <!-- Text section -->
             <div class="space-y-14 md:px-12">
-                <div class="space-y-4">
-                    <span class="text-xs rounded-full text-white py-1 px-3 w-fit text-center inline-block"
-                        style="background-color: #0057FF;">B2B SaaS</span>
-                    <h1 class="text-3xl md:text-4xl font-medium leading-tight md:max-w-[70%]">One Unified Design for Two
+                <div class="space-y-1">
+                    <span class="inline-flex items-center w-fit text-xl leading-normal font-borel" style="color: #0057FF;">B2B SaaS</span>
+                    <h1 class="text-4xl md:text-5xl font-medium leading-tight md:max-w-[70%]">One Unified Design for Two
                         Brands and Languages</h1>
                 </div>
                 <div class="md:grid md:grid-cols-3 md:gap-x-16 md:items-end flex-col space-y-4 md:space-y-0">
-                    <p class="text-lg text-gray-700 col-span-2">Hitta.se and Fonecta are Sweden's and Finland's
+                    <p class="text-lg text-gray-800 col-span-2">Hitta.se and Fonecta are Sweden's and Finland's
                         respective leading people and business directory. As interim design lead during Hitta.se and
                         Fonecta's merger, I shaped the product design for their B2B suite of tools that help business
-                        owners manage customer reviews and social posting in one place.</p>
+                        owners manage their online business listing and social media in one place.</p>
                     <div class="flex flex-wrap gap-2 md:flex-col md:items-end">
                         <span
                             class="rounded-full border border-gray-200 text-gray-700 py-1 px-3 text-sm w-fit">/design-lead</span>
@@ -175,11 +174,10 @@
             <div class="md:px-12">
                 <div class="bg-white border border-gray-200 p-2 rounded-3xl">
                     <div class="bg-[#F5F9FF] bg-[url('case-img/hitta-bg.svg')] bg-cover bg-center h-[280px] md:h-[360px] overflow-hidden rounded-2xl relative">
-                        <img src="case-img/hitta-mockup.svg"
-                            class="absolute md:left-10 md:top-20 left-4 top-10 h-[120%] max-w-none"
-                            alt="Hitta platform mockup">
+                        <img src="case-img/hitta-mockup.png" class="absolute md:left-10 md:top-20 left-4 top-10 h-[120%] max-w-none" alt="Hitta platform mockup">
                     </div>
                 </div>
+               
             </div>
         </div>
 
@@ -188,17 +186,26 @@
 
 
 
+
             <!-- Context -->
             <div class="flex-col space-y-8">
 
-                <h2 class="text-2xl font-medium">Problem Description</h2>
-                <p class="text-lg text-gray-700">When Fonecta acquired Hitta.se, Sweden’s leading people and business
-                    directory, the goal was to unify their shared B2B product across two brands and languages.
-                </p>
-                <p class="text-lg text-gray-700">In both markets, business owners struggled to manage reviews across
-                    platforms and maintain a consistent social media presence. I was brought in to bring these workflows
-                    together in one cohesive platform.</p>
+                <h2 class="text-3xl font-medium">Problem Description</h2>
+                <p class="text-lg text-gray-800">Business owners in both markets struggled to keep their accounts
+                    active, and couldn’t see if it paid off.</p>
 
+                <!-- User quote: the need behind the statistics page -->
+                <figure class="py-6 md:py-10 px-4 md:px-12 space-y-4">
+                <blockquote class="text-3xl font-medium leading-snug text-gray-900">
+                    “Can you see whether there were any searches on my hitta.se?
+                    <mark class="text-select"><span class="sel-handle start" aria-hidden="true"></span>Do you have any statistics or anything?<span class="sel-handle end" aria-hidden="true"></span></mark>
+                    Anyone who found their way through you, to me?”
+                </blockquote>
+                <figcaption class="text-gray-500">Paraphrased from a business owner, Hitta.se</figcaption>
+            </figure>
+
+                <p class="text-lg text-gray-800">After Fonecta acquired Hitta.se, both products shared this problem,
+                    so one shared design could improve both at once, across two brands and two languages.</p>
 
                 <div class="md:grid md:grid-cols-2 md:gap-4 flex-col space-y-4 md:space-y-0">
                     <div class="flex flex-col justify-between gap-10 rounded-2xl bg-gray-100 p-6">
@@ -222,28 +229,40 @@
                 </div>
             </div>
 
-
-
-
-
-
-            <div class="flex-col space-y-14">
+            <div class="flex-col space-y-16 md:space-y-24">
 
                 <div class="flex-col space-y-8">
-                                    <h2 class="text-2xl font-medium">Design</h2>
+                    <h2 class="text-3xl font-medium">Design</h2>
 
+                <!-- 1. The answer to the opening question: from managing information to seeing results -->
+                <div class="flex-col space-y-8">
                     <div class="space-y-2">
-                        <h3 class="text-xl font-medium">Modernizing the Visual Language</h3>
-                        <p class="text-lg text-gray-700">Over the years, the product had accumulated visual debt. The
-                            new editor cleans it up: clearer type, more breathing room, lighter surfaces and more
-                            information about where their business information are shared to.</p>
+                        <h3 class="text-2xl font-medium">From Managing Information to Seeing Results</h3>
+                        <p class="text-lg text-gray-800">Owners could edit their information, but not see how it performed. The new statistics page answers their question: how often they were seen, how customers interacted, and how that compares with the industry.</p>
+                    </div>
+
+                     <div class="bg-white border border-gray-200 p-2 rounded-3xl mt-4">
+                    <img src="case-img/hitta-stat.png" class="block w-full h-auto rounded-2xl"
+                        alt="Statistics page in Swedish for Hitta.se, with digital presence numbers and a 12-month chart">
+                </div>
+                <div class="flex flex-col space-y-3">
+                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                            <img src="case-img/hitta-6.png" class="block w-full h-auto rounded-2xl" alt="Home page statistics">
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- 2. What users see: a modernised editor -->
+                <div class="flex-col space-y-8">
+                    <div class="space-y-2">
+                        <h3 class="text-2xl font-medium">Modernizing the Visual Language</h3>
+                        <p class="text-lg text-gray-800">Wherever the new feature touched an existing screen, that screen was improved too: clearer type, more breathing room and lighter surfaces.</p>
                     </div>
 
                     <div class="md:grid md:grid-cols-2 md:gap-6 flex-col space-y-6 md:space-y-0">
                         <div class="flex flex-col space-y-3">
-                            <p
-                                class="rounded-full bg-white border border-gray-300 text-gray-900 py-1 px-3 text-sm w-fit font-medium">
-                                Before</p>
+                            <p class="w-fit rounded-full border border-gray-300 py-1 px-3 text-sm text-gray-900">Before</p>
                             <div
                                 class="bg-white border border-gray-200 p-2 rounded-2xl md:rounded-3xl flex-1 flex flex-col overflow-hidden">
                                 <div
@@ -253,15 +272,13 @@
                             </div>
                         </div>
                         <div class="flex flex-col space-y-3">
-                            <p class="rounded-full bg-gray-900 text-gray-50 py-1 px-3 text-sm w-fit font-medium">After
-                            </p>
+                            <p class="w-fit rounded-full border py-1 px-3 text-sm" style="color: #0057FF; border-color: #0057FF;">After</p>
                             <div
                                 class="bg-white border border-gray-200 p-2 rounded-2xl md:rounded-3xl flex-1 flex flex-col overflow-hidden">
                                 <div
                                     class="bg-white rounded-xl md:rounded-2xl flex-1 flex items-start overflow-hidden">
                                     <div class="relative w-full">
-                                        <img class="w-full h-auto" src="case-img/hitta-2-after.svg"
-                                            alt="New opening hours editor, showing which platforms the information is shared to">
+                                        <img src="case-img/hitta-2-after.png" class="w-full h-auto" alt="New opening hours editor, showing which platforms the information is shared to">
                                         <div class="hotspot absolute left-[84.4%] top-[14.5%]">
                                             <button type="button" class="hotspot-dot" aria-expanded="false"
                                                 aria-controls="hotspot-after" aria-label="What changed from before">
@@ -269,7 +286,7 @@
                                             </button>
                                             <div id="hotspot-after" role="tooltip" class="hotspot-tip below">
                                                 <p class="font-medium text-gray-900">See where your info shows up</p>
-                                                <p class="text-gray-700">Beyond a UI facelift, the new editor shows
+                                                <p class="text-gray-800">Beyond a UI facelift, the new editor shows
                                                     where the business information is shared: on Hitta, Google, ChatGPT
                                                     and 35+ other platforms.</p>
                                             </div>
@@ -281,19 +298,12 @@
                     </div>
                 </div>
 
+                <!-- 3. The foundation: one design system for two brands and two languages -->
                 <div class="flex-col space-y-6">
                     <div class="space-y-2">
-                        <h3 class="text-xl font-medium">1 Design, 1 Product, 2 Brands</h3>
+                        <h3 class="text-2xl font-medium">1 Design, 1 Product, 2 Brands</h3>
 
-<div class="flex-col space-y-6"> <p class="text-lg text-gray-700">One major goal of the project was to create a scalable
-                            experience that unified both products around the same core UX, while preserving the local
-                            brand characteristics that users in Finland and Sweden were already familiar with.
-                        </p>
-                        <p class="text-lg text-gray-700">The design was built on a robust shared design system, with
-                            each components and tokens corresponding to two brands as two themes. This reduces
-                            duplicated design and development work and allows future improvement to be shipped faster to
-                            users.
-                        </p></div>
+<div class="flex-col space-y-6"><p class="text-lg text-gray-800">Both products share one core UX and one design system, with each brand as a theme. Local brands stay familiar, and every improvement ships to both markets at once.</p></div>
                        
                     </div>
                     <!-- Tier badges for both brands, with a hotspot on how tiers differ -->
@@ -308,7 +318,7 @@
                                 </button>
                                 <div id="hotspot-tiers" role="tooltip" class="hotspot-tip center">
                                     <p class="font-medium text-gray-900">Different tiers, one component</p>
-                                    <p class="text-gray-700">Hitta.se and Fonecta each have their own subscription
+                                    <p class="text-gray-800">Hitta.se and Fonecta each have their own subscription
                                         tiers, with different names and colours. The tier badge is one shared component
                                         that adapts to each brand's lineup.</p>
                                 </div>
@@ -319,8 +329,7 @@
 
                     <div class="bg-white border border-gray-200 p-2 rounded-3xl">
                         <div class="relative">
-                            <img class="w-full h-auto rounded-2xl" src="case-img/hitta-3.svg"
-                                alt="The same dashboard in Swedish for Hitta.se and in Finnish for Fonecta">
+                            <img src="case-img/hitta-3.png" class="w-full h-auto rounded-2xl" alt="The same dashboard in Swedish for Hitta.se and in Finnish for Fonecta">
                             <div class="hotspot absolute left-[76%] top-[70.5%]">
                                 <button type="button" class="hotspot-dot" aria-expanded="false"
                                     aria-controls="hotspot-lang" aria-label="Why the Finnish copy wraps">
@@ -328,7 +337,7 @@
                                 </button>
                                 <div id="hotspot-lang" role="tooltip" class="hotspot-tip">
                                     <p class="font-medium text-gray-900">Same meaning, longer words</p>
-                                    <p class="text-gray-700">Sharing one design comes with challenges, like language
+                                    <p class="text-gray-800">Sharing one design comes with challenges, like language
                                         differences. Finnish tends to run longer than Swedish for the same sentence, so
                                         every component had to stretch without breaking the layout.</p>
                                 </div>
@@ -340,8 +349,7 @@
                         <div class="flex flex-col space-y-3">
                             <div class="bg-white border border-gray-200 p-2 rounded-3xl">
                                 <div class="relative">
-                                    <img class="w-full h-auto rounded-2xl" src="case-img/hitta-4.svg"
-                                        alt="Onboarding checklist in Swedish for Hitta.se">
+                                    <img src="case-img/hitta-4.png" class="w-full h-auto rounded-2xl" alt="Onboarding checklist in Swedish for Hitta.se">
                                     <div class="hotspot absolute left-[49.6%] top-[34%]">
                                         <button type="button" class="hotspot-dot" aria-expanded="false"
                                             aria-controls="hotspot-system"
@@ -350,7 +358,7 @@
                                         </button>
                                         <div id="hotspot-system" role="tooltip" class="hotspot-tip center">
                                             <p class="font-medium text-gray-900">Design once, ship twice</p>
-                                            <p class="text-gray-700">A robust shared design system meant each screen was
+                                            <p class="text-gray-800">A robust shared design system meant each screen was
                                                 designed one time. Adapting it for the other market took minimal work:
                                                 brand colours, tier names and copy changed, the layout stayed the same.
                                             </p>
@@ -360,16 +368,15 @@
                             </div>
                         </div>
                         <div class="flex flex-col space-y-3">
-                            <img class="bg-white border border-gray-200 p-2 rounded-3xl w-full h-auto"
-                                src="case-img/fonecta-4.svg" alt="The same onboarding checklist in Finnish for Fonecta">
+                            <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                                <img src="case-img/fonecta-4.png" class="block w-full h-auto rounded-2xl" alt="The same onboarding checklist in Finnish for Fonecta">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col space-y-3">
-                        <img class="bg-white border border-gray-200 p-2 rounded-3xl w-full h-auto"
-                            src="case-img/hitta-6.svg" alt="Onboarding checklist in Swedish for Hitta.se">
-                    </div>
+                    
                 </div>
+
 
 
 
@@ -377,8 +384,8 @@
 
             <div class="space-y-8">
                 <div class="space-y-2">
-                    <h3 class="text-xl font-medium">Afterthoughts</h3>
-                    <p class="text-lg text-gray-700">Bringing two products, two brands and two languages into one design
+                    <h3 class="text-2xl font-medium">Afterthoughts</h3>
+                    <p class="text-lg text-gray-800">Bringing two products, two brands and two languages into one design
                         taught me where to share and where to adapt:</p>
                 </div>
 
@@ -416,14 +423,14 @@
                     </div>
                 </div>
 
-                <p class="text-lg text-gray-700">Special thanks to Dalite Bagner Jensmar (Digital Designer), Emilia
+                <p class="text-lg text-gray-800">Special thanks to Dalite Bagner Jensmar (Digital Designer), Emilia
                     Niklasson
                     (Project Manager), and the Hitta.se and Fonecta teams for your work and collaboration on this
                     project.</p>
             </div>
 
             <div class="space-y-8 col-start-1 col-span-4 w-full animate">
-                <h2 class="text-2xl font-medium">Check out other works from Vy: </h2>
+                <h2 class="text-3xl font-medium">Check out other works from Vy: </h2>
 
                 <div class="space-y-4 md:gap-4 col-start-1 col-span-4 w-full">
 
@@ -441,10 +448,10 @@
                                             alt="C&A mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">Fashion</span>
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">Enhancing Offline Shopping Experience with Digital
+                                <div class="px-4 pt-8 pb-6 space-y-0">
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #2271B3;">Fashion</span>
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">Enhancing Offline Shopping Experience with Digital
                                             In-store Assistant</p>
                                         <p class="text-gray-500">C&A, Germany</p>
                                     </div>
@@ -458,17 +465,17 @@
                                 <div
                                     class="rounded-2xl overflow-hidden border border-gray-100">
                                     <div class="relative h-72 max-h-[240px] overflow-hidden" style="background-color: #D8FD53;">
-                                        <div class="absolute inset-0 group-hover:backdrop-saturate-200 transition-all duration-300" data-hover-colour="#3A8000"></div>
+                                        <div class="absolute inset-0 group-hover:backdrop-saturate-200 transition-all duration-300" data-hover-colour="#1F6B35"></div>
                                         <img src="case-img/bruce-mockup.png"
                                             class="absolute left-10 top-10 md:w-[100%] w-[120%] max-w-none rounded-t-xl"
                                             alt="bruce mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
+                                <div class="px-4 pt-8 pb-6 space-y-0">
 
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">Fitnesstech</span>
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">Redesign Membership Cancellation Process to Improve User Retention</p>
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #1F6B35;">Fitnesstech</span>
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">Redesign Membership Cancellation Process to Improve User Retention</p>
                                         <p class="text-gray-500">Bruce, Sweden</p>
                                     </div>
 
@@ -491,10 +498,10 @@
                                             alt="Bachable mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">Music Notation Editor</span>
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">Building a Design System for Faster Design to Shipping
+                                <div class="px-4 pt-8 pb-6 space-y-0">
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #E52900;">Music Notation Editor</span>
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">Building a Design System for Faster Design to Shipping
                                         </p>
                                         <p class="text-gray-500">Bachable, Sweden</p>
                                     </div>
@@ -515,11 +522,11 @@
                                             alt="Homebase mockup">
                                     </div>
                                 </div>
-                                <div class="px-2 pt-6 pb-4 space-y-2">
-                                    <span class="inline-flex items-center w-fit rounded-full bg-white border border-gray-200 py-1 px-3 text-xs font-medium text-gray-700">Fintech</span>
+                                <div class="px-4 pt-8 pb-6 space-y-0">
+                                    <span class="inline-flex items-center w-fit text-base leading-normal font-borel" style="color: #0D2B99;">Fintech</span>
 
-                                    <div class="space-y-1">
-                                        <p class="text-xl font-medium">Building Digital Trust in Financial Service with Design
+                                    <div class="space-y-2">
+                                        <p class="text-2xl font-medium">Building Digital Trust in Financial Service with Design
                                         </p>
                                         <p class="text-gray-500">Homebase, Vietnam</p>
                                     </div>

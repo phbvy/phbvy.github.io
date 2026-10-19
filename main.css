@@ -1,14 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 body {
-  font-family: 'Inter Tight', sans-serif;
+  font-family: 'Scoutie Sans', sans-serif;
+  /* Small text is light; headings use Medium (500) via font-medium */
+  font-weight: 300;
+  /* Slightly tight tracking for all text (Tailwind's tracking-tight is -0.025em) */
+  letter-spacing: -0.015em;
 }
+
 
 b {
   font-weight: 400;
+}
+
+/* Category tags: Borel (handwritten), shown as plain text */
+.font-borel {
+  font-family: 'Borel', cursive;
+  letter-spacing: 0;
 }
 
 .animate {
@@ -196,4 +207,72 @@ input[type="button"],
 input[type="submit"],
 .cursor-pointer:not(.card-cursor-target) {
   cursor: pointer !important;
+}
+
+/* Text-selection highlight (used in user quotes): a light blue band with a handle at each end,
+   a dot on top at the start and a dot below at the end. Wrap the phrase like:
+   <mark class="text-select"><span class="sel-handle start"></span>…<span class="sel-handle end"></span></mark> */
+.text-select {
+  background: #C5DAF1;
+  color: inherit;
+  padding: 0.06em 0;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.sel-handle {
+  display: inline-block;
+  position: relative;
+  width: 2px;
+  height: 1.2em;
+  margin: 0 1px;
+  vertical-align: -0.25em;
+  background: #2E6BB5;
+}
+.sel-handle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0.42em;
+  height: 0.42em;
+  border-radius: 9999px;
+  background: #0057FF;
+  transform: translateX(-50%);
+}
+.sel-handle.start::after { top: -0.34em; }
+.sel-handle.end::after { bottom: -0.34em; }
+
+/* Hand-drawn scribble under clickable Borel text (e.g. case card tags) that draws itself in
+   when the link is hovered or focused. Added by scripts.js; non-clickable Borel text has none. */
+.font-borel {
+  position: relative;
+}
+.font-borel .scribble {
+  position: absolute;
+  left: -3%;
+  /* Borel's line box has a very deep descender area, so measure up from the bottom to sit just under the letters */
+  bottom: 0.22em;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 1;
+}
+.font-borel .scribble path {
+  fill: none;
+  stroke: currentColor;
+  /* Soft marker stroke: thick, rounded and see-through */
+  stroke-width: 3.5;
+  stroke-opacity: 0.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* --len is the measured path length (set in scripts.js) */
+  stroke-dasharray: var(--len, 400);
+  stroke-dashoffset: var(--len, 400);
+  transition: stroke-dashoffset 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+a:hover .font-borel .scribble path,
+button:hover .font-borel .scribble path,
+a:focus-visible .font-borel .scribble path {
+  stroke-dashoffset: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .font-borel .scribble path { transition: none; }
 }
