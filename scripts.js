@@ -1,7 +1,7 @@
 // Reveal bubbles as they scroll into view with a slight offset, like incoming messages.
 // The offset carries over between scroll events, but no bubble ever waits longer than revealMaxWait,
 // so a fast scroll never leaves bubbles blank while a long queue plays out.
-var revealGap = 0.3;      // seconds between consecutive bubbles
+var revealGap = 0.4;      // seconds between consecutive bubbles
 var revealMaxWait = 0.3;  // longest any bubble waits before appearing
 var nextRevealAt = 0;     // timestamp (s) when the next bubble may start
 
@@ -13,6 +13,10 @@ function slide() {
 
     for (var i = 0; i < slides.length; i++) {
         var el = slides[i];
+        // Vy's hero bubbles play on load instead (see below); the sent "Hi Vy" bubble still waits for scroll
+        if (el.closest('#meet') && !el.classList.contains('border-[#1A2FD6]')) continue;
+        // ...and "Hi Vy" waits until those have started, so it never jumps ahead of them
+        if (el.closest('#meet') && !window.heroStarted) continue;
         if (el.getBoundingClientRect().top < (windowHeight - elementVisible)) {
             // Blue bubbles (sent messages) grow from the bottom-right; everything else from the left
             if (el.classList.contains("border-[#1A2FD6]")) {
@@ -240,17 +244,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Case cards on the home page.
-    // Phones (one column): fully rounded, no grouping. Desktop grid: every card gets the same
-    // tight top-left "tail" corner, and the first card joins the message above it.
+    // Phones (one column): fully rounded, no grouping. Desktop grid: left-column cards get a tight
+    // top-left corner (the first one joins the message above); right-column cards stay fully rounded.
     function caseCards() {
         const cards = [...document.querySelectorAll('#by a[href*="vy-for-"]')].filter((el) => el.offsetWidth > 0);
         if (!cards.length) return [];
         const boxes = cards.map((el) => ({ el, box: pageOffset(el) }));
         const oneColumn = boxes.every((c) => Math.abs(c.box.left - boxes[0].box.left) < 4);
         if (oneColumn) return []; // phones: cards stay fully rounded
-        boxes.forEach(({ el }) => { el.style.borderTopLeftRadius = TIGHT; });
-        boxes.sort((a, b) => a.box.top - b.box.top || a.box.left - b.box.left);
-        return [boxes[0]];
+        // Desktop grid: left-column cards get the tight top-left corner; right-column cards stay fully rounded.
+        // The first card joins the message above it.
+        const leftEdge = Math.min(...boxes.map((c) => c.box.left));
+        const left = boxes.filter((c) => Math.abs(c.box.left - leftEdge) <= 4);
+        left.forEach(({ el }) => { el.style.borderTopLeftRadius = TIGHT; });
+        left.sort((a, b) => a.box.top - b.box.top);
+        return [left[0]];
     }
 
     function group() {
@@ -368,3 +376,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     window.addEventListener('resize', draw);
 })();
+
+// Hero: Vy's bubbles ("Meet Vy" + intro) pop in on page load, one after another, without waiting
+// for a scroll. The blue "Hi Vy" reply is left to the normal scroll reveal.
+document.addEventListener('DOMContentLoaded', () => {
+    const now = performance.now() / 1000;
+    document.querySelectorAll('#meet .animate:not(.slide)').forEach((el) => {
+        if (el.classList.contains('border-[#1A2FD6]')) return;
+        const start = Math.max(now, nextRevealAt);
+        el.style.animationDelay = (start - now) + 's';
+        el.classList.add('slide');
+        nextRevealAt = start + revealGap;
+    });
+    window.heroStarted = true;
+    // If "Hi Vy" is already on screen, let it follow the intro in turn (lift the usual wait cap once)
+    const cap = revealMaxWait;
+    revealMaxWait = 10;
+    slide();
+    revealMaxWait = cap;
+});
+
+// Nav links use "/" (clean URLs on the live site). When a page is opened straight from disk (file://),
+// "/" would point at the computer's root, so point those links back at the local index.html instead.
+document.addEventListener('DOMContentLoaded', () => {
+    if (location.protocol !== 'file:') return;
+    const toRoot = location.pathname.includes('/cases/') ? '../' : '';
+    document.querySelectorAll('a[href^="/"]').forEach((link) => {
+        const href = link.getAttribute('href');           // e.g. "/" or "/#about"
+        link.setAttribute('href', toRoot + 'index.html' + href.slice(1));
+    });
+});

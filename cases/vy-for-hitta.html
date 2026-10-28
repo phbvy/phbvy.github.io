@@ -79,7 +79,7 @@
             visibility: hidden;
             transform: translateY(6px) scale(0.96);
             transform-origin: bottom right;
-            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+            transition: opacity 0.25s ease-out, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.25s;
         }
 
         .hotspot-tip p+p {
@@ -136,14 +136,14 @@
             <nav style="background-color: #F7F7F8; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.06), inset 0 1px 0 rgb(255 255 255 / 0.8);"
                 class="border border-slate-200 mx-auto p-1.5 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
                 <a class="border border-transparent hover:text-slate-900 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-500 transition-colors"
-                    href="../index.html">Home</a>
+                    href="/">Home</a>
                 <a style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.06);"
                     class="bg-white border border-slate-200 rounded-3xl text-slate-900 py-2 px-4 md:px-6 md:w-fit w-fill"
-                    href="../index.html#by" aria-current="page">Portfolio</a>
+                    href="/#by" aria-current="page">Portfolio</a>
                 <a class="border border-transparent hover:text-slate-900 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-500 transition-colors"
-                    href="../index.html#about">About</a>
+                    href="/#about">About</a>
                 <a class="border border-transparent hover:text-slate-900 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-500 transition-colors"
-                    href="../index.html#contact">Contact</a>
+                    href="/#contact">Contact</a>
             </nav>
 
             <!-- Text section -->
@@ -198,8 +198,8 @@
                 <figure class="py-6 md:py-10 px-4 md:px-12 space-y-4">
                 <blockquote class="text-3xl font-medium leading-snug text-gray-900">
                     “Can you see whether there were any searches on my hitta.se?
-                    <mark class="text-select"><span class="sel-handle start" aria-hidden="true"></span>Do you have any statistics or anything?<span class="sel-handle end" aria-hidden="true"></span></mark>
-                    Anyone who found their way through you, to me?”
+                    Do you have any statistics or anything?
+                    <mark class="text-select"><span class="sel-handle start" aria-hidden="true"></span>Anyone who found their way through you, to me?<span class="sel-handle end" aria-hidden="true"></span></mark>”
                 </blockquote>
                 <figcaption class="text-gray-500">Paraphrased from a business owner, Hitta.se</figcaption>
             </figure>
