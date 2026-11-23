@@ -10,6 +10,7 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="case.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,7 +22,7 @@
 
 </head>
 
-<body style="background-color: #FaFaFa;">
+<body style="background-color: #FFFFFF;">
     <div id="start"></div>
     <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300"
         href="#start" id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up"
@@ -61,23 +62,23 @@
 
             <!-- Image card -->
             <div class="md:px-12">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <div class="bg-[#FAF8F3] bg-[url('case-img/canda-bg.svg')] bg-cover bg-center h-[280px] md:h-[400px] overflow-hidden rounded-2xl relative">
-                        <img src="case-img/canda-mockup.png" class="absolute left-1/2 -translate-x-1/2 top-10 h-[125%] max-w-none" alt="C&A mockup">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                    <div class="bg-[#FAF8F3] bg-[url('case-img/canda-bg.svg')] bg-cover bg-center overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16 flex items-center justify-center">
+                        <img src="case-img/canda-mockup.png" class="block w-full h-auto md:w-auto md:max-w-full md:max-h-[70vh]" alt="C&A mockup">
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="md:px-12 md:space-y-28 space-y-16">
-            <div class="md:grid md:grid-cols-5 gap-4 items-stretch">
-                <div class="col-span-3 bg-white border border-gray-200 p-2 rounded-3xl flex-1 flex flex-col">
-                    <div class="overflow-hidden rounded-2xl flex-1">
-                        <img class="w-full h-full object-cover object-top" src="case-img/canda-7.png">
+            <!-- one zooming card holding the two images side by side on desktop -->
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <!-- on desktop the pair is as tall as fits the window, like the other image cards at rest -->
+                    <div class="flex flex-col md:flex-row md:justify-center gap-8 md:gap-16 md:h-[calc(88vh-8rem)]">
+                        <img class="w-full h-auto md:w-auto md:h-full" src="case-img/canda-7.png">
+                        <img class="w-full h-auto md:w-auto md:h-full rounded-xl md:rounded-2xl" src="case-img/canda-10.gif">
                     </div>
-                </div>
-                <div class="col-span-2 bg-white border border-gray-200 p-2 rounded-3xl flex flex-col justify-center">
-                    <img class="w-full rounded-2xl" src="case-img/canda-10.gif">
                 </div>
             </div>
 
@@ -101,7 +102,7 @@
 
             </div>
 
-            <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
+            <div class="flex flex-col justify-between rounded-3xl bg-gray-100 p-6 col-span-1">
                 <img class="h-[48px] w-auto self-start" src="case-img/c-a-logo.png">
                 <div class="pt-12 space-y-1">
                     <h2 class="font-medium">About C&A</h2>
@@ -119,11 +120,14 @@
                 <h2 class="text-3xl font-medium">Deliverables: Seamless Offline to Online Experience</h2>
             </div>
 
-            <div class="bg-white border border-gray-200 p-8 rounded-3xl">
-                <div class="flex flex-row gap-6 items-end">
-                    <div class="flex-1"><img class="w-full rounded-2xl" src="case-img/canda-step1.png"></div>
-                    <div class="flex-1"><img class="w-full rounded-2xl" src="case-img/canda-step2.png"></div>
-                    <div class="flex-1"><img class="w-full rounded-2xl" src="case-img/canda-step3.png"></div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                <!-- on desktop the screens are as tall as fits the window, like the other image cards at rest -->
+                <div class="flex flex-row justify-center gap-3 md:gap-6 md:h-[calc(88vh-8rem)]">
+                    <img class="min-w-0 flex-1 md:flex-none w-full h-auto md:w-auto md:h-full rounded-xl md:rounded-2xl" src="case-img/canda-step1.png">
+                    <img class="min-w-0 flex-1 md:flex-none w-full h-auto md:w-auto md:h-full rounded-xl md:rounded-2xl" src="case-img/canda-step2.png">
+                    <img class="min-w-0 flex-1 md:flex-none w-full h-auto md:w-auto md:h-full rounded-xl md:rounded-2xl" src="case-img/canda-step3.png">
+                </div>
                 </div>
             </div>
 
@@ -136,7 +140,7 @@
             <h2 class="text-3xl font-medium">Context</h2>
 
             <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6 h-full">
+                <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6 h-full">
                     <i data-lucide="user" class="w-6 h-6"></i>
                     <div class="pt-12 space-y-1">
                         <h2 class="font-medium">About the Users</h2>
@@ -145,7 +149,7 @@
                             life.</p>
                     </div>
                 </div>
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                     <i data-lucide="puzzle" class="w-6 h-6"></i>
                     <div class="pt-12 space-y-1">
                         <h2 class="font-medium">The Digital Assistant Product hypothesis</h2>
@@ -169,7 +173,7 @@
 
             <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
 
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6 col-span-1">
+                <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6 col-span-1">
                     <i data-lucide="search-x" class="w-6 h-6"></i>
                     <div class="pt-12 space-y-1">
                         <h3 class="font-medium">Lack of Information Access</h3>
@@ -180,7 +184,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6 col-span-1">
+                <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6 col-span-1">
                     <i data-lucide="arrow-right-left" class="w-6 h-6"></i>
                     <div class="pt-12 space-y-1">
                         <h3 class="font-medium">Offline-to-Online Transition</h3>
@@ -190,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6 col-span-1">
+                <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6 col-span-1">
                     <i data-lucide="timer" class="w-6 h-6"></i>
                     <div class="pt-12 space-y-1">
                         <h3 class="font-medium">Short Time-to-Market</h3>
@@ -240,7 +244,7 @@
 
 
                     <div class="space-y-4 pt-4">
-                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                        <div class="flex flex-col rounded-3xl bg-gray-100 p-6">
                             <div
                                 class="bg-gray-900 rounded-3xl p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium">
                                 1
@@ -259,16 +263,14 @@
                             </div>
                         </div>
 
-                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                            <img class="w-full rounded-2xl" src="case-img/canda-1.png">
-                        </div>
+                        <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/canda-1.png" alt="Customer journey map"></div>
 
                     </div>
 
 
 
                     <div class="space-y-4 pt-4">
-                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                        <div class="flex flex-col rounded-3xl bg-gray-100 p-6">
                             <div
                                 class="bg-gray-900 rounded-3xl p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium">
                                 2
@@ -289,9 +291,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                            <img class="w-full rounded-2xl" src="case-img/canda-2.png">
-                        </div>
+                        <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/canda-2.png"></div>
 
                         <p class="text-center text-sm text-gray-400">C&A and other brands' availability feature in
                             product
@@ -304,7 +304,7 @@
 
                     <div class="space-y-4 pt-4">
 
-                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                        <div class="flex flex-col rounded-3xl bg-gray-100 p-6">
                             <div
                                 class="bg-gray-900 rounded-3xl p-2 text-gray-50 w-[40px] h-[40px] text-center font-medium">
                                 3
@@ -317,9 +317,7 @@
                                     understanding of how they solve similar challenges.</p>
                             </div>
                         </div>
-                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                            <img class="w-full rounded-2xl" src="case-img/canda-9.png">
-                        </div>
+                        <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/canda-9.png"></div>
 
                         <p class="text-center text-sm text-gray-400">Uniqlo, a C&A competitor, provdies tailoring
                             services
@@ -371,12 +369,12 @@
                     </div>
                 </div>
 
-                <div class="space-y-2">
+                <div class="space-y-6">
                     <p class="text-lg text-gray-800">I led the creatation of a CX Strategy in the project to guide the
                         approach to address the challenges and leverage the opportunities identified previously when
                         designing the UI and UX of the project:</p>
                     <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
-                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                        <div class="flex flex-col rounded-3xl bg-gray-100 p-6">
                             <div class="space-y-1">
                                 <h3 class="font-medium">Connect Offline-to-Online Touchpoints & Top-of-Mind Choice
                                 </h3>
@@ -387,7 +385,7 @@
                                     Assistant to access stock information.</p>
                             </div>
                         </div>
-                        <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                        <div class="flex flex-col rounded-3xl bg-gray-100 p-6">
                             <div class="space-y-1">
                                 <h3 class="font-medium">Minimizing Friction to Information</h3>
                                 <p class="text-gray-800">We need to provide alternative size and stock information
@@ -423,9 +421,7 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                        <img class="w-full rounded-2xl" src="case-img/canda-3.png">
-                    </div>
+                    <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/canda-3.png"></div>
                     <p class="text-center text-sm text-gray-400">C&A denim blue used in In-store communication design
                         and
                         Digital Assitant interface design</p>
@@ -489,8 +485,10 @@
             </div>
 
             <div class="space-y-4 pt-8">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <img class="w-full rounded-2xl" src="case-img/canda-5.png">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/canda-5.png">
+                    </div>
                 </div>
                 <p class="text-center text-sm text-gray-400">Digital Assistant Design</p>
 
@@ -654,5 +652,6 @@
 
     </div>
     <script>lucide.createIcons();</script>
+    <script src="case.js"></script>
 
 </body>

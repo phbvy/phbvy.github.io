@@ -91,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const createCommentForm = document.querySelector("#commentform")
       
     const input = document.getElementById('messagecontent');
+    // only the home page has the chat box
+    if (!input || !createCommentForm) return;
     input.addEventListener('blur', () => {
         if (input.value.trim() === '') {
             const bubble = document.getElementById('typingBubble');

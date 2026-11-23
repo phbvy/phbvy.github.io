@@ -10,6 +10,7 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="case.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +24,7 @@
 
 </head>
 
-<body style="background-color: #FCFCFC;">
+<body style="background-color: #FFFFFF;">
     <div id="start"></div>
     <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300"
         href="#start" id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up"
@@ -63,9 +64,9 @@
 
             <!-- Image card -->
             <div class="md:px-12">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <div class="bg-[#D8FD53] h-[280px] md:h-[400px] overflow-hidden rounded-2xl relative">
-                        <img src="case-img/bruce-3.png" class="absolute left-1/2 -translate-x-1/2 top-10 h-[125%] max-w-none" alt="Bruce mockup">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                    <div class="bg-[#D8FD53] overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16 flex items-center justify-center">
+                        <img src="case-img/bruce-3.png" class="block w-full h-auto md:w-auto md:max-w-full md:max-h-[70vh]" alt="Bruce mockup">
                     </div>
                 </div>
             </div>
@@ -88,7 +89,7 @@
 
                 </div>
 
-                <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
+                <div class="flex flex-col justify-between rounded-3xl bg-gray-100 p-6 col-span-1">
                     <img class="h-[32px] w-auto self-start" src="case-img/bruce-logo.png">
                     <div class="pt-12 space-y-1">
                         <h2 class="font-medium">About Bruce</h2>
@@ -102,7 +103,11 @@
             </div>
 
             <figure class="space-y-2">
-                <div class="bg-white border border-gray-200 md:p-12 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/bruce-mockup.png"></div>
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/bruce-mockup.png">
+                    </div>
+                </div>
             </figure>
 
 
@@ -117,7 +122,7 @@
 
                 <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
 
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">Quantitative User Survey</h3>
@@ -126,7 +131,7 @@
                                 be improved.</p>
                         </div>
                     </div>
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="user" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">Stakeholders Interviews</h3>
@@ -135,7 +140,7 @@
                                 CMO) to align UX improvements with business objectives.</p>
                         </div>
                     </div>
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="layers" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">Affinity Mapping</h3>
@@ -211,7 +216,11 @@
                         it is important to inform users optimal alternatives that allow users to keep up their working
                         out routine with Bruce based on their subscription and account status.</p>
                 </div>
-                <div class="bg-white border border-gray-200  md:p-12 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/bruce-3.png"></div>
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/bruce-3.png">
+                    </div>
+                </div>
 
 
             </div>
@@ -224,7 +233,11 @@
                         them to cancel their subscription in order to improve the product and tailor our offer to match
                         with their answers.</p>
                 </div>
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/bruce-4.png"></div>
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/bruce-4.png">
+                    </div>
+                </div>
             </div>
             <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
                 <div class="space-y-2 flex-1 md:sticky md:top-8">
@@ -387,4 +400,5 @@
 
     </div>
     <script>lucide.createIcons();</script>
+    <script src="case.js"></script>
 </body>

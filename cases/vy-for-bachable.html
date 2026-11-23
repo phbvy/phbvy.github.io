@@ -3,13 +3,16 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&family=Borel&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&family=Borel&family=Trocchi&display=swap"
         rel="stylesheet">
     <meta charset="utf-8">
     <title>Vy's Portfolio</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="case.css">
+    <link rel="stylesheet" href="bachable-features.css">
+    <link rel="stylesheet" href="bachable-hero.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +26,7 @@
 
 </head>
 
-<body style="background-color: #FCFCFC;">
+<body style="background-color: #FFFFFF;">
     <div id="start"></div>
     <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300"
         href="#start" id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up"
@@ -33,7 +36,7 @@
     <div class="md:container mx-auto md:py-12 py-6 px-4 mb-32 md:space-y-28 space-y-16 xl:w-3/4 w-auto">
         <div class="space-y-12">
             <nav style="background-color: #F7F7F8; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.06), inset 0 1px 0 rgb(255 255 255 / 0.8);"
-                class="border border-slate-200 mx-auto p-1.5 rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
+                class="border border-slate-200 mx-auto p-1.5 rounded-[20px] md:rounded-[32px] w-fit flex flex-wrap justify-center md:gap-1">
                 <a class="border border-transparent hover:text-slate-900 rounded-3xl py-2 px-4 md:px-6 md:w-fit w-fill text-slate-500 transition-colors"
                     href="/">Home</a>
                 <a style="box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.06);"
@@ -68,11 +71,12 @@
                     </div>
                 </div>
 
-                 <div class="md:px-12">
-                    <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                        <div class="bg-[#FF4D00] h-[280px] md:h-[360px] overflow-hidden rounded-2xl relative">
+                 <!-- breaks out of the page column on wide screens -->
+                 <div class="xl:-mx-[9vw]">
+                    <div data-expand class="rounded-[20px] md:rounded-[32px]">
+                        <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
                             <img src="case-img/bachable-mockup.png"
-                                class="absolute left-1/2 -translate-x-1/2 top-10 h-[120%] max-w-none rounded-2xl"
+                                class="w-full rounded-xl md:rounded-3xl"
                                 alt="Bachable mockup">
                         </div>
                     </div>
@@ -95,7 +99,7 @@
                 </div>
 
 
-                <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-2">
+                <div class="flex flex-col justify-between rounded-3xl bg-gray-100 p-6 col-span-2">
                     <img class="h-[48px] w-auto self-start" src="case-img/bachable-logo.png">
                     <div class="pt-4 space-y-1">
                         <h2 class="font-medium">About Bachable.io</h2>
@@ -107,29 +111,60 @@
             </div>
 
             <div class="space-y-6">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <div class="bg-[#FF4D00] overflow-hidden rounded-2xl">
-                        <img class="w-full" src="case-img/bachable-1.png">
+                <!-- pins the audience card on screen for a stretch of scrolling, like the product,
+                     so the highlight runs through creates, composes and performs before moving on -->
+                <div data-pin>
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                        <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-4 md:p-12">
+                            <!-- Bachable landing page audience section, rebuilt from the product (scroll-highlight-section.tsx):
+                                 while pinned, scrolling moves the highlight and the photos through the three Figma states -->
+                            <div class="bh-hero rounded-xl md:rounded-3xl" data-bh-hero>
+                                <div class="bh-stage">
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: -305px; --desktop-y: -230px; --mobile-x: 22%; --mobile-y: -294px"><i data-lucide="music"></i><i data-lucide="music" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: 226px; --desktop-y: -80px; --mobile-x: 90%; --mobile-y: 272px"><i data-lucide="music"></i><i data-lucide="music" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: -212px; --desktop-y: 89px; --mobile-x: 19%; --mobile-y: 72px"><i data-lucide="music"></i><i data-lucide="music" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: -330px; --desktop-y: 283px; --mobile-x: 87%; --mobile-y: 42px"><i data-lucide="music"></i><i data-lucide="music" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: 539px; --desktop-y: -215px; --mobile-x: 92%; --mobile-y: -227px"><i data-lucide="music-2"></i><i data-lucide="music-2" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: -519px; --desktop-y: 185px; --mobile-x: 7%; --mobile-y: -58px"><i data-lucide="music-2"></i><i data-lucide="music-2" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: 464px; --desktop-y: -41px; --mobile-x: 60%; --mobile-y: 300px"><i data-lucide="music-2"></i><i data-lucide="music-2" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: 516px; --desktop-y: 226px; --mobile-x: 31%; --mobile-y: 176px"><i data-lucide="music-2"></i><i data-lucide="music-2" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: 342px; --desktop-y: -180px; --mobile-x: 47%; --mobile-y: -176px"><i data-lucide="music-3"></i><i data-lucide="music-3" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: -509px; --desktop-y: -195px; --mobile-x: 80%; --mobile-y: 122px"><i data-lucide="music-3"></i><i data-lucide="music-3" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: 89px; --desktop-y: 271px; --mobile-x: 78%; --mobile-y: -146px"><i data-lucide="music-4"></i><i data-lucide="music-4" class="bh-accent"></i></span>
+                                    <span class="bh-icon" aria-hidden="true" style="--desktop-x: -458px; --desktop-y: -38px; --mobile-x: 11%; --mobile-y: 150px"><i data-lucide="music-4"></i><i data-lucide="music-4" class="bh-accent"></i></span>
+                                    <img class="bh-tile" src="case-img/audience-top.jpg" alt="" loading="lazy">
+                                    <img class="bh-tile" src="case-img/audience-left.jpg" alt="" loading="lazy">
+                                    <img class="bh-tile" src="case-img/audience-right.jpg" alt="" loading="lazy">
+                                    <img class="bh-tile" src="case-img/audience-bottom.jpg" alt="" loading="lazy">
+                                    <div class="bh-copy">
+                                        <h2 class="bh-heading">For everyone<br>who <span class="bh-word">creates</span>,<br><span class="bh-word">composes</span> and<br><span class="bh-word">performs</span></h2>
+                                        <span class="bh-button"><i data-lucide="music-2"></i>Try bachable</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <div class="bg-[#FF4D00] overflow-hidden rounded-2xl">
-                        <img class="w-full" src="case-img/bachable-1.2.png">
+
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/bachable-2.png">
                     </div>
                 </div>
+
             </div>
 
             <div class="flex-col space-y-4">
                 <h2 class="text-3xl font-medium">Challenges & Stack</h2>
                 <div class="md:grid md:grid-cols-2 md:gap-4 flex-col space-y-4 md:space-y-0">
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="users" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">The Team</h3>
                             <p class="text-gray-600">A tiny cross-functional team of 1 designer and 1 developer. With limited resources, speed and consistency were both non-negotiable.</p>
                         </div>
                     </div>
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="code-2" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">The Tech Stack</h3>
@@ -152,7 +187,7 @@
 
                     <div class="flex-col space-y-4">
                         <div class="md:grid md:grid-cols-2 md:space-x-4 flex-col space-y-4 md:space-y-0">
-                            <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                            <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                                 <i data-lucide="handshake" class="w-6 h-6"></i>
                                 <div class="pt-12 space-y-1">
                                     <h2 class="font-medium">Developer alignment</h2>
@@ -161,7 +196,7 @@
                                         would feel natural rather than imposed.</p>
                                 </div>
                             </div>
-                            <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                            <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                                 <i data-lucide="puzzle" class="w-6 h-6"></i>
                                 <div class="pt-12 space-y-1">
                                     <h2 class="font-medium">Choose the base</h2>
@@ -191,7 +226,7 @@
                 <div class="hidden md:flex items-center pb-2">
                     <p class="text-sm font-medium text-gray-800 text-center flex-1">Designer in Figma</p>
                     <div class="flex-1"></div>
-                    <div class="w-32"></div>
+                    <div class="w-40"></div>
                     <div class="flex-1"></div>
                     <p class="text-sm font-medium text-gray-800 text-center flex-1">Developer in Code</p>
                 </div>
@@ -205,7 +240,7 @@
                             <p class="font-medium text-sm">color/fg-primary</p>
                         </div>
                         <div class="flex-1 h-px bg-gray-300"></div>
-                        <div class="flex-shrink-0 w-32 flex justify-center">
+                        <div class="flex-shrink-0 w-40 flex justify-center">
                             <div class="w-8 h-8 rounded-lg" style="background:#f54a00"></div>
                         </div>
                         <div class="flex-1 h-px bg-gray-300"></div>
@@ -242,11 +277,8 @@
                             <p class="font-medium text-sm">Button/variant=primary</p>
                         </div>
                         <div class="flex-1 h-px bg-gray-300"></div>
-                        <div class="flex-shrink-0 w-32 flex justify-center">
-                            <button
-                                class="rounded-md px-3 py-2 text-xs font-medium text-white flex items-center whitespace-nowrap gap-1.5"
-                                style="background:#f54a00"><i data-lucide="music" class="w-3 h-3"
-                                    stroke-width="3"></i>Save score</button>
+                        <div class="flex-shrink-0 w-40 flex justify-center">
+                            <span class="bh-button whitespace-nowrap"><i data-lucide="music-2"></i>Save score</span>
                         </div>
                         <div class="flex-1 h-px bg-gray-300"></div>
                         <div class="bg-gray-100  rounded-2xl px-4 py-3 flex-1">
@@ -257,10 +289,7 @@
                     <!-- Mobile -->
                     <div class="md:hidden space-y-2">
                         <div class="flex items-center justify-center gap-2">
-                            <button
-                                class="rounded-md px-3 py-2 text-xs font-medium text-white flex items-center w-fit gap-1.5 whitespace-nowrap"
-                                style="background:#f54a00"><i data-lucide="music" class="w-3 h-3"
-                                    stroke-width="3"></i>Save score</button>
+                            <span class="bh-button whitespace-nowrap"><i data-lucide="music-2"></i>Save score</span>
                         </div>
                         <div class="grid grid-cols-2 gap-2">
                             <div class="bg-gray-100  rounded-2xl px-4 py-3">
@@ -276,6 +305,7 @@
                     <p class="hidden md:block text-xs text-gray-400 text-center">Primary button</p>
                 </div>
 
+
             </div>
 
 
@@ -289,61 +319,826 @@
                     <p class="text-lg text-gray-800">The product had a complex UI with the markdown editor, multi-files free and compile logs. New screens were assembled from components, not designed from
                         scratch.
                         Design-to-code required
-                        minimal interpretation.</p>
+                        minimal interpretation. The repo is also set up for Claude Code, so I shipped design updates as
+                        pull requests myself, and the developer reviewed code instead of rebuilding it from a Figma file.</p>
                 </div>
 
-                <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
-
-                    <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                <!-- how design updates ship as pull requests via Claude Code -->
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="flex flex-col rounded-3xl bg-gray-100 p-6 space-y-6">
+                        <div class="flex items-center justify-between">
+                            <i data-lucide="git-branch" class="w-6 h-6 text-gray-800"></i>
+                            <span class="text-sm text-gray-400">1</span>
+                        </div>
                         <div class="space-y-1">
-                            <p class="text-3xl font-medium">1×</p>
-                            <p class="text-gray-600">Each decision made once, reused everywhere</p>
+                            <p class="font-medium">Branch</p>
+                            <p class="text-gray-600">I work on new changes on a branch, named by Claude following predefined rules.</p>
                         </div>
                     </div>
-
-                    <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col rounded-3xl bg-gray-100 p-6 space-y-6">
+                        <div class="flex items-center justify-between">
+                            <i data-lucide="book-open" class="w-6 h-6 text-gray-800"></i>
+                            <span class="text-sm text-gray-400">2</span>
+                        </div>
                         <div class="space-y-1">
-                            <p class="text-3xl font-medium">0</p>
-                            <p class="text-gray-600">Back-and-forth on "what shade of orange is this?".</p>
+                            <p class="font-medium">Build with the system</p>
+                            <p class="text-gray-600">Claude follows the repo's rules: use the tokens and components from the design system.</p>
                         </div>
                     </div>
-
-                    <div class="flex flex-col rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col rounded-3xl bg-gray-100 p-6 space-y-6">
+                        <div class="flex items-center justify-between">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-gray-800"></i>
+                            <span class="text-sm text-gray-400">3</span>
+                        </div>
                         <div class="space-y-1">
-                            <p class="text-3xl font-medium">Any</p>
-                            <p class="text-gray-600">Screen built from the same source of truth</p>
+                            <p class="font-medium">Checked on every edit</p>
+                            <p class="text-gray-600">A hook lints each file Claude touches; typecheck, lint and tests run before it's done.</p>
                         </div>
                     </div>
-
+                    <div class="flex flex-col rounded-3xl bg-gray-100 p-6 space-y-6">
+                        <div class="flex items-center justify-between">
+                            <i data-lucide="git-pull-request" class="w-6 h-6 text-gray-800"></i>
+                            <span class="text-sm text-gray-400">4</span>
+                        </div>
+                        <div class="space-y-1">
+                            <p class="font-medium">Pull request</p>
+                            <p class="text-gray-600">The developer reviews and merges.</p>
+                        </div>
+                    </div>
+                    </div>
                 </div>
 
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
-                    <div class="bg-gray-100 overflow-hidden rounded-2xl flex items-center justify-center py-16 px-8">
-                        <img class="w-full max-w-sm md:rounded-2xl rounded-l" src="case-img/bachable-4.png">
+
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/bachable-mockup.png" alt="Bachable mockup">
                     </div>
                 </div>
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
-                    <div class="bg-gray-100 px-0 pt-1 pb-0 md:px-2 md:pt-4 md:pb-0 overflow-hidden rounded-2xl">
-                        
-                        <img class="w-full" src="case-img/bachable-2.png">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/bachable-3.png">
+                    </div>
+                </div>
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/bachable-4.png">
+                    </div>
+                </div>
+                <!-- Bachable landing page Features section, ported from the product (features-section.tsx).
+                     Each visual animates while hovered, or on touch screens while mostly on screen. -->
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-4 md:p-12">
+                    <div class="fv-section flex flex-col gap-4 md:gap-6">
+                        <div class="fv-row flex flex-col md:flex-row gap-4 md:gap-6 md:h-[400px]">
+                            <div class="fv-card flex flex-col bg-[rgb(20,20,20)] rounded-xl md:rounded-3xl overflow-hidden md:basis-0 md:min-w-0" style="flex-grow: 1">
+                                <div class="fv-stage bg-[#18181B] w-full md:flex-1 md:min-h-0 overflow-hidden" style="--fv-focus: 0.45; --fv-mobile-y: 0%; --fv-mobile-x: 0%; --fv-mobile-aspect: 16 / 10" role="img" aria-label="Zero setup. Just start writing.">
+<svg class="fv-svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true" width="1752" height="700" viewBox="-34 44 876 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>@font-face{font-family:"Inter Embed";font-weight:500;src:url(data:font/woff2;base64,d09GMgABAAAAAAfUABAAAAAADtQAAAd2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhwbhBQcgWgGYD9TVEFUWgBsEQgKjDCKQgE2AiQDWAsuAAQgBYQiByAMBxuiDFFUcrYh+SKBwyvjT3FAj4Q2xibGEIej56aWNQrufZ4J+u/3uj33ld9K0lUGRZcoFCo6CuVaFQaNRCEkTqMROu+Hd9NeaKgklJoaVJ1SDe7XAyYwVaZmTNy/RkCsrT1PDY2EypCti2hp5Eh+0fYhfUMa4H8cdllU/nVv6u5dx50PcpfagAIYi3Bs95f2Ulu3nMXqeKXQ/3hzll44FKGjTEgCgOE8y1kqOqFK6JVwMpX/nvtVEagBgDGSk1JHBEqXCGi11tgJgQOjVg6xE61ABrFLjl4JsVBA+kfUTARbjLRKoK4rfIHzDgC/FkRTRHMu8rBDDeyQuKCYAyg4lcuBg2biDLx4Q0aIJOSNAwcBys2/kwwVIskwlc8WxpqCdFfadEA6pCf6b553BT5/E1PuT4soAOQGAun7UCCtFwraObA+PNb4nNRmOHcf5atndVbMcgNPVKKxldQGklHOI7oETmzMFcQYBWuhUABcl+OEBJdRoXRKKtwXQL0XnNScoER+3+FapYDwf3QYC7Frg0ILydthOWQe05p8sHfhBgQe+KBtra34VUUXqUC8NwaWzMhbyR9tlqMR3HFUILaclRqZqIkczlpBlGySnpfu5vMM0PhL8AMZoRJfAvgaR7Mri2zJUCECsD2ejR+2azV1wFGpjNnR/QjkX2YDEMC3EzvABoX2uwKmo7OcIm22OhOSD24mYj2CgH7e+jSEhiQahUKABQWoQARVgh8Ax1hAB4AAGJyD1gR1XTFyVzzunJCEnJqWgfEZOMchJqfif0JvaUta3MIWNK/ZEJhC9PynA3P43lPAGugFsA+AETB9x0i9eLalJFOcTFsLk3v6ucd2o+JRDz8UdXdv+nj7BVFQCkblTLh1C7HeVplx7hWEUKYPNuHGjeAuthSfeBN7AYoh2EZwdU2sRRDbDciNPtnngsWoKdQTUzHAzDiKb1E03gXLncWSLWnVeA+x3ne4hdG5+Na8ii+nSMIYN+YIu1JwMm4MvGiLwwDcEY9OgWxVz0pTmIGKGF2st+tiOmfvFtWDswzdX8BS/tgKyFZ1L9wFdzYb5yX3izuYbT1mHA4WsHPgC5UtdeMufNp4KgZmG3T0dOUi5BIse8mIgTPWi9+40cOMOdWMZTJN+MDNmwysKWXh/8/xzlVOl49Y/RmA5QbLCXc0TbBz6Dq6tuEqwzybpjb/gRf9pRuaeXOUrFrjkJq5Uc3OXNxMXR7nWJbGIFJr6sTJtKqfl3NieJONe/K4lXPCRnd0zDG9ujkP72W0jchO2No7vKpCR596oNyTQW1xmXFbGFNcVZiTWzMQBYd9BJbK2r4szy23gGx/kEjJrO4bVikZYx9rRHbvHCTZJ+zdz7aKaNtUStpmi4BDWNn0jQZ9+VYrDyQWv51qddi42YqO/xuLmXOSTZ2dJu/GqxnrU6ppWZ1BWYJRUto2uYy2dZREkM0IrshOqV94JcOrmTHExJyXAlk+465PGCTt3G1Ero8dIx5WWdMXSUl8AGT7rS2eUXV9wyuz9xMWXvlWvYG+0cJmcSwC2malir7NKgKDVZ8nW5DNG4eRX89YyN5WOnl0+425zeaVmDBHVLZwCJMYGNlTOYOp1jUvntxKlPIia6ujLqcHMoaNPFgLSS+IHet3uFYSj8T9E+dUdVcQPszMbT/eRTVXNdUfBdXZe/Ia98aEpM/aN36Udj2L2D/x9IMNxqFjlfUGWoUZbMQDAvzI9vPG+i6QWPTudNBx3qLF1Itu3mh1MNgnHCWlbZXKaNuhXCgYeVIYR+OTw8xl4Ai3dnue9MxxV2VPlLaQ6rP/Cjbi5k5KaN88Eden3dO+o8IpqtFYVqGuXwPurtoNLOLAhD32DBuraNCXDumenT6LHTx80uccGAujpudsHz2l17W82qvGry3Qxvv0wBQtSb8WLKrsrpNtjxY/MX0I5f+N6OEOji3uzW6jQi61lMEo6bnO0pJrMQhD399yhz955E3C/vjY9Ynx8+IS58IfPLNamRFxFZkZaiWLDPYKAZKC+8mloN6QmxeloKCtIS/3KwApxwVEsxsQDb8Ar6/ALdAlUuEjfdV6+UGAd1UOPq5juRX/5w7OAPB3HjttPHXRfvsIn653vv3eHwwgfGlyZ0eB+0ZfD9D/PKEFtfFEOuJvbH4x7DHdoh2mkQtM46vYDIXbiAGTWG+225w/m/lUfj6pYayRprBCa2gPvhqR+AF4goC5Xli0jUwQHFfe+CZTYheAT4CGy9K0cNP6CXfO7V7tZeHBhRdh0TIIHIIgUAeZgLPspVo+2OvDCzgHXEyzS29OhwX/qaCiZqQlISKmFy5Tugy5K62TxYK2Okp6CKQVrpWWipQAT1FGZ1iB+MvZoRMu3lEgPTWdQmnSiEhEbQZcqcoOFYU0RZmCLs6RBFibEOyuTQT4JAwU2gmIGMhxaGVLlb6nfYu069DUry6CtSl61CUEPEhCRSl8Le1fRYrclhpJHp7GhUU5REz5fM01tbVQ08dn4eGQC9dBwkQgQ/aaq6PnRdB+HoLGoeQAgP1Gi8D+v/o3en4yAAAA) format("woff2")}</style>
+<pattern id="fv-zero-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+<path d="M40 0H0V40" stroke="black" stroke-opacity="0.045"/>
+</pattern>
+<radialGradient id="fv-zero-vignette" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(404 219) scale(626 250)">
+<stop stop-color="#18181B" stop-opacity="0"/>
+<stop offset="0.45" stop-color="#18181B" stop-opacity="0.15"/>
+<stop offset="1" stop-color="#18181B"/>
+</radialGradient>
+<filter id="fv-zero-softShadow" x="-20%" y="-20%" width="140%" height="160%" color-interpolation-filters="sRGB">
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="eroded"/>
+<feOffset dy="12" in="eroded"/>
+<feGaussianBlur stdDeviation="16"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in="SourceGraphic"/>
+</filter>
+<filter id="fv-zero-heroShadow" x="-30%" y="-80%" width="160%" height="300%" color-interpolation-filters="sRGB">
+<feMorphology radius="6" operator="erode" in="SourceAlpha" result="eroded"/>
+<feOffset dy="14" in="eroded"/>
+<feGaussianBlur stdDeviation="18"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in="SourceGraphic"/>
+</filter>
+<clipPath id="fv-zero-browserClip">
+<rect x="290" y="96" width="820" height="460" rx="24"/>
+</clipPath>
+<clipPath id="fv-zero-canvas">
+<rect x="-100" width="1100" height="500"/>
+</clipPath>
+<filter id="fv-zero-heroHalo" x="400.5" y="16.5" width="479" height="479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="45" result="h1_foregroundBlur"/>
+</filter>
+<filter id="fv-zero-heroDisc" x="538" y="168" width="204" height="204" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="6" operator="erode" in="SourceAlpha" result="h1_dropShadow"/>
+<feOffset dy="14"/>
+<feGaussianBlur stdDeviation="22"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.960784 0 0 0 0 0.286275 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="h1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="h1_dropShadow" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="h2_innerShadow"/>
+</filter>
+<linearGradient id="fv-zero-heroFill" x1="640" y1="192" x2="640" y2="320" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F97316"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+</defs>
+
+<g clip-path="url(#fv-zero-canvas)">
+<rect x="-100" width="1100" height="500" fill="#18181B"/>
+<rect x="-100" width="1100" height="500" fill="url(#fv-zero-grid)"/>
+<rect x="-100" width="1100" height="500" fill="url(#fv-zero-vignette)"/>
+
+<!-- Browser window, bleeding off the right and bottom edges -->
+<g filter="url(#fv-zero-softShadow)">
+<rect x="290" y="96" width="820" height="460" rx="24" fill="#27272A"/>
+</g>
+<g clip-path="url(#fv-zero-browserClip)">
+<rect x="290" y="126" width="820" height="440" fill="#222225"/>
+<path d="M290 126.5H1110" stroke="white" stroke-opacity="0.06"/>
+<circle cx="318" cy="111" r="4" fill="#3F3F46"/>
+<circle cx="332" cy="111" r="4" fill="#3F3F46"/>
+<circle cx="346" cy="111" r="4" fill="#3F3F46"/>
+
+<!-- Editor pane -->
+<text x="320" y="214" fill="#A1A1AA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">\relative c'' {</text>
+<rect x="340" y="234" width="96" height="8" rx="4" fill="#52525B"/>
+<rect x="446" y="234" width="56" height="8" rx="4" fill="#3F3F46"/>
+<rect x="340" y="258" width="72" height="8" rx="4" fill="#52525B"/>
+<rect x="422" y="258" width="104" height="8" rx="4" fill="#3F3F46"/>
+<g opacity="0.6">
+<rect x="340" y="282" width="48" height="8" rx="4" fill="#52525B"/>
+<rect x="398" y="282" width="88" height="8" rx="4" fill="#3F3F46"/>
+</g>
+<g opacity="0.35">
+<rect x="340" y="306" width="112" height="8" rx="4" fill="#52525B"/>
+</g>
+<g opacity="0.15">
+<rect x="320" y="330" width="64" height="8" rx="4" fill="#52525B"/>
+</g>
+<path d="M560.5 148V560" stroke="white" stroke-opacity="0.06"/>
+
+<!-- Live preview pane -->
+<g class="fv-render" style="--fv-delay:1.27s">
+<path d="M592 238H1110M592 252H1110M592 266H1110M592 280H1110M592 294H1110" stroke-width="1.5" stroke-linecap="round" stroke="#52525B"/>
+<path d="M592 238V294" stroke-width="3" stroke-linecap="round" stroke="#71717A"/>
+<ellipse cx="630" cy="280" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="668" cy="273" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M637.5 280V230M675.5 273V230" stroke-width="2" stroke-linecap="round" stroke="#E4E4E7"/>
+<path d="M636.5 230H676.5V237H636.5V230Z" fill="#E4E4E7"/>
+<ellipse cx="710" cy="266" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="748" cy="259" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="786" cy="252" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M717.5 266V220M755.5 259V213M793.5 252V206" stroke-width="2" stroke-linecap="round" stroke="#E4E4E7"/>
+<path d="M716.5 220L794.5 206V213L716.5 227V220Z" fill="#E4E4E7"/>
+<g opacity="0.5">
+<path d="M592 358H1110M592 372H1110M592 386H1110M592 400H1110M592 414H1110" stroke-width="1.5" stroke-linecap="round" stroke="#52525B"/>
+<path d="M592 358V414" stroke-width="3" stroke-linecap="round" stroke="#71717A"/>
+<ellipse cx="630" cy="400" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="668" cy="393" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M637.5 400V350M675.5 393V350" stroke-width="2" stroke-linecap="round" stroke="#E4E4E7"/>
+<path d="M636.5 350H676.5V357H636.5V350Z" fill="#E4E4E7"/>
+<ellipse cx="740" cy="379" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M747.5 379V333" stroke-width="2" stroke-linecap="round" stroke="#E4E4E7"/>
+</g>
+</g>
+</g>
+
+
+<rect x="290.5" y="96.5" width="819" height="459" rx="23.5" stroke="white" stroke-opacity="0.08"/>
+
+<!-- Hero: the address bar, popped out of the browser chrome -->
+<g filter="url(#fv-zero-heroShadow)">
+<rect x="170" y="118" width="380" height="60" rx="30" fill="#303034"/>
+</g>
+<rect x="170.5" y="118.5" width="379" height="59" rx="29.5" stroke="white" stroke-opacity="0.1"/>
+<g transform="translate(200 148) scale(0.3125) translate(-640 -256)">
+<g class="fv-halo">
+<g filter="url(#fv-zero-heroHalo)">
+<circle cx="640" cy="256" r="149.5" fill="#431407"/>
+</g>
+<circle opacity="0.3" cx="640" cy="256" r="74.5" stroke-width="5" stroke="#9A3412"/>
+</g>
+<g filter="url(#fv-zero-heroDisc)">
+<rect x="576" y="192" width="128" height="128" rx="64" fill="url(#fv-zero-heroFill)"/>
+<path d="M655.465 229.951C650.581 237.289 645.824 244.963 641.195 252.972C642.259 252.417 643.452 252.023 644.771 251.792C646.114 251.537 647.051 251.41 647.584 251.41C648.139 251.41 648.614 251.433 649.007 251.479C649.401 251.502 649.898 251.63 650.5 251.861C651.125 252.069 651.658 252.37 652.097 252.764C653.162 253.713 653.695 255.056 653.695 256.792C653.695 258.528 653.22 260.438 652.271 262.521C651.345 264.581 650.072 266.653 648.452 268.736C646.854 270.819 645.095 272.764 643.174 274.569C641.276 276.352 639.227 277.81 637.028 278.944C634.829 280.079 632.78 280.646 630.882 280.646C630.003 280.646 628.984 280.079 627.827 278.944C626.692 277.81 626.125 276.317 626.125 274.465C626.125 272.613 626.924 269.743 628.521 265.854C630.118 261.965 632.051 258.019 634.32 254.014C636.611 249.986 638.938 246.062 641.299 242.243C643.683 238.424 645.709 235.299 647.375 232.868C649.042 230.437 650.06 229.037 650.431 228.667C650.801 228.296 651.472 227.984 652.445 227.729C653.44 227.475 654.296 227.359 655.014 227.382C655.732 227.382 656.09 227.706 656.09 228.354C656.09 228.771 655.882 229.303 655.465 229.951ZM646.09 263.285C647.04 261.618 647.514 260.102 647.514 258.736C647.514 257.37 647.074 256.688 646.195 256.688C645.338 256.688 644.007 257.069 642.202 257.833C640.419 258.574 639.401 258.944 639.146 258.944C638.891 258.944 638.556 258.736 638.139 258.319C633.625 266.444 631.368 271.63 631.368 273.875C631.368 274.917 631.704 275.438 632.375 275.438C633.972 275.438 636.276 274.106 639.285 271.444C642.294 268.759 644.563 266.039 646.09 263.285Z" fill="#FCFCFC"/>
+</g>
+</g>
+<text x="238" y="155" fill="#F4F4F5" font-family='"Inter Embed", Inter, ui-sans-serif, system-ui, sans-serif' font-size="20" font-weight="500"><tspan class="fv-type" style="--fv-delay:0.15s">b</tspan><tspan class="fv-type" style="--fv-delay:0.22s">a</tspan><tspan class="fv-type" style="--fv-delay:0.29s">c</tspan><tspan class="fv-type" style="--fv-delay:0.36s">h</tspan><tspan class="fv-type" style="--fv-delay:0.43s">a</tspan><tspan class="fv-type" style="--fv-delay:0.50s">b</tspan><tspan class="fv-type" style="--fv-delay:0.57s">l</tspan><tspan class="fv-type" style="--fv-delay:0.64s">e</tspan><tspan class="fv-type" style="--fv-delay:0.71s">.</tspan><tspan class="fv-type" style="--fv-delay:0.78s">i</tspan><tspan class="fv-type" style="--fv-delay:0.85s">o</tspan></text>
+<g class="fv-caret">
+<rect class="fv-blink" style="--fv-delay:1.02s" x="351" y="136" width="2" height="24" rx="1" fill="#F54900"/>
+</g>
+<g class="fv-press" style="--fv-delay:1.02s">
+<rect x="498" y="134" width="36" height="28" rx="8" fill="#3F3F46"/>
+<g transform="translate(508 140) scale(0.6667)" stroke="#A1A1AA" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4v7a4 4 0 0 1-4 4H4"/><path d="m9 10-5 5 5 5"/></g>
+</g>
+</g>
+</svg>
+                                </div>
+                                <div class="px-6 pb-8 space-y-2">
+                                    <h3 class="text-xl md:text-2xl font-medium text-[rgb(245,245,245)]">Zero setup. Just start writing.</h3>
+                                    <p class="text-sm md:text-base text-white/50 leading-relaxed">Open your browser and start engraving. Your scores are saved in the cloud and accessible from any device.</p>
+                                </div>
+                            </div>
+                            <div class="fv-card flex flex-col bg-[rgb(20,20,20)] rounded-xl md:rounded-3xl overflow-hidden md:basis-0 md:min-w-0" style="flex-grow: 2">
+                                <div class="fv-stage bg-[#18181B] w-full md:flex-1 md:min-h-0 overflow-hidden" style="--fv-focus: 0.5; --fv-mobile-y: 6.1%; --fv-mobile-x: -3.13%; --fv-mobile-aspect: 2 / 1; --fv-mobile-w: 106.7%" data-fv-fit="width" role="img" aria-label="Publication-quality engraving">
+<svg class="fv-svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true" width="1280" height="512" viewBox="0 0 1280 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#fv-engraving-clip0_14679_748)">
+<rect width="1280" height="512" fill="#18181B"/>
+<path d="M0 0V16M0 16V56M0 16H40M0 56V96M0 56H40M0 96V136M0 96H40M0 136V176M0 136H40M0 176V216M0 176H40M0 216V256M0 216H40M0 256V296M0 256H40M0 296V336M0 296H40M0 336V376M0 336H40M0 376V416M0 376H40M0 416V456M0 416H40M0 456V496M0 456H40M0 496V512M0 496H40M40 0V16M40 16V56M40 16H80M40 56V96M40 56H80M40 96V136M40 96H80M40 136V176M40 136H80M40 176V216M40 176H80M40 216V256M40 216H80M40 256V296M40 256H80M40 296V336M40 296H80M40 336V376M40 336H80M40 376V416M40 376H80M40 416V456M40 416H80M40 456V496M40 456H80M40 496V512M40 496H80M80 0V16M80 16V56M80 16H120M80 56V96M80 56H120M80 96V136M80 96H120M80 136V176M80 136H120M80 176V216M80 176H120M80 216V256M80 216H120M80 256V296M80 256H120M80 296V336M80 296H120M80 336V376M80 336H120M80 376V416M80 376H120M80 416V456M80 416H120M80 456V496M80 456H120M80 496V512M80 496H120M120 0V16M120 16V56M120 16H160M120 56V96M120 56H160M120 96V136M120 96H160M120 136V176M120 136H160M120 176V216M120 176H160M120 216V256M120 216H160M120 256V296M120 256H160M120 296V336M120 296H160M120 336V376M120 336H160M120 376V416M120 376H160M120 416V456M120 416H160M120 456V496M120 456H160M120 496V512M120 496H160M160 0V16M160 16V56M160 16H200M160 56V96M160 56H200M160 96V136M160 96H200M160 136V176M160 136H200M160 176V216M160 176H200M160 216V256M160 216H200M160 256V296M160 256H200M160 296V336M160 296H200M160 336V376M160 336H200M160 376V416M160 376H200M160 416V456M160 416H200M160 456V496M160 456H200M160 496V512M160 496H200M200 0V16M200 16V56M200 16H240M200 56V96M200 56H240M200 96V136M200 96H240M200 136V176M200 136H240M200 176V216M200 176H240M200 216V256M200 216H240M200 256V296M200 256H240M200 296V336M200 296H240M200 336V376M200 336H240M200 376V416M200 376H240M200 416V456M200 416H240M200 456V496M200 456H240M200 496V512M200 496H240M240 0V16M240 16V56M240 16H280M240 56V96M240 56H280M240 96V136M240 96H280M240 136V176M240 136H280M240 176V216M240 176H280M240 216V256M240 216H280M240 256V296M240 256H280M240 296V336M240 296H280M240 336V376M240 336H280M240 376V416M240 376H280M240 416V456M240 416H280M240 456V496M240 456H280M240 496V512M240 496H280M280 0V16M280 16V56M280 16H320M280 56V96M280 56H320M280 96V136M280 96H320M280 136V176M280 136H320M280 176V216M280 176H320M280 216V256M280 216H320M280 256V296M280 256H320M280 296V336M280 296H320M280 336V376M280 336H320M280 376V416M280 376H320M280 416V456M280 416H320M280 456V496M280 456H320M280 496V512M280 496H320M320 0V16M320 16V56M320 16H360M320 56V96M320 56H360M320 96V136M320 96H360M320 136V176M320 136H360M320 176V216M320 176H360M320 216V256M320 216H360M320 256V296M320 256H360M320 296V336M320 296H360M320 336V376M320 336H360M320 376V416M320 376H360M320 416V456M320 416H360M320 456V496M320 456H360M320 496V512M320 496H360M360 0V16M360 16V56M360 16H400M360 56V96M360 56H400M360 96V136M360 96H400M360 136V176M360 136H400M360 176V216M360 176H400M360 216V256M360 216H400M360 256V296M360 256H400M360 296V336M360 296H400M360 336V376M360 336H400M360 376V416M360 376H400M360 416V456M360 416H400M360 456V496M360 456H400M360 496V512M360 496H400M400 0V16M400 16V56M400 16H440M400 56V96M400 56H440M400 96V136M400 96H440M400 136V176M400 136H440M400 176V216M400 176H440M400 216V256M400 216H440M400 256V296M400 256H440M400 296V336M400 296H440M400 336V376M400 336H440M400 376V416M400 376H440M400 416V456M400 416H440M400 456V496M400 456H440M400 496V512M400 496H440M440 0V16M440 16V56M440 16H480M440 56V96M440 56H480M440 96V136M440 96H480M440 136V176M440 136H480M440 176V216M440 176H480M440 216V256M440 216H480M440 256V296M440 256H480M440 296V336M440 296H480M440 336V376M440 336H480M440 376V416M440 376H480M440 416V456M440 416H480M440 456V496M440 456H480M440 496V512M440 496H480M480 0V16M480 16V56M480 16H520M480 56V96M480 56H520M480 96V136M480 96H520M480 136V176M480 136H520M480 176V216M480 176H520M480 216V256M480 216H520M480 256V296M480 256H520M480 296V336M480 296H520M480 336V376M480 336H520M480 376V416M480 376H520M480 416V456M480 416H520M480 456V496M480 456H520M480 496V512M480 496H520M520 0V16M520 16V56M520 16H560M520 56V96M520 56H560M520 96V136M520 96H560M520 136V176M520 136H560M520 176V216M520 176H560M520 216V256M520 216H560M520 256V296M520 256H560M520 296V336M520 296H560M520 336V376M520 336H560M520 376V416M520 376H560M520 416V456M520 416H560M520 456V496M520 456H560M520 496V512M520 496H560M560 0V16M560 16V56M560 16H600M560 56V96M560 56H600M560 96V136M560 96H600M560 136V176M560 136H600M560 176V216M560 176H600M560 216V256M560 216H600M560 256V296M560 256H600M560 296V336M560 296H600M560 336V376M560 336H600M560 376V416M560 376H600M560 416V456M560 416H600M560 456V496M560 456H600M560 496V512M560 496H600M600 0V16M600 16V56M600 16H640M600 56V96M600 56H640M600 96V136M600 96H640M600 136V176M600 136H640M600 176V216M600 176H640M600 216V256M600 216H640M600 256V296M600 256H640M600 296V336M600 296H640M600 336V376M600 336H640M600 376V416M600 376H640M600 416V456M600 416H640M600 456V496M600 456H640M600 496V512M600 496H640M640 0V16M640 16V56M640 16H680M640 56V96M640 56H680M640 96V136M640 96H680M640 136V176M640 136H680M640 176V216M640 176H680M640 216V256M640 216H680M640 256V296M640 256H680M640 296V336M640 296H680M640 336V376M640 336H680M640 376V416M640 376H680M640 416V456M640 416H680M640 456V496M640 456H680M640 496V512M640 496H680M680 0V16M680 16V56M680 16H720M680 56V96M680 56H720M680 96V136M680 96H720M680 136V176M680 136H720M680 176V216M680 176H720M680 216V256M680 216H720M680 256V296M680 256H720M680 296V336M680 296H720M680 336V376M680 336H720M680 376V416M680 376H720M680 416V456M680 416H720M680 456V496M680 456H720M680 496V512M680 496H720M720 0V16M720 16V56M720 16H760M720 56V96M720 56H760M720 96V136M720 96H760M720 136V176M720 136H760M720 176V216M720 176H760M720 216V256M720 216H760M720 256V296M720 256H760M720 296V336M720 296H760M720 336V376M720 336H760M720 376V416M720 376H760M720 416V456M720 416H760M720 456V496M720 456H760M720 496V512M720 496H760M760 0V16M760 16V56M760 16H800M760 56V96M760 56H800M760 96V136M760 96H800M760 136V176M760 136H800M760 176V216M760 176H800M760 216V256M760 216H800M760 256V296M760 256H800M760 296V336M760 296H800M760 336V376M760 336H800M760 376V416M760 376H800M760 416V456M760 416H800M760 456V496M760 456H800M760 496V512M760 496H800M800 0V16M800 16V56M800 16H840M800 56V96M800 56H840M800 96V136M800 96H840M800 136V176M800 136H840M800 176V216M800 176H840M800 216V256M800 216H840M800 256V296M800 256H840M800 296V336M800 296H840M800 336V376M800 336H840M800 376V416M800 376H840M800 416V456M800 416H840M800 456V496M800 456H840M800 496V512M800 496H840M840 0V16M840 16V56M840 16H880M840 56V96M840 56H880M840 96V136M840 96H880M840 136V176M840 136H880M840 176V216M840 176H880M840 216V256M840 216H880M840 256V296M840 256H880M840 296V336M840 296H880M840 336V376M840 336H880M840 376V416M840 376H880M840 416V456M840 416H880M840 456V496M840 456H880M840 496V512M840 496H880M880 0V16M880 16V56M880 16H920M880 56V96M880 56H920M880 96V136M880 96H920M880 136V176M880 136H920M880 176V216M880 176H920M880 216V256M880 216H920M880 256V296M880 256H920M880 296V336M880 296H920M880 336V376M880 336H920M880 376V416M880 376H920M880 416V456M880 416H920M880 456V496M880 456H920M880 496V512M880 496H920M920 0V16M920 16V56M920 16H960M920 56V96M920 56H960M920 96V136M920 96H960M920 136V176M920 136H960M920 176V216M920 176H960M920 216V256M920 216H960M920 256V296M920 256H960M920 296V336M920 296H960M920 336V376M920 336H960M920 376V416M920 376H960M920 416V456M920 416H960M920 456V496M920 456H960M920 496V512M920 496H960M960 0V16M960 16V56M960 16H1000M960 56V96M960 56H1000M960 96V136M960 96H1000M960 136V176M960 136H1000M960 176V216M960 176H1000M960 216V256M960 216H1000M960 256V296M960 256H1000M960 296V336M960 296H1000M960 336V376M960 336H1000M960 376V416M960 376H1000M960 416V456M960 416H1000M960 456V496M960 456H1000M960 496V512M960 496H1000M1000 0V16M1000 16V56M1000 16H1040M1000 56V96M1000 56H1040M1000 96V136M1000 96H1040M1000 136V176M1000 136H1040M1000 176V216M1000 176H1040M1000 216V256M1000 216H1040M1000 256V296M1000 256H1040M1000 296V336M1000 296H1040M1000 336V376M1000 336H1040M1000 376V416M1000 376H1040M1000 416V456M1000 416H1040M1000 456V496M1000 456H1040M1000 496V512M1000 496H1040M1040 0V16M1040 16V56M1040 16H1080M1040 56V96M1040 56H1080M1040 96V136M1040 96H1080M1040 136V176M1040 136H1080M1040 176V216M1040 176H1080M1040 216V256M1040 216H1080M1040 256V296M1040 256H1080M1040 296V336M1040 296H1080M1040 336V376M1040 336H1080M1040 376V416M1040 376H1080M1040 416V456M1040 416H1080M1040 456V496M1040 456H1080M1040 496V512M1040 496H1080M1080 0V16M1080 16V56M1080 16H1120M1080 56V96M1080 56H1120M1080 96V136M1080 96H1120M1080 136V176M1080 136H1120M1080 176V216M1080 176H1120M1080 216V256M1080 216H1120M1080 256V296M1080 256H1120M1080 296V336M1080 296H1120M1080 336V376M1080 336H1120M1080 376V416M1080 376H1120M1080 416V456M1080 416H1120M1080 456V496M1080 456H1120M1080 496V512M1080 496H1120M1120 0V16M1120 16V56M1120 16H1160M1120 56V96M1120 56H1160M1120 96V136M1120 96H1160M1120 136V176M1120 136H1160M1120 176V216M1120 176H1160M1120 216V256M1120 216H1160M1120 256V296M1120 256H1160M1120 296V336M1120 296H1160M1120 336V376M1120 336H1160M1120 376V416M1120 376H1160M1120 416V456M1120 416H1160M1120 456V496M1120 456H1160M1120 496V512M1120 496H1160M1160 0V16M1160 16V56M1160 16H1200M1160 56V96M1160 56H1200M1160 96V136M1160 96H1200M1160 136V176M1160 136H1200M1160 176V216M1160 176H1200M1160 216V256M1160 216H1200M1160 256V296M1160 256H1200M1160 296V336M1160 296H1200M1160 336V376M1160 336H1200M1160 376V416M1160 376H1200M1160 416V456M1160 416H1200M1160 456V496M1160 456H1200M1160 496V512M1160 496H1200M1200 0V16M1200 16V56M1200 16H1240M1200 56V96M1200 56H1240M1200 96V136M1200 96H1240M1200 136V176M1200 136H1240M1200 176V216M1200 176H1240M1200 216V256M1200 216H1240M1200 256V296M1200 256H1240M1200 296V336M1200 296H1240M1200 336V376M1200 336H1240M1200 376V416M1200 376H1240M1200 416V456M1200 416H1240M1200 456V496M1200 456H1240M1200 496V512M1200 496H1240M1240 0V16M1240 16V56M1240 16H1280M1240 56V96M1240 56H1280M1240 96V136M1240 96H1280M1240 136V176M1240 136H1280M1240 176V216M1240 176H1280M1240 216V256M1240 216H1280M1240 256V296M1240 256H1280M1240 296V336M1240 296H1280M1240 336V376M1240 336H1280M1240 376V416M1240 376H1280M1240 416V456M1240 416H1280M1240 456V496M1240 456H1280M1240 496V512M1240 496H1280M1280 0V16M1280 16V56M1280 56V96M1280 96V136M1280 136V176M1280 176V216M1280 216V256M1280 256V296M1280 296V336M1280 336V376M1280 376V416M1280 416V456M1280 456V496M1280 496V512" stroke="black" stroke-opacity="0.045"/>
+<rect width="1280" height="512" fill="url(#fv-engraving-paint0_radial_14679_748)"/>
+<g transform="translate(0 -44)">
+<g filter="url(#fv-engraving-filter0_d_14679_748)">
+<g clip-path="url(#fv-engraving-clip1_14679_748)">
+<rect x="860" y="120" width="480" height="470" rx="24" fill="#222225"/>
+<rect x="860" y="120" width="480" height="44" fill="#27272A"/>
+<path d="M860 164.5H1340" stroke="white" stroke-opacity="0.06"/>
+<rect x="860.5" y="120.5" width="479" height="469" rx="23.5" stroke="white" stroke-opacity="0.08"/>
+<g class="fv-render" style="--fv-delay:0.45s">
+<g transform="translate(0 60)">
+<path d="M896 162H1340M896 176H1340M896 190H1340M896 204H1340M896 218H1340" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#52525B"/>
+<path d="M896 162V218" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#71717A"/>
+<path d="M1128 162V218" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#71717A"/>
+<ellipse cx="940" cy="204" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="978" cy="197" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M947.5 204V154" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M985.5 197V154" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M946.5 154H986.5V161H946.5V154Z" fill="#E4E4E7"/>
+<ellipse cx="1020" cy="190" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="1058" cy="183" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="1096" cy="176" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M1027.5 190V144" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1065.5 183V137" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1103.5 176V130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1026.5 144L1104.5 130V137L1026.5 151V144Z" fill="#E4E4E7"/>
+<ellipse cx="1170" cy="183" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M1177.5 183V137" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<mask id="fv-engraving-stroke0_14679_748" fill="white">
+<path d="M1240.5 169C1240.5 172.314 1236.69 175 1232 175C1227.31 175 1223.5 172.314 1223.5 169C1223.5 165.686 1227.31 163 1232 163C1236.69 163 1240.5 165.686 1240.5 169Z"/>
+</mask>
+<ellipse cx="1232" cy="169" rx="8.5" ry="6" stroke-width="5" stroke="#E4E4E7" mask="url(#fv-engraving-stroke0_14679_748)"/>
+<path d="M1239.5 169V123" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1172 200C1190 220 1220 220 1236 202" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#D4D4D8"/>
+<g id="fv-engraving-staffB">
+<path d="M896 302H1340M896 316H1340M896 330H1340M896 344H1340M896 358H1340" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#52525B"/>
+<path d="M896 302V358" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#71717A"/>
+<path d="M1128 302V358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#71717A"/>
+<ellipse cx="940" cy="344" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="978" cy="337" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M947.5 344V294" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M985.5 337V294" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M946.5 294H986.5V301H946.5V294Z" fill="#E4E4E7"/>
+<ellipse cx="1020" cy="330" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="1058" cy="323" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="1096" cy="316" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M1027.5 330V284" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1065.5 323V277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1103.5 316V270" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1026.5 284L1104.5 270V277L1026.5 291V284Z" fill="#E4E4E7"/>
+<ellipse cx="1170" cy="323" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M1177.5 323V277" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<mask id="fv-engraving-stroke1_14679_748" fill="white">
+<path d="M1240.5 309C1240.5 312.314 1236.69 315 1232 315C1227.31 315 1223.5 312.314 1223.5 309C1223.5 305.686 1227.31 303 1232 303C1236.69 303 1240.5 305.686 1240.5 309Z"/>
+</mask>
+<ellipse cx="1232" cy="309" rx="8.5" ry="6" stroke-width="5" stroke="#E4E4E7" mask="url(#fv-engraving-stroke1_14679_748)"/>
+<path d="M1239.5 309V263" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M1172 340C1190 360 1220 360 1236 342" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#D4D4D8"/>
+</g>
+<use href="#fv-engraving-staffB" y="140" opacity="0.4"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g class="fv-halo">
+<g filter="url(#fv-engraving-filter1_f_14679_748)">
+<circle cx="640" cy="256" r="149.5" fill="#431407"/>
+</g>
+<circle opacity="0.3" cx="640" cy="256" r="74.5" stroke-width="5" stroke="#9A3412"/>
+</g>
+<g filter="url(#fv-engraving-filter2_di_14679_748)">
+<rect x="576" y="192" width="128" height="128" rx="64" fill="url(#fv-engraving-paint1_linear_14679_748)"/>
+<path d="M655.465 229.951C650.581 237.289 645.824 244.963 641.195 252.972C642.259 252.417 643.452 252.023 644.771 251.792C646.114 251.537 647.051 251.41 647.584 251.41C648.139 251.41 648.614 251.433 649.007 251.479C649.401 251.502 649.898 251.63 650.5 251.861C651.125 252.069 651.658 252.37 652.097 252.764C653.162 253.713 653.695 255.056 653.695 256.792C653.695 258.528 653.22 260.438 652.271 262.521C651.345 264.581 650.072 266.653 648.452 268.736C646.854 270.819 645.095 272.764 643.174 274.569C641.276 276.352 639.227 277.81 637.028 278.944C634.829 280.079 632.78 280.646 630.882 280.646C630.003 280.646 628.984 280.079 627.827 278.944C626.692 277.81 626.125 276.317 626.125 274.465C626.125 272.613 626.924 269.743 628.521 265.854C630.118 261.965 632.051 258.019 634.32 254.014C636.611 249.986 638.938 246.062 641.299 242.243C643.683 238.424 645.709 235.299 647.375 232.868C649.042 230.437 650.06 229.037 650.431 228.667C650.801 228.296 651.472 227.984 652.445 227.729C653.44 227.475 654.296 227.359 655.014 227.382C655.732 227.382 656.09 227.706 656.09 228.354C656.09 228.771 655.882 229.303 655.465 229.951ZM646.09 263.285C647.04 261.618 647.514 260.102 647.514 258.736C647.514 257.37 647.074 256.688 646.195 256.688C645.338 256.688 644.007 257.069 642.202 257.833C640.419 258.574 639.401 258.944 639.146 258.944C638.891 258.944 638.556 258.736 638.139 258.319C633.625 266.444 631.368 271.63 631.368 273.875C631.368 274.917 631.704 275.438 632.375 275.438C633.972 275.438 636.276 274.106 639.285 271.444C642.294 268.759 644.563 266.039 646.09 263.285Z" fill="#FCFCFC"/>
+</g>
+<g transform="translate(0 -44)">
+<g filter="url(#fv-engraving-filter3_d_14679_748)">
+<rect x="-40" y="120" width="420" height="440" rx="24" fill="#222225"/>
+<path d="M-40 120H356A24 24 0 0 1 380 144V164H-40Z" fill="#27272A"/>
+<path d="M-40 164.5H380" stroke="white" stroke-opacity="0.06"/>
+<rect x="-39.5" y="120.5" width="419" height="439" rx="23.5" stroke="white" stroke-opacity="0.08"/>
+<g transform="translate(20 108)">
+<path d="M50.824 184.42H49.064L42.376 165.5H44.136L50.824 184.42ZM58.2074 182V170.34H59.7474L59.9234 173.288L59.7474 173.244C59.8941 172.247 60.2094 171.513 60.6934 171.044C61.1921 170.575 61.8521 170.34 62.6734 170.34H65.0714V172.012H62.6954C62.1234 172.012 61.6394 172.129 61.2434 172.364C60.8621 172.584 60.5687 172.914 60.3634 173.354C60.1581 173.779 60.0554 174.315 60.0554 174.96V182H58.2074ZM55.1714 182V180.372H63.7514V182H55.1714ZM55.1714 171.968V170.34H59.2194V171.968H55.1714ZM73.1808 182.264C72.0808 182.264 71.1275 182.015 70.3208 181.516C69.5288 181.017 68.9128 180.313 68.4728 179.404C68.0475 178.48 67.8348 177.402 67.8348 176.17C67.8348 174.938 68.0475 173.867 68.4728 172.958C68.9128 172.049 69.5215 171.345 70.2988 170.846C71.0908 170.333 72.0221 170.076 73.0928 170.076C74.1048 170.076 74.9995 170.318 75.7768 170.802C76.5541 171.271 77.1628 171.961 77.6028 172.87C78.0428 173.779 78.2628 174.887 78.2628 176.192V176.742H69.7708C69.8441 177.989 70.1741 178.927 70.7608 179.558C71.3621 180.189 72.1688 180.504 73.1808 180.504C73.9435 180.504 74.5668 180.328 75.0508 179.976C75.5495 179.609 75.8941 179.133 76.0848 178.546L78.0648 178.7C77.7568 179.741 77.1701 180.599 76.3048 181.274C75.4541 181.934 74.4128 182.264 73.1808 182.264ZM69.7708 175.114H76.2388C76.1508 173.985 75.8208 173.156 75.2488 172.628C74.6768 172.1 73.9581 171.836 73.0928 171.836C72.1981 171.836 71.4575 172.115 70.8708 172.672C70.2988 173.215 69.9321 174.029 69.7708 175.114ZM85.5802 182V169.504C85.5802 169.035 85.4482 168.668 85.1842 168.404C84.9202 168.14 84.5536 168.008 84.0842 168.008H81.3342V166.38H84.1722C85.2429 166.38 86.0496 166.659 86.5922 167.216C87.1496 167.759 87.4282 168.565 87.4282 169.636V182H85.5802ZM80.8942 182V180.372H91.4542V182H80.8942ZM97.8256 182.264C97.0923 182.264 96.4323 182.132 95.8456 181.868C95.259 181.604 94.797 181.237 94.4596 180.768C94.1223 180.284 93.9536 179.727 93.9536 179.096C93.9536 178.099 94.247 177.329 94.8336 176.786C95.435 176.229 96.3736 175.825 97.6496 175.576L101.566 174.784C101.566 173.787 101.338 173.046 100.884 172.562C100.444 172.078 99.8056 171.836 98.9696 171.836C98.163 171.836 97.5323 172.019 97.0776 172.386C96.623 172.738 96.3076 173.251 96.1316 173.926L94.1736 173.772C94.3936 172.672 94.9143 171.785 95.7356 171.11C96.5716 170.421 97.6496 170.076 98.9696 170.076C100.378 170.076 101.47 170.501 102.248 171.352C103.025 172.188 103.414 173.347 103.414 174.828V179.668C103.414 179.932 103.472 180.115 103.59 180.218C103.707 180.321 103.883 180.372 104.118 180.372H104.866V182C104.778 182.015 104.638 182.022 104.448 182.022C104.257 182.037 104.074 182.044 103.898 182.044C103.399 182.044 102.974 181.963 102.622 181.802C102.284 181.641 102.028 181.384 101.852 181.032C101.676 180.665 101.58 180.196 101.566 179.624H101.918C101.815 180.123 101.566 180.577 101.17 180.988C100.788 181.384 100.304 181.699 99.7176 181.934C99.131 182.154 98.5003 182.264 97.8256 182.264ZM98.0016 180.636C98.7936 180.636 99.4536 180.504 99.9816 180.24C100.51 179.961 100.906 179.58 101.17 179.096C101.434 178.597 101.566 178.025 101.566 177.38V176.368L98.0016 177.072C97.2096 177.219 96.6596 177.446 96.3516 177.754C96.0436 178.047 95.8896 178.436 95.8896 178.92C95.8896 179.463 96.073 179.888 96.4396 180.196C96.821 180.489 97.3416 180.636 98.0016 180.636ZM114.273 182C113.144 182 112.3 181.736 111.743 181.208C111.186 180.68 110.907 179.873 110.907 178.788V167.612H112.755V178.788C112.755 179.331 112.88 179.734 113.129 179.998C113.378 180.247 113.76 180.372 114.273 180.372H117.397V182H114.273ZM107.057 171.968V170.34H117.397V171.968H107.057ZM125.594 182V170.34H127.442V182H125.594ZM120.908 182V180.372H131.468V182H120.908ZM121.128 171.968V170.34H127.442V171.968H121.128ZM125.418 168.514V166.358H127.354V168.514H125.418ZM137.774 182L133.44 170.34H135.464L138.94 180.108L142.416 170.34H144.44L140.106 182H137.774ZM152.329 182.264C151.229 182.264 150.276 182.015 149.469 181.516C148.677 181.017 148.061 180.313 147.621 179.404C147.196 178.48 146.983 177.402 146.983 176.17C146.983 174.938 147.196 173.867 147.621 172.958C148.061 172.049 148.67 171.345 149.447 170.846C150.239 170.333 151.171 170.076 152.241 170.076C153.253 170.076 154.148 170.318 154.925 170.802C155.703 171.271 156.311 171.961 156.751 172.87C157.191 173.779 157.411 174.887 157.411 176.192V176.742H148.919C148.993 177.989 149.323 178.927 149.909 179.558C150.511 180.189 151.317 180.504 152.329 180.504C153.092 180.504 153.715 180.328 154.199 179.976C154.698 179.609 155.043 179.133 155.233 178.546L157.213 178.7C156.905 179.741 156.319 180.599 155.453 181.274C154.603 181.934 153.561 182.264 152.329 182.264ZM148.919 175.114H155.387C155.299 173.985 154.969 173.156 154.397 172.628C153.825 172.1 153.107 171.836 152.241 171.836C151.347 171.836 150.606 172.115 150.019 172.672C149.447 173.215 149.081 174.029 148.919 175.114ZM178.822 182.264C177.737 182.264 176.791 182.015 175.984 181.516C175.177 181.017 174.554 180.313 174.114 179.404C173.674 178.48 173.454 177.402 173.454 176.17C173.454 174.938 173.674 173.867 174.114 172.958C174.554 172.049 175.177 171.345 175.984 170.846C176.791 170.333 177.737 170.076 178.822 170.076C179.687 170.076 180.457 170.237 181.132 170.56C181.807 170.868 182.364 171.323 182.804 171.924C183.244 172.525 183.545 173.259 183.706 174.124L181.77 174.256C181.594 173.479 181.242 172.885 180.714 172.474C180.201 172.049 179.57 171.836 178.822 171.836C177.751 171.836 176.908 172.225 176.292 173.002C175.691 173.765 175.39 174.821 175.39 176.17C175.39 177.519 175.691 178.583 176.292 179.36C176.908 180.123 177.751 180.504 178.822 180.504C179.57 180.504 180.215 180.284 180.758 179.844C181.315 179.404 181.682 178.744 181.858 177.864L183.794 177.996C183.633 178.861 183.325 179.617 182.87 180.262C182.415 180.893 181.843 181.384 181.154 181.736C180.465 182.088 179.687 182.264 178.822 182.264ZM191.045 173.574L190.737 168.052V166.38H192.673V168.052L192.365 173.574H191.045ZM204.237 173.574L203.929 168.052V166.38H205.865V168.052L205.557 173.574H204.237ZM233.678 184.53C232.519 184.53 231.602 184.178 230.928 183.474C230.268 182.77 229.938 181.861 229.938 180.746V178.92C229.938 178.289 229.85 177.754 229.674 177.314C229.498 176.859 229.241 176.515 228.904 176.28C228.566 176.045 228.156 175.928 227.672 175.928V174.102C228.156 174.102 228.566 173.985 228.904 173.75C229.241 173.515 229.498 173.178 229.674 172.738C229.85 172.283 229.938 171.741 229.938 171.11V169.284C229.938 168.169 230.268 167.26 230.928 166.556C231.602 165.852 232.519 165.5 233.678 165.5H234.888V167.216C233.729 167.172 232.908 167.304 232.424 167.612C231.94 167.92 231.698 168.463 231.698 169.24V171.264C231.698 172.364 231.456 173.222 230.972 173.838C230.488 174.439 229.908 174.821 229.234 174.982V175.004C229.923 175.151 230.502 175.539 230.972 176.17C231.456 176.801 231.698 177.666 231.698 178.766V180.79C231.698 181.553 231.94 182.088 232.424 182.396C232.908 182.704 233.729 182.843 234.888 182.814V184.53H233.678Z" fill="#A1A1AA"/>
+<g clip-path="url(#fv-engraving-clip2_14679_748)">
+<rect x="82" y="211" width="120" height="10" rx="5" fill="#52525B"/>
+<rect x="214" y="211" width="70" height="10" rx="5" fill="#3F3F46"/>
+</g>
+<g clip-path="url(#fv-engraving-clip3_14679_748)">
+<rect x="82" y="243" width="90" height="10" rx="5" fill="#52525B"/>
+<rect x="184" y="243" width="150" height="10" rx="5" fill="#3F3F46"/>
+</g>
+<g clip-path="url(#fv-engraving-clip4_14679_748)">
+<rect x="82" y="275" width="60" height="10" rx="5" fill="#52525B"/>
+<rect x="154" y="275" width="110" height="10" rx="5" fill="#3F3F46"/>
+<rect x="276" y="275" width="50" height="10" rx="5" fill="#3F3F46"/>
+</g>
+<g opacity="0.6" clip-path="url(#fv-engraving-clip5_14679_748)">
+<rect x="82" y="307" width="140" height="10" rx="5" fill="#52525B"/>
+<rect x="234" y="307" width="60" height="10" rx="5" fill="#3F3F46"/>
+</g>
+<g opacity="0.35" clip-path="url(#fv-engraving-clip6_14679_748)">
+<rect x="82" y="339" width="80" height="10" rx="5" fill="#52525B"/>
+</g>
+<g opacity="0.15"><rect x="82" y="371" width="120" height="10" rx="5" fill="#52525B"/><rect x="214" y="371" width="60" height="10" rx="5" fill="#3F3F46"/></g>
+</g>
+</g>
+</g>
+<rect y="300" width="1280" height="212" fill="url(#fv-engraving-bottomFade)"/>
+<path class="fv-flow" d="M380 256H560.5" stroke-width="5" stroke-linecap="square" stroke-linejoin="round" stroke="url(#fv-engraving-paint2_linear_14679_748)"/>
+<circle cx="380" cy="256" r="4" fill="#71717A"/>
+<path class="fv-flow" style="--fv-delay:0.25s" d="M720 256L860 256" stroke-width="5" stroke-linecap="square" stroke-linejoin="round" stroke="url(#fv-engraving-paint3_linear_14679_748)"/>
+<circle cx="860" cy="256" r="5" fill="#F54900"/>
+</g>
+<defs>
+<linearGradient id="fv-engraving-bottomFade" x1="0" y1="300" x2="0" y2="490" gradientUnits="userSpaceOnUse">
+<stop stop-color="#18181B" stop-opacity="0"/>
+<stop offset="1" stop-color="#18181B"/>
+</linearGradient>
+<filter id="fv-engraving-filter0_d_14679_748" x="836" y="108" width="528" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_748"/>
+<feOffset dy="12"/>
+<feGaussianBlur stdDeviation="16"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_748"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_748" result="shape"/>
+</filter>
+<filter id="fv-engraving-filter1_f_14679_748" x="400.5" y="16.5" width="479" height="479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="45" result="effect1_foregroundBlur_14679_748"/>
+</filter>
+<filter id="fv-engraving-filter2_di_14679_748" x="538" y="168" width="204" height="204" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="6" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_748"/>
+<feOffset dy="14"/>
+<feGaussianBlur stdDeviation="22"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.960784 0 0 0 0 0.286275 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_748"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_748" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_14679_748"/>
+</filter>
+<filter id="fv-engraving-filter3_d_14679_748" x="-64" y="108" width="468" height="490" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_748"/>
+<feOffset dy="12"/>
+<feGaussianBlur stdDeviation="16"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_748"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_748" result="shape"/>
+</filter>
+<radialGradient id="fv-engraving-paint0_radial_14679_748" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 256) scale(640 256)">
+<stop stop-color="#18181B" stop-opacity="0"/>
+<stop offset="0.45" stop-color="#18181B" stop-opacity="0.15"/>
+<stop offset="1" stop-color="#18181B"/>
+</radialGradient>
+<linearGradient id="fv-engraving-paint1_linear_14679_748" x1="640" y1="192" x2="640" y2="320" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F97316"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<linearGradient id="fv-engraving-paint2_linear_14679_748" x1="380" y1="256.5" x2="560.5" y2="256.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#71717A"/>
+<stop offset="1" stop-color="#CFCFE0" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="fv-engraving-paint3_linear_14679_748" x1="720" y1="256.5" x2="860" y2="256.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F54900" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<clipPath id="fv-engraving-clip0_14679_748">
+<rect width="1280" height="512" fill="white"/>
+</clipPath>
+<clipPath id="fv-engraving-clip1_14679_748">
+<rect x="860" y="120" width="480" height="470" rx="24" fill="white"/>
+</clipPath>
+<clipPath id="fv-engraving-clip2_14679_748">
+<rect width="244" height="10" fill="white" transform="translate(40 211)"/>
+</clipPath>
+<clipPath id="fv-engraving-clip3_14679_748">
+<rect width="294" height="10" fill="white" transform="translate(40 243)"/>
+</clipPath>
+<clipPath id="fv-engraving-clip4_14679_748">
+<rect width="286" height="10" fill="white" transform="translate(40 275)"/>
+</clipPath>
+<clipPath id="fv-engraving-clip5_14679_748">
+<rect width="254" height="10" fill="white" transform="translate(40 307)"/>
+</clipPath>
+<clipPath id="fv-engraving-clip6_14679_748">
+<rect width="122" height="10" fill="white" transform="translate(40 339)"/>
+</clipPath>
+</defs>
+</svg>
+                                </div>
+                                <div class="px-6 pb-8 space-y-2">
+                                    <h3 class="text-xl md:text-2xl font-medium text-[rgb(245,245,245)]">Publication-quality engraving</h3>
+                                    <p class="text-sm md:text-base text-white/50 leading-relaxed">Powered by LilyPond – the gold standard for music typesetting. Your scores look like they came from a professional publisher.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fv-row flex flex-col md:flex-row gap-4 md:gap-6 md:h-[400px]">
+                            <div class="fv-card flex flex-col bg-[rgb(20,20,20)] rounded-xl md:rounded-3xl overflow-hidden md:basis-0 md:min-w-0" style="flex-grow: 2">
+                                <div class="fv-stage bg-[#18181B] w-full md:flex-1 md:min-h-0 overflow-hidden" style="--fv-focus: 0.5; --fv-mobile-y: 1.5%; --fv-mobile-x: -2.6%; --fv-mobile-aspect: 2 / 1; --fv-mobile-w: 110%" data-fv-fit="width" role="img" aria-label="Export to multiple formats">
+<svg class="fv-svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true" width="1280" height="560" viewBox="0 0 1280 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#fv-export-clip0_14679_754)">
+<rect width="1280" height="560" fill="#18181B"/>
+<path d="M0 40V0H40M0 40V80M0 40H40M0 80V120M0 80H40M0 120V160M0 120H40M0 160V200M0 160H40M0 200V240M0 200H40M0 240V280M0 240H40M0 280V320M0 280H40M0 320V360M0 320H40M0 360V400M0 360H40M0 400V440M0 400H40M0 440V480M0 440H40M0 480V520M0 480H40M0 520V560H40M0 520H40M40 0V40M40 0H80M40 40V80M40 40H80M40 80V120M40 80H80M40 120V160M40 120H80M40 160V200M40 160H80M40 200V240M40 200H80M40 240V280M40 240H80M40 280V320M40 280H80M40 320V360M40 320H80M40 360V400M40 360H80M40 400V440M40 400H80M40 440V480M40 440H80M40 480V520M40 480H80M40 520V560M40 520H80M40 560H80M80 0V40M80 0H120M80 40V80M80 40H120M80 80V120M80 80H120M80 120V160M80 120H120M80 160V200M80 160H120M80 200V240M80 200H120M80 240V280M80 240H120M80 280V320M80 280H120M80 320V360M80 320H120M80 360V400M80 360H120M80 400V440M80 400H120M80 440V480M80 440H120M80 480V520M80 480H120M80 520V560M80 520H120M80 560H120M120 0V40M120 0H160M120 40V80M120 40H160M120 80V120M120 80H160M120 120V160M120 120H160M120 160V200M120 160H160M120 200V240M120 200H160M120 240V280M120 240H160M120 280V320M120 280H160M120 320V360M120 320H160M120 360V400M120 360H160M120 400V440M120 400H160M120 440V480M120 440H160M120 480V520M120 480H160M120 520V560M120 520H160M120 560H160M160 0V40M160 0H200M160 40V80M160 40H200M160 80V120M160 80H200M160 120V160M160 120H200M160 160V200M160 160H200M160 200V240M160 200H200M160 240V280M160 240H200M160 280V320M160 280H200M160 320V360M160 320H200M160 360V400M160 360H200M160 400V440M160 400H200M160 440V480M160 440H200M160 480V520M160 480H200M160 520V560M160 520H200M160 560H200M200 0V40M200 0H240M200 40V80M200 40H240M200 80V120M200 80H240M200 120V160M200 120H240M200 160V200M200 160H240M200 200V240M200 200H240M200 240V280M200 240H240M200 280V320M200 280H240M200 320V360M200 320H240M200 360V400M200 360H240M200 400V440M200 400H240M200 440V480M200 440H240M200 480V520M200 480H240M200 520V560M200 520H240M200 560H240M240 0V40M240 0H280M240 40V80M240 40H280M240 80V120M240 80H280M240 120V160M240 120H280M240 160V200M240 160H280M240 200V240M240 200H280M240 240V280M240 240H280M240 280V320M240 280H280M240 320V360M240 320H280M240 360V400M240 360H280M240 400V440M240 400H280M240 440V480M240 440H280M240 480V520M240 480H280M240 520V560M240 520H280M240 560H280M280 0V40M280 0H320M280 40V80M280 40H320M280 80V120M280 80H320M280 120V160M280 120H320M280 160V200M280 160H320M280 200V240M280 200H320M280 240V280M280 240H320M280 280V320M280 280H320M280 320V360M280 320H320M280 360V400M280 360H320M280 400V440M280 400H320M280 440V480M280 440H320M280 480V520M280 480H320M280 520V560M280 520H320M280 560H320M320 0V40M320 0H360M320 40V80M320 40H360M320 80V120M320 80H360M320 120V160M320 120H360M320 160V200M320 160H360M320 200V240M320 200H360M320 240V280M320 240H360M320 280V320M320 280H360M320 320V360M320 320H360M320 360V400M320 360H360M320 400V440M320 400H360M320 440V480M320 440H360M320 480V520M320 480H360M320 520V560M320 520H360M320 560H360M360 0V40M360 0H400M360 40V80M360 40H400M360 80V120M360 80H400M360 120V160M360 120H400M360 160V200M360 160H400M360 200V240M360 200H400M360 240V280M360 240H400M360 280V320M360 280H400M360 320V360M360 320H400M360 360V400M360 360H400M360 400V440M360 400H400M360 440V480M360 440H400M360 480V520M360 480H400M360 520V560M360 520H400M360 560H400M400 0V40M400 0H440M400 40V80M400 40H440M400 80V120M400 80H440M400 120V160M400 120H440M400 160V200M400 160H440M400 200V240M400 200H440M400 240V280M400 240H440M400 280V320M400 280H440M400 320V360M400 320H440M400 360V400M400 360H440M400 400V440M400 400H440M400 440V480M400 440H440M400 480V520M400 480H440M400 520V560M400 520H440M400 560H440M440 0V40M440 0H480M440 40V80M440 40H480M440 80V120M440 80H480M440 120V160M440 120H480M440 160V200M440 160H480M440 200V240M440 200H480M440 240V280M440 240H480M440 280V320M440 280H480M440 320V360M440 320H480M440 360V400M440 360H480M440 400V440M440 400H480M440 440V480M440 440H480M440 480V520M440 480H480M440 520V560M440 520H480M440 560H480M480 0V40M480 0H520M480 40V80M480 40H520M480 80V120M480 80H520M480 120V160M480 120H520M480 160V200M480 160H520M480 200V240M480 200H520M480 240V280M480 240H520M480 280V320M480 280H520M480 320V360M480 320H520M480 360V400M480 360H520M480 400V440M480 400H520M480 440V480M480 440H520M480 480V520M480 480H520M480 520V560M480 520H520M480 560H520M520 0V40M520 0H560M520 40V80M520 40H560M520 80V120M520 80H560M520 120V160M520 120H560M520 160V200M520 160H560M520 200V240M520 200H560M520 240V280M520 240H560M520 280V320M520 280H560M520 320V360M520 320H560M520 360V400M520 360H560M520 400V440M520 400H560M520 440V480M520 440H560M520 480V520M520 480H560M520 520V560M520 520H560M520 560H560M560 0V40M560 0H600M560 40V80M560 40H600M560 80V120M560 80H600M560 120V160M560 120H600M560 160V200M560 160H600M560 200V240M560 200H600M560 240V280M560 240H600M560 280V320M560 280H600M560 320V360M560 320H600M560 360V400M560 360H600M560 400V440M560 400H600M560 440V480M560 440H600M560 480V520M560 480H600M560 520V560M560 520H600M560 560H600M600 0V40M600 0H640M600 40V80M600 40H640M600 80V120M600 80H640M600 120V160M600 120H640M600 160V200M600 160H640M600 200V240M600 200H640M600 240V280M600 240H640M600 280V320M600 280H640M600 320V360M600 320H640M600 360V400M600 360H640M600 400V440M600 400H640M600 440V480M600 440H640M600 480V520M600 480H640M600 520V560M600 520H640M600 560H640M640 0V40M640 0H680M640 40V80M640 40H680M640 80V120M640 80H680M640 120V160M640 120H680M640 160V200M640 160H680M640 200V240M640 200H680M640 240V280M640 240H680M640 280V320M640 280H680M640 320V360M640 320H680M640 360V400M640 360H680M640 400V440M640 400H680M640 440V480M640 440H680M640 480V520M640 480H680M640 520V560M640 520H680M640 560H680M680 0V40M680 0H720M680 40V80M680 40H720M680 80V120M680 80H720M680 120V160M680 120H720M680 160V200M680 160H720M680 200V240M680 200H720M680 240V280M680 240H720M680 280V320M680 280H720M680 320V360M680 320H720M680 360V400M680 360H720M680 400V440M680 400H720M680 440V480M680 440H720M680 480V520M680 480H720M680 520V560M680 520H720M680 560H720M720 0V40M720 0H760M720 40V80M720 40H760M720 80V120M720 80H760M720 120V160M720 120H760M720 160V200M720 160H760M720 200V240M720 200H760M720 240V280M720 240H760M720 280V320M720 280H760M720 320V360M720 320H760M720 360V400M720 360H760M720 400V440M720 400H760M720 440V480M720 440H760M720 480V520M720 480H760M720 520V560M720 520H760M720 560H760M760 0V40M760 0H800M760 40V80M760 40H800M760 80V120M760 80H800M760 120V160M760 120H800M760 160V200M760 160H800M760 200V240M760 200H800M760 240V280M760 240H800M760 280V320M760 280H800M760 320V360M760 320H800M760 360V400M760 360H800M760 400V440M760 400H800M760 440V480M760 440H800M760 480V520M760 480H800M760 520V560M760 520H800M760 560H800M800 0V40M800 0H840M800 40V80M800 40H840M800 80V120M800 80H840M800 120V160M800 120H840M800 160V200M800 160H840M800 200V240M800 200H840M800 240V280M800 240H840M800 280V320M800 280H840M800 320V360M800 320H840M800 360V400M800 360H840M800 400V440M800 400H840M800 440V480M800 440H840M800 480V520M800 480H840M800 520V560M800 520H840M800 560H840M840 0V40M840 0H880M840 40V80M840 40H880M840 80V120M840 80H880M840 120V160M840 120H880M840 160V200M840 160H880M840 200V240M840 200H880M840 240V280M840 240H880M840 280V320M840 280H880M840 320V360M840 320H880M840 360V400M840 360H880M840 400V440M840 400H880M840 440V480M840 440H880M840 480V520M840 480H880M840 520V560M840 520H880M840 560H880M880 0V40M880 0H920M880 40V80M880 40H920M880 80V120M880 80H920M880 120V160M880 120H920M880 160V200M880 160H920M880 200V240M880 200H920M880 240V280M880 240H920M880 280V320M880 280H920M880 320V360M880 320H920M880 360V400M880 360H920M880 400V440M880 400H920M880 440V480M880 440H920M880 480V520M880 480H920M880 520V560M880 520H920M880 560H920M920 0V40M920 0H960M920 40V80M920 40H960M920 80V120M920 80H960M920 120V160M920 120H960M920 160V200M920 160H960M920 200V240M920 200H960M920 240V280M920 240H960M920 280V320M920 280H960M920 320V360M920 320H960M920 360V400M920 360H960M920 400V440M920 400H960M920 440V480M920 440H960M920 480V520M920 480H960M920 520V560M920 520H960M920 560H960M960 0V40M960 0H1000M960 40V80M960 40H1000M960 80V120M960 80H1000M960 120V160M960 120H1000M960 160V200M960 160H1000M960 200V240M960 200H1000M960 240V280M960 240H1000M960 280V320M960 280H1000M960 320V360M960 320H1000M960 360V400M960 360H1000M960 400V440M960 400H1000M960 440V480M960 440H1000M960 480V520M960 480H1000M960 520V560M960 520H1000M960 560H1000M1000 0V40M1000 0H1040M1000 40V80M1000 40H1040M1000 80V120M1000 80H1040M1000 120V160M1000 120H1040M1000 160V200M1000 160H1040M1000 200V240M1000 200H1040M1000 240V280M1000 240H1040M1000 280V320M1000 280H1040M1000 320V360M1000 320H1040M1000 360V400M1000 360H1040M1000 400V440M1000 400H1040M1000 440V480M1000 440H1040M1000 480V520M1000 480H1040M1000 520V560M1000 520H1040M1000 560H1040M1040 0V40M1040 0H1080M1040 40V80M1040 40H1080M1040 80V120M1040 80H1080M1040 120V160M1040 120H1080M1040 160V200M1040 160H1080M1040 200V240M1040 200H1080M1040 240V280M1040 240H1080M1040 280V320M1040 280H1080M1040 320V360M1040 320H1080M1040 360V400M1040 360H1080M1040 400V440M1040 400H1080M1040 440V480M1040 440H1080M1040 480V520M1040 480H1080M1040 520V560M1040 520H1080M1040 560H1080M1080 0V40M1080 0H1120M1080 40V80M1080 40H1120M1080 80V120M1080 80H1120M1080 120V160M1080 120H1120M1080 160V200M1080 160H1120M1080 200V240M1080 200H1120M1080 240V280M1080 240H1120M1080 280V320M1080 280H1120M1080 320V360M1080 320H1120M1080 360V400M1080 360H1120M1080 400V440M1080 400H1120M1080 440V480M1080 440H1120M1080 480V520M1080 480H1120M1080 520V560M1080 520H1120M1080 560H1120M1120 0V40M1120 0H1160M1120 40V80M1120 40H1160M1120 80V120M1120 80H1160M1120 120V160M1120 120H1160M1120 160V200M1120 160H1160M1120 200V240M1120 200H1160M1120 240V280M1120 240H1160M1120 280V320M1120 280H1160M1120 320V360M1120 320H1160M1120 360V400M1120 360H1160M1120 400V440M1120 400H1160M1120 440V480M1120 440H1160M1120 480V520M1120 480H1160M1120 520V560M1120 520H1160M1120 560H1160M1160 0V40M1160 0H1200M1160 40V80M1160 40H1200M1160 80V120M1160 80H1200M1160 120V160M1160 120H1200M1160 160V200M1160 160H1200M1160 200V240M1160 200H1200M1160 240V280M1160 240H1200M1160 280V320M1160 280H1200M1160 320V360M1160 320H1200M1160 360V400M1160 360H1200M1160 400V440M1160 400H1200M1160 440V480M1160 440H1200M1160 480V520M1160 480H1200M1160 520V560M1160 520H1200M1160 560H1200M1200 0V40M1200 0H1240M1200 40V80M1200 40H1240M1200 80V120M1200 80H1240M1200 120V160M1200 120H1240M1200 160V200M1200 160H1240M1200 200V240M1200 200H1240M1200 240V280M1200 240H1240M1200 280V320M1200 280H1240M1200 320V360M1200 320H1240M1200 360V400M1200 360H1240M1200 400V440M1200 400H1240M1200 440V480M1200 440H1240M1200 480V520M1200 480H1240M1200 520V560M1200 520H1240M1200 560H1240M1240 0V40M1240 0H1280V40M1240 40V80M1240 40H1280M1240 80V120M1240 80H1280M1240 120V160M1240 120H1280M1240 160V200M1240 160H1280M1240 200V240M1240 200H1280M1240 240V280M1240 240H1280M1240 280V320M1240 280H1280M1240 320V360M1240 320H1280M1240 360V400M1240 360H1280M1240 400V440M1240 400H1280M1240 440V480M1240 440H1280M1240 480V520M1240 480H1280M1240 520V560M1240 520H1280M1240 560H1280V520M1280 40V80M1280 80V120M1280 120V160M1280 160V200M1280 200V240M1280 240V280M1280 280V320M1280 320V360M1280 360V400M1280 400V440M1280 440V480M1280 480V520" stroke="black" stroke-opacity="0.045"/>
+<rect width="1280" height="560" fill="url(#fv-export-paint0_radial_14679_754)"/>
+<g filter="url(#fv-export-filter0_f_14679_754)">
+<path d="M764.8 284.9C764.8 364.926 699.926 429.8 619.9 429.8C539.874 429.8 475 364.926 475 284.9C475 204.874 539.874 140 619.9 140C699.926 140 764.8 204.874 764.8 284.9Z" fill="black" fill-opacity="0.09"/>
+</g>
+<circle cx="620" cy="280" r="70.5" stroke-width="5" stroke="black" stroke-opacity="0.2"/>
+<g class="fv-pill" style="--fv-delay:0.25s">
+<g filter="url(#fv-export-filter1_d_14679_754)">
+<path d="M900 130C900 112.327 914.327 98 932 98H1028C1045.67 98 1060 112.327 1060 130V130C1060 147.673 1045.67 162 1028 162H932C914.327 162 900 147.673 900 130V130Z" fill="#27272A"/>
+<g transform="translate(928 117) scale(1.0833)" stroke="#A1A1AA" stroke-width="1.385" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/></g>
+<path d="M968.077 139.5V120.591H974.817C976.289 120.591 977.507 120.859 978.474 121.394C979.44 121.93 980.163 122.662 980.643 123.592C981.124 124.515 981.364 125.555 981.364 126.712C981.364 127.876 981.121 128.922 980.634 129.852C980.154 130.775 979.428 131.507 978.455 132.049C977.489 132.585 976.273 132.852 974.808 132.852H970.173V130.433H974.55C975.479 130.433 976.233 130.273 976.812 129.953C977.39 129.627 977.815 129.184 978.086 128.624C978.357 128.063 978.492 127.426 978.492 126.712C978.492 125.998 978.357 125.364 978.086 124.81C977.815 124.256 977.387 123.822 976.803 123.509C976.224 123.195 975.461 123.038 974.513 123.038H970.93V139.5H968.077ZM990.57 139.5H984.448V120.591H990.764C992.616 120.591 994.208 120.969 995.537 121.727C996.867 122.478 997.885 123.558 998.593 124.967C999.307 126.371 999.664 128.054 999.664 130.018C999.664 131.987 999.304 133.68 998.584 135.096C997.87 136.512 996.836 137.601 995.482 138.364C994.127 139.121 992.49 139.5 990.57 139.5ZM987.301 137.007H990.413C991.853 137.007 993.05 136.736 994.004 136.195C994.958 135.647 995.672 134.856 996.146 133.822C996.62 132.781 996.857 131.513 996.857 130.018C996.857 128.534 996.62 127.276 996.146 126.241C995.679 125.207 994.98 124.423 994.051 123.887C993.121 123.352 991.967 123.084 990.588 123.084H987.301V137.007ZM1002.95 139.5V120.591H1014.68V123.047H1005.8V128.808H1013.84V131.255H1005.8V139.5H1002.95Z" fill="#F4F4F5"/>
+</g>
+</g>
+<g class="fv-pill" style="--fv-delay:0.37s">
+<g filter="url(#fv-export-filter2_d_14679_754)">
+<path d="M900 230C900 212.327 914.327 198 932 198H1028C1045.67 198 1060 212.327 1060 230V230C1060 247.673 1045.67 262 1028 262H932C914.327 262 900 247.673 900 230V230Z" fill="#27272A"/>
+<g transform="translate(928 217) scale(1.0833)" stroke="#A1A1AA" stroke-width="1.385" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/></g>
+<path d="M978.391 225.558C978.292 224.684 977.886 224.007 977.172 223.527C976.458 223.041 975.559 222.798 974.476 222.798C973.7 222.798 973.029 222.921 972.463 223.167C971.897 223.407 971.457 223.739 971.143 224.164C970.835 224.583 970.681 225.06 970.681 225.595C970.681 226.045 970.786 226.432 970.995 226.759C971.21 227.085 971.491 227.359 971.835 227.58C972.186 227.796 972.562 227.977 972.962 228.125C973.362 228.267 973.746 228.384 974.116 228.476L975.962 228.956C976.566 229.104 977.184 229.304 977.818 229.556C978.452 229.808 979.04 230.141 979.582 230.553C980.123 230.966 980.56 231.477 980.893 232.086C981.231 232.695 981.401 233.425 981.401 234.274C981.401 235.345 981.124 236.296 980.57 237.127C980.022 237.958 979.225 238.614 978.178 239.094C977.138 239.574 975.879 239.814 974.402 239.814C972.986 239.814 971.761 239.589 970.727 239.14C969.693 238.691 968.884 238.054 968.299 237.229C967.714 236.398 967.391 235.413 967.33 234.274H970.192C970.247 234.957 970.469 235.527 970.857 235.982C971.25 236.432 971.752 236.767 972.362 236.989C972.977 237.204 973.651 237.312 974.384 237.312C975.19 237.312 975.907 237.186 976.535 236.933C977.169 236.675 977.667 236.318 978.031 235.862C978.394 235.401 978.575 234.862 978.575 234.246C978.575 233.686 978.415 233.228 978.095 232.871C977.781 232.514 977.353 232.218 976.812 231.984C976.276 231.75 975.67 231.544 974.993 231.366L972.759 230.756C971.244 230.344 970.044 229.738 969.158 228.938C968.277 228.137 967.837 227.079 967.837 225.761C967.837 224.672 968.133 223.721 968.724 222.908C969.315 222.096 970.115 221.465 971.124 221.016C972.134 220.56 973.272 220.332 974.54 220.332C975.821 220.332 976.95 220.557 977.929 221.006C978.914 221.456 979.689 222.074 980.256 222.862C980.822 223.644 981.117 224.543 981.142 225.558H978.391ZM986.203 220.591L991.465 235.991H991.678L996.94 220.591H1000.02L993.22 239.5H989.923L983.119 220.591H986.203ZM1014.35 226.565C1014.17 226.004 1013.93 225.503 1013.63 225.06C1013.34 224.61 1012.98 224.229 1012.57 223.915C1012.16 223.595 1011.69 223.352 1011.16 223.185C1010.63 223.019 1010.06 222.936 1009.43 222.936C1008.37 222.936 1007.41 223.21 1006.55 223.758C1005.69 224.306 1005.02 225.109 1004.52 226.168C1004.03 227.22 1003.78 228.51 1003.78 230.036C1003.78 231.569 1004.03 232.865 1004.53 233.923C1005.03 234.982 1005.71 235.785 1006.58 236.333C1007.45 236.881 1008.43 237.155 1009.54 237.155C1010.57 237.155 1011.47 236.946 1012.23 236.527C1013 236.108 1013.59 235.518 1014.01 234.754C1014.44 233.985 1014.65 233.08 1014.65 232.04L1015.39 232.178H1009.98V229.824H1017.41V231.975C1017.41 233.563 1017.07 234.942 1016.39 236.112C1015.72 237.275 1014.79 238.174 1013.6 238.808C1012.42 239.442 1011.07 239.759 1009.54 239.759C1007.83 239.759 1006.33 239.365 1005.04 238.577C1003.75 237.789 1002.75 236.672 1002.03 235.225C1001.31 233.772 1000.95 232.049 1000.95 230.055C1000.95 228.547 1001.16 227.192 1001.57 225.992C1001.99 224.792 1002.58 223.773 1003.34 222.936C1004.1 222.093 1005 221.45 1006.02 221.006C1007.06 220.557 1008.19 220.332 1009.41 220.332C1010.43 220.332 1011.39 220.483 1012.27 220.785C1013.15 221.086 1013.94 221.514 1014.63 222.068C1015.32 222.622 1015.9 223.281 1016.36 224.044C1016.81 224.801 1017.12 225.641 1017.28 226.565H1014.35Z" fill="#F4F4F5"/>
+</g>
+</g>
+<g class="fv-pill" style="--fv-delay:0.49s">
+<g filter="url(#fv-export-filter3_d_14679_754)">
+<path d="M900 330C900 312.327 914.327 298 932 298H1028C1045.67 298 1060 312.327 1060 330V330C1060 347.673 1045.67 362 1028 362H932C914.327 362 900 347.673 900 330V330Z" fill="#27272A"/>
+<g transform="translate(928 317) scale(1.0833)" stroke="#A1A1AA" stroke-width="1.385" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/></g>
+<path d="M968.077 320.591H971.54L977.56 335.29H977.781L983.801 320.591H987.263V339.5H984.549V325.817H984.374L978.797 339.472H976.544L970.967 325.808H970.792V339.5H968.077V320.591ZM994.004 320.591V339.5H991.151V320.591H994.004ZM1004.02 339.5H997.899V320.591H1004.21C1006.07 320.591 1007.66 320.969 1008.99 321.727C1010.32 322.478 1011.34 323.558 1012.04 324.967C1012.76 326.371 1013.12 328.054 1013.12 330.018C1013.12 331.987 1012.76 333.68 1012.03 335.096C1011.32 336.512 1010.29 337.601 1008.93 338.364C1007.58 339.121 1005.94 339.5 1004.02 339.5ZM1000.75 337.007H1003.86C1005.3 337.007 1006.5 336.736 1007.46 336.195C1008.41 335.647 1009.12 334.856 1009.6 333.822C1010.07 332.781 1010.31 331.513 1010.31 330.018C1010.31 328.534 1010.07 327.276 1009.6 326.241C1009.13 325.207 1008.43 324.423 1007.5 323.887C1006.57 323.352 1005.42 323.084 1004.04 323.084H1000.75V337.007ZM1019.26 320.591V339.5H1016.4V320.591H1019.26Z" fill="#F4F4F5"/>
+</g>
+</g>
+<g class="fv-pill" style="--fv-delay:0.61s">
+<g filter="url(#fv-export-filter4_d_14679_754)">
+<path d="M900 430C900 412.327 914.327 398 932 398H1028C1045.67 398 1060 412.327 1060 430V430C1060 447.673 1045.67 462 1028 462H932C914.327 462 900 447.673 900 430V430Z" fill="#27272A"/>
+<g transform="translate(928 417) scale(1.0833)" stroke="#A1A1AA" stroke-width="1.385" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/></g>
+<path d="M971.78 439.5L966.536 420.591H969.536L973.22 435.234H973.396L977.227 420.591H980.2L984.032 435.244H984.207L987.882 420.591H990.892L985.638 439.5H982.767L978.788 425.337H978.64L974.661 439.5H971.78ZM993.206 439.5H990.177L996.982 420.591H1000.28L1007.08 439.5H1004.05L998.709 424.026H998.561L993.206 439.5ZM993.714 432.095H1003.54V434.496H993.714V432.095ZM1009.23 420.591L1014.49 435.991H1014.7L1019.96 420.591H1023.05L1016.24 439.5H1012.95L1006.14 420.591H1009.23Z" fill="#F4F4F5"/>
+</g>
+</g>
+<g filter="url(#fv-export-filter5_d_14679_754)">
+<g clip-path="url(#fv-export-clip1_14679_754)">
+<rect x="-84" y="116" width="480" height="470" rx="24" fill="#27272A"/>
+<rect x="-84" y="116" width="480" height="44" fill="#2C2C30"/>
+<path d="M-84 160.5H396" stroke="white" stroke-opacity="0.06"/>
+<rect x="-83.5" y="116.5" width="479" height="469" rx="23.5" stroke="white" stroke-opacity="0.08"/>
+<g transform="translate(0 32)">
+<path d="M-48 186H396M-48 200H396M-48 214H396M-48 228H396M-48 242H396" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#52525B"/>
+<path d="M184 186V242" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#71717A"/>
+<ellipse cx="-4" cy="228" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="34" cy="221" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M3.5 228V178" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M41.5 221V178" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M2.5 178H42.5V185H2.5V178Z" fill="#E4E4E7"/>
+<ellipse cx="76" cy="214" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="114" cy="207" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="152" cy="200" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M83.5 214V168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M121.5 207V161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M159.5 200V154" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M82.5 168L160.5 154V161L82.5 175V168Z" fill="#E4E4E7"/>
+<ellipse cx="226" cy="207" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M233.5 207V161" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<mask id="fv-export-stroke0_14679_754" fill="white">
+<path d="M296.5 193C296.5 196.314 292.694 199 288 199C283.306 199 279.5 196.314 279.5 193C279.5 189.686 283.306 187 288 187C292.694 187 296.5 189.686 296.5 193Z"/>
+</mask>
+<ellipse cx="288" cy="193" rx="8.5" ry="6" stroke-width="5" stroke="#E4E4E7" mask="url(#fv-export-stroke0_14679_754)"/>
+<path d="M295.5 193V147" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M228 224C246 244 276 244 292 226" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#D4D4D8"/>
+<ellipse cx="346" cy="214" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M353.5 214V168" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<g id="fv-export-staffB">
+<path d="M-48 326H396M-48 340H396M-48 354H396M-48 368H396M-48 382H396" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#52525B"/>
+<path d="M184 326V382" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="#71717A"/>
+<ellipse cx="-4" cy="368" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="34" cy="361" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M3.5 368V318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M41.5 361V318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M2.5 318H42.5V325H2.5V318Z" fill="#E4E4E7"/>
+<ellipse cx="76" cy="354" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="114" cy="347" rx="8.5" ry="6" fill="#E4E4E7"/>
+<ellipse cx="152" cy="340" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M83.5 354V308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M121.5 347V301" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M159.5 340V294" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M82.5 308L160.5 294V301L82.5 315V308Z" fill="#E4E4E7"/>
+<ellipse cx="226" cy="347" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M233.5 347V301" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<mask id="fv-export-stroke1_14679_754" fill="white">
+<path d="M296.5 333C296.5 336.314 292.694 339 288 339C283.306 339 279.5 336.314 279.5 333C279.5 329.686 283.306 327 288 327C292.694 327 296.5 329.686 296.5 333Z"/>
+</mask>
+<ellipse cx="288" cy="333" rx="8.5" ry="6" stroke-width="5" stroke="#E4E4E7" mask="url(#fv-export-stroke1_14679_754)"/>
+<path d="M295.5 333V287" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+<path d="M228 364C246 384 276 384 292 366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="#D4D4D8"/>
+<ellipse cx="346" cy="354" rx="8.5" ry="6" fill="#E4E4E7"/>
+<path d="M353.5 354V308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#E4E4E7"/>
+</g>
+<use href="#fv-export-staffB" y="140" opacity="0.4"/>
+</g>
+</g>
+</g>
+<rect x="-84" y="360" width="490" height="200" fill="url(#fv-export-panelFade)"/>
+<path class="fv-flow" d="M397 280H549" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke="#71717A"/>
+<circle cx="397" cy="280" r="4" fill="#71717A"/>
+<circle cx="569" cy="280" r="4" fill="#71717A"/>
+<path class="fv-flow" style="--fv-delay:0.56s" d="M693 280H765C778.333 280 785 286.667 785 300V410C785 423.333 791.667 430 805 430H901" stroke-width="5" stroke-linecap="square" stroke-linejoin="round" stroke="url(#fv-export-paint1_linear_14679_754)"/>
+<circle cx="901" cy="430" r="4" fill="#F54900"/>
+<path class="fv-flow" style="--fv-delay:0.44s" d="M693 280H765C778.333 280 785 286.667 785 300V310C785 323.333 791.667 330 805 330H901" stroke-width="5" stroke-linecap="square" stroke-linejoin="round" stroke="url(#fv-export-paint2_linear_14679_754)"/>
+<circle cx="901" cy="330" r="4" fill="#F54900"/>
+<path class="fv-flow" style="--fv-delay:0.32s" d="M713 280H765C778.333 280 785 273.333 785 260V250C785 236.667 791.667 230 805 230H901" stroke-width="5" stroke-linecap="square" stroke-linejoin="round" stroke="url(#fv-export-paint3_linear_14679_754)"/>
+<circle cx="901" cy="230" r="4" fill="#F54900"/>
+<path class="fv-flow" style="--fv-delay:0.20s" d="M694 280H765C778.333 280 785 273.333 785 260V150C785 136.667 791.667 130 805 130H901" stroke-width="5" stroke-linecap="square" stroke-linejoin="round" stroke="url(#fv-export-paint4_linear_14679_754)"/>
+<circle cx="901" cy="130" r="5" fill="#F54900"/>
+<circle cx="774" cy="280" r="5" fill="#F54900"/>
+<g class="fv-halo">
+<g filter="url(#fv-export-filter6_f_14679_754)">
+<circle cx="614.5" cy="279.5" r="149.5" fill="#431407"/>
+</g>
+<circle opacity="0.3" cx="614.5" cy="279.5" r="74.5" stroke-width="5" stroke="#9A3412"/>
+</g>
+<g filter="url(#fv-export-filter7_di_14679_754)">
+<rect x="550.5" y="215.5" width="128" height="128" rx="64" fill="url(#fv-export-paint5_linear_14679_754)"/>
+<path d="M629.965 253.451C625.081 260.789 620.324 268.463 615.695 276.472C616.759 275.917 617.952 275.523 619.271 275.292C620.614 275.037 621.551 274.91 622.084 274.91C622.639 274.91 623.114 274.933 623.507 274.979C623.901 275.002 624.398 275.13 625 275.361C625.625 275.569 626.158 275.87 626.597 276.264C627.662 277.213 628.195 278.556 628.195 280.292C628.195 282.028 627.72 283.938 626.771 286.021C625.845 288.081 624.572 290.153 622.952 292.236C621.354 294.319 619.595 296.264 617.674 298.069C615.776 299.852 613.727 301.31 611.528 302.444C609.329 303.579 607.28 304.146 605.382 304.146C604.503 304.146 603.484 303.579 602.327 302.444C601.192 301.31 600.625 299.817 600.625 297.965C600.625 296.113 601.424 293.243 603.021 289.354C604.618 285.465 606.551 281.519 608.82 277.514C611.111 273.486 613.438 269.562 615.799 265.743C618.183 261.924 620.209 258.799 621.875 256.368C623.542 253.937 624.56 252.537 624.931 252.167C625.301 251.796 625.972 251.484 626.945 251.229C627.94 250.975 628.796 250.859 629.514 250.882C630.232 250.882 630.59 251.206 630.59 251.854C630.59 252.271 630.382 252.803 629.965 253.451ZM620.59 286.785C621.54 285.118 622.014 283.602 622.014 282.236C622.014 280.87 621.574 280.188 620.695 280.188C619.838 280.188 618.507 280.569 616.702 281.333C614.919 282.074 613.901 282.444 613.646 282.444C613.391 282.444 613.056 282.236 612.639 281.819C608.125 289.944 605.868 295.13 605.868 297.375C605.868 298.417 606.204 298.938 606.875 298.938C608.472 298.938 610.776 297.606 613.785 294.944C616.794 292.259 619.063 289.539 620.59 286.785Z" fill="#FCFCFC"/>
+</g>
+</g>
+<defs>
+<linearGradient id="fv-export-panelFade" x1="0" y1="360" x2="0" y2="540" gradientUnits="userSpaceOnUse">
+<stop stop-color="#18181B" stop-opacity="0"/>
+<stop offset="1" stop-color="#18181B"/>
+</linearGradient>
+<filter id="fv-export-filter0_f_14679_754" x="388" y="53" width="463.8" height="463.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="43.5" result="effect1_foregroundBlur_14679_754"/>
+</filter>
+<filter id="fv-export-filter1_d_14679_754" x="880" y="88" width="200" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_754"/>
+<feOffset dy="10"/>
+<feGaussianBlur stdDeviation="14"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_754"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_754" result="shape"/>
+</filter>
+<filter id="fv-export-filter2_d_14679_754" x="880" y="188" width="200" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_754"/>
+<feOffset dy="10"/>
+<feGaussianBlur stdDeviation="14"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_754"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_754" result="shape"/>
+</filter>
+<filter id="fv-export-filter3_d_14679_754" x="880" y="288" width="200" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_754"/>
+<feOffset dy="10"/>
+<feGaussianBlur stdDeviation="14"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_754"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_754" result="shape"/>
+</filter>
+<filter id="fv-export-filter4_d_14679_754" x="880" y="388" width="200" height="104" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_754"/>
+<feOffset dy="10"/>
+<feGaussianBlur stdDeviation="14"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_754"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_754" result="shape"/>
+</filter>
+<filter id="fv-export-filter5_d_14679_754" x="-108" y="104" width="528" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="8" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_754"/>
+<feOffset dy="12"/>
+<feGaussianBlur stdDeviation="16"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_754"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_754" result="shape"/>
+</filter>
+<filter id="fv-export-filter6_f_14679_754" x="375" y="40" width="479" height="479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="45" result="effect1_foregroundBlur_14679_754"/>
+</filter>
+<filter id="fv-export-filter7_di_14679_754" x="512.5" y="191.5" width="204" height="204" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="6" operator="erode" in="SourceAlpha" result="effect1_dropShadow_14679_754"/>
+<feOffset dy="14"/>
+<feGaussianBlur stdDeviation="22"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.960784 0 0 0 0 0.286275 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_14679_754"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_14679_754" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_14679_754"/>
+</filter>
+<radialGradient id="fv-export-paint0_radial_14679_754" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(640 280) scale(640 280)">
+<stop stop-color="#18181B" stop-opacity="0"/>
+<stop offset="0.45" stop-color="#18181B" stop-opacity="0.15"/>
+<stop offset="1" stop-color="#18181B"/>
+</radialGradient>
+<linearGradient id="fv-export-paint1_linear_14679_754" x1="785" y1="323.5" x2="901" y2="430" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F54900" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<linearGradient id="fv-export-paint2_linear_14679_754" x1="785" y1="305" x2="901" y2="305" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F54900" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<linearGradient id="fv-export-paint3_linear_14679_754" x1="779" y1="255" x2="901" y2="255" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F54900" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<linearGradient id="fv-export-paint4_linear_14679_754" x1="783.5" y1="234" x2="905.5" y2="130" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F54900" stop-opacity="0.35"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<linearGradient id="fv-export-paint5_linear_14679_754" x1="614.5" y1="215.5" x2="614.5" y2="343.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F97316"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<clipPath id="fv-export-clip0_14679_754">
+<rect width="1280" height="560" fill="white"/>
+</clipPath>
+<clipPath id="fv-export-clip1_14679_754">
+<rect x="-84" y="116" width="480" height="470" rx="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                                </div>
+                                <div class="px-6 pb-8 space-y-2">
+                                    <h3 class="text-xl md:text-2xl font-medium text-[rgb(245,245,245)]">Export to multiple formats</h3>
+                                    <p class="text-sm md:text-base text-white/50 leading-relaxed">PDF for printing and rehearsal. PNG and SVG for digital publishing. WAV and MIDI to bring into your audio workflow. Or grab the full source as a ZIP.</p>
+                                </div>
+                            </div>
+                            <div class="fv-card flex flex-col bg-[rgb(20,20,20)] rounded-xl md:rounded-3xl overflow-hidden md:basis-0 md:min-w-0" style="flex-grow: 1">
+                                <div class="fv-stage bg-[#18181B] w-full md:flex-1 md:min-h-0 overflow-hidden" style="--fv-focus: 0.5; --fv-mobile-y: 18%; --fv-mobile-x: -4.6%; --fv-mobile-aspect: 2 / 1; --fv-mobile-w: 110%" data-fv-fit="width" role="img" aria-label="Publish your score for everyone">
+<svg class="fv-svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true" width="1050" height="420" viewBox="-22.5 70 525 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="fv-share-fade" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 150) scale(230 190)">
+<stop stop-color="white"/>
+<stop offset="0.6" stop-color="white" stop-opacity="0.7"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<mask id="fv-share-ringFade" maskUnits="userSpaceOnUse" x="-100" y="0" width="680" height="300">
+<rect x="-100" width="680" height="300" fill="url(#fv-share-fade)"/>
+</mask>
+<radialGradient id="fv-share-vignette" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(240 175) scale(375 150)">
+<stop stop-color="#18181B" stop-opacity="0"/>
+<stop offset="0.45" stop-color="#18181B" stop-opacity="0.15"/>
+<stop offset="1" stop-color="#18181B"/>
+</radialGradient>
+<filter id="fv-share-softShadow" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB">
+<feMorphology radius="4" operator="erode" in="SourceAlpha" result="eroded"/>
+<feOffset dy="8" in="eroded"/>
+<feGaussianBlur stdDeviation="10"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+<feBlend mode="normal" in="SourceGraphic"/>
+</filter>
+<clipPath id="fv-share-canvas">
+<rect x="-100" width="680" height="300"/>
+</clipPath>
+<filter id="fv-share-heroHalo" x="400.5" y="16.5" width="479" height="479" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="45" result="h1_foregroundBlur"/>
+</filter>
+<filter id="fv-share-heroDisc" x="538" y="168" width="204" height="204" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="6" operator="erode" in="SourceAlpha" result="h1_dropShadow"/>
+<feOffset dy="14"/>
+<feGaussianBlur stdDeviation="22"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.960784 0 0 0 0 0.286275 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="h1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="h1_dropShadow" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="h2_innerShadow"/>
+</filter>
+<linearGradient id="fv-share-heroFill" x1="640" y1="192" x2="640" y2="320" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F97316"/>
+<stop offset="1" stop-color="#F54900"/>
+</linearGradient>
+<clipPath id="fv-share-avatarA">
+<rect x="298.1" y="96.5" width="36" height="36" rx="9"/>
+</clipPath>
+<clipPath id="fv-share-avatarB">
+<rect x="139.3" y="117.4" width="36" height="36" rx="9"/>
+</clipPath>
+<clipPath id="fv-share-avatarC">
+<rect x="294.7" y="174.0" width="36" height="36" rx="9"/>
+</clipPath>
+</defs>
+
+<g clip-path="url(#fv-share-canvas)">
+<rect x="-100" width="680" height="300" fill="#18181B"/>
+
+<!-- Texture: concentric rings the link reaches out across -->
+<g class="fv-rings" mask="url(#fv-share-ringFade)" stroke="white">
+<circle cx="240" cy="150" r="84" stroke-opacity="0.08"/>
+<circle cx="240" cy="150" r="124" stroke-opacity="0.07"/>
+<circle cx="240" cy="150" r="164" stroke-opacity="0.06" stroke-dasharray="4 4"/>
+</g>
+<rect x="-100" width="680" height="300" fill="url(#fv-share-vignette)"/>
+
+<!-- Viewers on the inner ring, as rounded-square photo avatars, echoing the "For everyone" tiles -->
+<g filter="url(#fv-share-softShadow)">
+<rect x="298.1" y="96.5" width="36" height="36" rx="9" fill="#27272A"/>
+</g>
+<image href="case-img/audience-top.jpg" x="298.1" y="96.5" width="36" height="36" preserveAspectRatio="xMidYMid slice" clip-path="url(#fv-share-avatarA)"/>
+<rect x="298.6" y="97.0" width="35" height="35" rx="8.5" stroke="white" stroke-opacity="0.16"/>
+<circle class="fv-badge" style="--fv-delay:1.10s" cx="332.1" cy="98.5" r="4" fill="#F54900" stroke="#18181B" stroke-width="2"/>
+
+<g>
+<g filter="url(#fv-share-softShadow)">
+<rect x="139.3" y="117.4" width="36" height="36" rx="9" fill="#27272A"/>
+</g>
+<image href="case-img/audience-right.jpg" x="139.3" y="117.4" width="36" height="36" preserveAspectRatio="xMidYMid slice" clip-path="url(#fv-share-avatarB)"/>
+<rect x="139.8" y="117.9" width="35" height="35" rx="8.5" stroke="white" stroke-opacity="0.16"/>
+</g>
+<circle class="fv-badge" style="--fv-delay:1.35s" cx="173.3" cy="119.4" r="4" fill="#F54900" stroke="#18181B" stroke-width="2"/>
+
+<g>
+<g filter="url(#fv-share-softShadow)">
+<rect x="294.7" y="174.0" width="36" height="36" rx="9" fill="#27272A"/>
+</g>
+<image href="case-img/audience-bottom.jpg" x="294.7" y="174.0" width="36" height="36" preserveAspectRatio="xMidYMid slice" clip-path="url(#fv-share-avatarC)"/>
+<rect x="295.2" y="174.5" width="35" height="35" rx="8.5" stroke="white" stroke-opacity="0.16"/>
+</g>
+<circle class="fv-badge" style="--fv-delay:1.60s" cx="328.7" cy="176.0" r="4" fill="#F54900" stroke="#18181B" stroke-width="2"/>
+
+<!-- Broadcast ripples while the card is hovered -->
+<circle class="fv-ripple" style="--fv-delay:0s" cx="240" cy="150" r="26" stroke="#F54900" stroke-width="1.5"/>
+<circle class="fv-ripple" style="--fv-delay:0.8s" cx="240" cy="150" r="26" stroke="#F54900" stroke-width="1.5"/>
+<circle class="fv-ripple" style="--fv-delay:1.6s" cx="240" cy="150" r="26" stroke="#F54900" stroke-width="1.5"/>
+
+<!-- Hero: the engraving card's logo element, scaled to render the same size as the engraving and export logos -->
+<g transform="translate(240 150) scale(0.41) translate(-640 -256)">
+<g class="fv-halo">
+<g filter="url(#fv-share-heroHalo)">
+<circle cx="640" cy="256" r="149.5" fill="#431407"/>
+</g>
+<circle opacity="0.3" cx="640" cy="256" r="74.5" stroke-width="5" stroke="#9A3412"/>
+</g>
+<g filter="url(#fv-share-heroDisc)">
+<rect x="576" y="192" width="128" height="128" rx="64" fill="url(#fv-share-heroFill)"/>
+<path d="M655.465 229.951C650.581 237.289 645.824 244.963 641.195 252.972C642.259 252.417 643.452 252.023 644.771 251.792C646.114 251.537 647.051 251.41 647.584 251.41C648.139 251.41 648.614 251.433 649.007 251.479C649.401 251.502 649.898 251.63 650.5 251.861C651.125 252.069 651.658 252.37 652.097 252.764C653.162 253.713 653.695 255.056 653.695 256.792C653.695 258.528 653.22 260.438 652.271 262.521C651.345 264.581 650.072 266.653 648.452 268.736C646.854 270.819 645.095 272.764 643.174 274.569C641.276 276.352 639.227 277.81 637.028 278.944C634.829 280.079 632.78 280.646 630.882 280.646C630.003 280.646 628.984 280.079 627.827 278.944C626.692 277.81 626.125 276.317 626.125 274.465C626.125 272.613 626.924 269.743 628.521 265.854C630.118 261.965 632.051 258.019 634.32 254.014C636.611 249.986 638.938 246.062 641.299 242.243C643.683 238.424 645.709 235.299 647.375 232.868C649.042 230.437 650.06 229.037 650.431 228.667C650.801 228.296 651.472 227.984 652.445 227.729C653.44 227.475 654.296 227.359 655.014 227.382C655.732 227.382 656.09 227.706 656.09 228.354C656.09 228.771 655.882 229.303 655.465 229.951ZM646.09 263.285C647.04 261.618 647.514 260.102 647.514 258.736C647.514 257.37 647.074 256.688 646.195 256.688C645.338 256.688 644.007 257.069 642.202 257.833C640.419 258.574 639.401 258.944 639.146 258.944C638.891 258.944 638.556 258.736 638.139 258.319C633.625 266.444 631.368 271.63 631.368 273.875C631.368 274.917 631.704 275.438 632.375 275.438C633.972 275.438 636.276 274.106 639.285 271.444C642.294 268.759 644.563 266.039 646.09 263.285Z" fill="#FCFCFC"/>
+</g>
+</g>
+
+</g>
+</svg>
+                                </div>
+                                <div class="px-6 pb-8 space-y-2">
+                                    <h3 class="text-xl md:text-2xl font-medium text-[rgb(245,245,245)]">Publish your score for everyone</h3>
+                                    <p class="text-sm md:text-base text-white/50 leading-relaxed">Generate a public link to your score. Choose whether viewers see just the output or the source code too.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
                 
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
-                    <div class="bg-gray-100 px-0 pt-1 pb-0 md:px-2 md:pt-4 md:pb-0 overflow-hidden rounded-2xl">
-                   
-                        <img class="w-full" src="case-img/bachable-3.png">
-                    </div>
-                </div>
 
 
 
 
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl overflow-hidden">
-                    <div class="overflow-hidden rounded-2xl">
-                        <video class="w-full" src="case-img/bachable-1.webm" autoplay loop muted playsinline></video>
-                    </div>
-                </div>
 
 
 
@@ -463,4 +1258,136 @@
 
     </div>
     <script>lucide.createIcons();</script>
+    <script>
+        // Audience section (rebuilt from bachable.io's scroll-highlight-section.tsx). Like the product, the
+        // card is pinned on screen while scrolling moves the highlight and photos through the three states.
+        (function () {
+            const hero = document.querySelector('[data-bh-hero]');
+            if (!hero) return;
+            const stage = hero.querySelector('.bh-stage');
+            const card = hero.closest('[data-expand]');
+            const pin = card.closest('[data-pin]');
+            const words = [...hero.querySelectorAll('.bh-word')];
+            const tiles = [...hero.querySelectorAll('.bh-tile')];
+            const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+            const DESKTOP_MIN_WIDTH = 768, TILE_BASE_SIZE = 134;
+            const FIRST_STATE_AT = 1 / 6, LAST_STATE_AT = 5 / 6;
+
+            // tile centre offset from the middle of the stage and its size, per Figma state
+            const FRAMES = [
+                { desktop: [[-72, -245, 112], [8, -256, 134], [39, -245, 112]],
+                  mobile: [[40, -245, 78], [55, -250, 94], [70, -245, 78]] },
+                { desktop: [[-300, -35, 112], [-305, -98, 90], [-312, -135, 112]],
+                  mobile: [[-108, -190, 78], [-115, -195, 63], [-108, -205, 78]] },
+                { desktop: [[300, 26, 112], [300, 62, 90], [285, 103, 112]],
+                  mobile: [[105, 190, 78], [110, 200, 63], [95, 210, 78]] },
+                { desktop: [[-107, 245, 112], [-178, 256, 134], [-211, 240, 112]],
+                  mobile: [[-30, 275, 78], [-70, 275, 94], [-105, 265, 78]] },
+            ];
+            const clamp = (v, a, b) => Math.min(Math.max(v, a), b);
+
+            function frameAt(frames, progress) {
+                const span = (LAST_STATE_AT - FIRST_STATE_AT) / (frames.length - 1);
+                const pos = clamp((progress - FIRST_STATE_AT) / span, 0, frames.length - 1);
+                const i = Math.min(Math.floor(pos), frames.length - 2), t = pos - i;
+                return frames[i].map((v, k) => v + (frames[i + 1][k] - v) * t);
+            }
+
+            function update() {
+                const desktop = window.innerWidth >= DESKTOP_MIN_WIDTH;
+                // fit the scene into the card: the notes reach ~560px either side of the centre, the
+                // photos ~330px above and below it (plus a margin)
+                const s = desktop ? Math.min(1, hero.clientWidth / 1180, hero.clientHeight / 720) : Math.min(1, hero.clientHeight / 720);
+                stage.style.scale = s;
+
+                // the card stays pinned in the middle of the screen while its block scrolls 1.5 screens
+                // past it: 0 when it pins, 1 when it lets go
+                const vh = window.innerHeight;
+                // centred exactly (the zoom scales it about its centre), so the space above and below match
+                const h = card.offsetHeight, top = (vh - h) / 2, travel = vh * 1.5;
+                card.style.top = `${top}px`;
+                pin.style.height = `${h + travel}px`;
+                const progress = clamp((top - pin.getBoundingClientRect().top) / travel, 0, 1);
+                const active = Math.min(Math.floor(progress * words.length), words.length - 1);
+                words.forEach((w, i) => w.classList.toggle('is-active', i === active));
+                tiles.forEach((tile, i) => {
+                    const [x, y, size] = frameAt(FRAMES[i][desktop ? 'desktop' : 'mobile'], reducedMotion.matches ? 0 : progress);
+                    tile.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${size / TILE_BASE_SIZE})`;
+                });
+            }
+
+            // cursor trail lights the background notes up in orange, tapering with age
+            const TRAIL_LENGTH = 10, TRAIL_RADIUS = 18;
+            hero.querySelectorAll('.bh-icon').forEach(icon => {
+                let trail = [];
+                icon.addEventListener('pointermove', e => {
+                    const accent = icon.querySelector('.bh-accent');
+                    if (!accent || e.pointerType === 'touch') return;
+                    const b = icon.getBoundingClientRect(), k = icon.offsetWidth / b.width;   // undo the stage scale
+                    trail = [{ x: (e.clientX - b.left) * k, y: (e.clientY - b.top) * k }, ...trail].slice(0, TRAIL_LENGTH);
+                    const mask = trail.map(({ x, y }, age) =>
+                        `radial-gradient(circle ${TRAIL_RADIUS * (1 - age / TRAIL_LENGTH)}px at ${x}px ${y}px, #000 35%, transparent)`).join(', ');
+                    accent.style.webkitMaskImage = accent.style.maskImage = mask;
+                    accent.style.opacity = 1;
+                });
+                icon.addEventListener('pointerleave', () => {
+                    trail = [];
+                    const accent = icon.querySelector('.bh-accent');
+                    if (accent) accent.style.opacity = 0;
+                });
+            });
+
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            update();
+        })();
+    </script>
+    <script>
+        // Features section: each visual animates while hovered with a mouse; touch screens
+        // have no hover, so there it plays while the card is mostly on screen
+        document.querySelectorAll('.fv-card').forEach(card => {
+            card.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') card.setAttribute('data-fv-active', ''); });
+            card.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') card.removeAttribute('data-fv-active'); });
+            if (matchMedia('(hover: none)').matches) {
+                new IntersectionObserver(([entry]) => card.toggleAttribute('data-fv-active', entry.isIntersecting),
+                    { threshold: 0.6 }).observe(card);
+            }
+        });
+    </script>
+    <script>
+        // Scroll-scrubbed videos: playback follows the video's position in the viewport
+        (function () {
+            const videos = [...document.querySelectorAll('video[data-scrub]')];
+            if (!videos.length) return;
+            const state = videos.map(v => ({ v, target: 0, current: 0 }));
+
+            function update() {
+                const vh = window.innerHeight;
+                state.forEach(s => {
+                    const r = s.v.getBoundingClientRect();
+                    // 0 when the video's top reaches 85% of the viewport, 1 when it reaches 15%
+                    const p = (vh * 0.85 - r.top) / (vh * 0.7);
+                    s.target = Math.min(1, Math.max(0, p));
+                });
+            }
+
+            function tick() {
+                state.forEach(s => {
+                    const d = s.v.duration;
+                    if (!d) return;
+                    s.current += (s.target - s.current) * 0.15;
+                    if (Math.abs(s.target - s.current) < 0.001) s.current = s.target;
+                    const t = s.current * (d - 0.05);
+                    if (Math.abs(s.v.currentTime - t) > 0.01) s.v.currentTime = t;
+                });
+                requestAnimationFrame(tick);
+            }
+
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update);
+            update();
+            requestAnimationFrame(tick);
+        })();
+    </script>
+    <script src="case.js"></script>
 </body>

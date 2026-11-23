@@ -7,6 +7,7 @@
     <title>Vy's Portfolio</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="case.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +19,7 @@
 
 </head>
 
-<body style="background-color: #FCFCFC;">
+<body style="background-color: #FFFFFF;">
     <div id="start"></div>
         <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start"
         id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up" class="w-6 h-6 text-gray-900"></i></a>
@@ -57,9 +58,9 @@
 
             <!-- Image card -->
             <div class="md:px-12">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <div class="bg-[#FFF9F9] bg-[url('case-img/workflw-bg.svg')] bg-cover bg-center h-[280px] md:h-[400px] overflow-hidden rounded-2xl relative">
-                        <img src="case-img/workflw-mockup.png" class="absolute left-1/2 -translate-x-1/2 top-12 h-[125%] max-w-none" alt="Workflw mockup">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                    <div class="bg-[#FFF9F9] bg-[url('case-img/workflw-bg.svg')] bg-cover bg-center overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16 flex items-center justify-center">
+                        <img src="case-img/workflw-mockup.png" class="block w-full h-auto md:w-auto md:max-w-full md:max-h-[70vh]" alt="Workflw mockup">
                     </div>
                 </div>
             </div>
@@ -75,7 +76,11 @@
                 <h2 class="text-2xl font-medium">Problem Description</h2>
                 <p class="text-lg text-gray-600">To-do apps are created to help people complete things they need to do, however, sometimes mantaining a useful to-do app can be seen as creating another task for users.</p>
             </div>
-<div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-1.png"></div>
+<div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+        <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-1.png">
+    </div>
+</div>
 
         </div>
 
@@ -90,9 +95,21 @@
             </div>
 
             
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-2.png"></div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-3.png"></div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-4.png"></div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-2.png">
+                </div>
+            </div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-3.png">
+                </div>
+            </div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-4.png">
+                </div>
+            </div>
             
 
         </div>
@@ -102,7 +119,11 @@
                 <h2 class="text-2xl font-medium">Design Approach</h2>
                 <p class="text-lg text-gray-600">After gaining a better understanding of the target users' pain points, their needs and current alternatives, I arrived at the following How-Might-We statement that guided the design process.</p>
             </div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-5.png"></div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-5.png">
+                </div>
+            </div>
 
         </div>
 
@@ -111,8 +132,16 @@
                 <h2 class="text-2xl font-medium">UX Design Theory: Gamification</h2>
                 <p class="text-lg text-gray-600">Games are the best at engaging users, therefore, I looked toward one of the most engaging/addictive game on the mobile game market for wisdoms that could be applicable for the design of this to-do app.</p>
             </div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-6.png"></div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-7.png"></div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-6.png">
+                </div>
+            </div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-7.png">
+                </div>
+            </div>
             
         </div>
        
@@ -122,11 +151,27 @@
                 <h2 class="text-2xl font-medium">Product Design</h2>
                 <p class="text-lg text-gray-600">An aha! moment occured as I realized that the easiest way help users maintain the habits of using to-do app is to make it feel like they are not using the app at all. Reducing the time users spend on the app is the best way to keep the users.</p>
             </div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-8.png"></div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-9.png"></div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-8.png">
+                </div>
+            </div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-9.png">
+                </div>
+            </div>
             
-                    <div class="bg-white border border-gray-200 p-2 md:p-12 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-11-nobg.png"></div>
-                    <div class="bg-white border border-gray-200 p-2 md:p-12 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/workflw-mockup.png"></div>
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                        <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                            <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-11-nobg.png">
+                        </div>
+                    </div>
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                        <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                            <img class="w-full rounded-xl md:rounded-3xl" src="case-img/workflw-mockup.png">
+                        </div>
+                    </div>
 
         </div>
 
@@ -266,4 +311,5 @@
 
     </div>
     <script>lucide.createIcons();</script>
+    <script src="case.js"></script>
 </body>

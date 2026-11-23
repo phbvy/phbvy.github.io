@@ -8,6 +8,7 @@
     <title>Vy's Portfolio</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="case.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,7 +20,7 @@
 
 </head>
 
-<body style="background-color: #FCFCFC;">
+<body style="background-color: #FFFFFF;">
     <div id="start"></div>
         <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300" href="#start"
         id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up" class="w-6 h-6 text-gray-900"></i></a>
@@ -58,9 +59,9 @@
 
             <!-- Image card -->
             <div class="md:px-12">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <div class="bg-[#1D2C63] h-[280px] md:h-[360px] overflow-hidden rounded-2xl relative">
-                        <img src="case-img/homebase-mockup.png" class="absolute rounded-2xl left-1/2 -translate-x-1/2 top-8 h-[120%] max-w-none" alt="Homebase mockup">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                    <div class="bg-[#1D2C63] overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16 flex items-center justify-center">
+                        <img src="case-img/homebase-mockup.png" class="block w-full h-auto md:w-auto md:max-w-full md:max-h-[70vh]" alt="Homebase mockup">
                     </div>
                 </div>
             </div>
@@ -80,7 +81,7 @@
                     </p>
             </div>
 
-            <div class="flex flex-col justify-between rounded-2xl bg-gray-100 p-6 col-span-1">
+            <div class="flex flex-col justify-between rounded-3xl bg-gray-100 p-6 col-span-1">
                 <object type="image/svg+xml" data="case-img/homebase-logo.svg" role="img" aria-hidden="true"
                     class="h-[32px] w-auto self-start pointer-events-none" style="aspect-ratio: 151 / 28;"></object>
                 <div class="pt-12 space-y-1">
@@ -92,11 +93,26 @@
         </div>
 
         <div class="space-y-4">
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                <img class="w-full rounded-2xl" src="case-img/homebase-7.png">
+            <!-- the two animations, one card each -->
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <video class="block mx-auto w-3/4 h-auto md:w-auto md:h-[calc(88vh-8rem)]" src="case-img/hero%20animation.mp4#t=0.001" data-play-once muted playsinline preload="auto" aria-label="Hero animation"></video>
+                </div>
             </div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                <img class="w-full rounded-2xl" src="case-img/homebase-9.png">
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <video class="block mx-auto w-3/4 h-auto md:w-auto md:h-[calc(88vh-8rem)]" src="case-img/agent%20animation.mp4#t=0.001" data-play-once muted playsinline preload="auto" aria-label="Agent animation"></video>
+                </div>
+            </div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full" src="case-img/homebase-mockup.png">
+                </div>
+            </div>
+            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                    <img class="w-full" src="case-img/homebase-9.png">
+                </div>
             </div>
         </div>
 
@@ -125,14 +141,14 @@
 
                 <div class="md:grid md:grid-cols-3 md:space-x-4 flex-col space-y-4 md:space-y-0">
 
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="user" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">Qualitative UX research data</h3>
                             <p class="text-gray-600">Review existing UX research reports</p>
                         </div>
                     </div>
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">Quantitative data</h3>
@@ -140,7 +156,7 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                         <i data-lucide="user-search" class="w-6 h-6"></i>
                         <div class="pt-12 space-y-1">
                             <h3 class="font-medium">Discovery of additional user profile</h3>
@@ -155,7 +171,7 @@
                 <p class="rounded-full bg-[#1F38FA] text-gray-50 py-1 px-3 text-sm w-fit font-medium">Outcome</p>
 
 
-                <div class="flex flex-col space-y-4 rounded-2xl bg-gray-100 p-6">
+                <div class="flex flex-col space-y-4 rounded-3xl bg-gray-100 p-6">
                     <i data-lucide="message-circle-question" class="w-6 h-6"></i>
                     <div class="pt-12 space-y-1">
                         <h3 class="font-medium">Additional interviews</h3>
@@ -203,7 +219,6 @@
                 the company's Blog and Help Center.</p>
                 <div class="space-y-4">
             <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/homebase-4.png"></div>
-            <div class="bg-white border border-gray-200 p-2 rounded-3xl"><img class="w-full rounded-2xl" src="case-img/homebase-5.png"></div>
         </div>
         </div>
         
@@ -225,17 +240,16 @@
 
 
             <div class="space-y-4">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <img class="w-full rounded-2xl" src="case-img/homebase-10.png">
+             
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full" src="case-img/homebase-8.png">
+                    </div>
                 </div>
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <img class="w-full rounded-2xl" src="case-img/homebase-8.png">
-                </div>
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <img class="w-full rounded-2xl" src="case-img/homebase-6.png">
-                </div>
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <img class="w-full rounded-2xl" src="case-img/homebase-9.png">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                        <img class="w-full" src="case-img/homebase-6.png">
+                    </div>
                 </div>
             </div>
 
@@ -354,4 +368,17 @@
 
     </div>
     <script>lucide.createIcons();</script>
+    <script src="case.js"></script>
+    <script>
+        // each animation plays once when it comes into view, and again from the start on hover (or tap)
+        document.querySelectorAll('video[data-play-once]').forEach(v => {
+            const play = () => { v.currentTime = 0; v.play().catch(() => {}); };
+            new IntersectionObserver((entries, io) => {
+                if (entries[0].isIntersecting) { play(); io.disconnect(); }
+            }, { threshold: 0.6 }).observe(v);
+            v.addEventListener('mouseenter', play);
+            // touch screens have no hover, so a tap replays it there
+            v.addEventListener('click', play);
+        });
+    </script>
 </body>

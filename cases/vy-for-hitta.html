@@ -10,6 +10,7 @@
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231F38FA'/></svg>">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="case.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -124,7 +125,7 @@
     </style>
 </head>
 
-<body style="background-color: #FCFCFC;">
+<body style="background-color: #FFFFFF;">
     <div id="start"></div>
     <a class="bg-white border border-gray-200 shadow-sm hover:border-gray-400 p-2 w-fit text-center rounded-full transition-all duration-300"
         href="#start" id="backToTopBtn" title="Go to top"><i data-lucide="arrow-up"
@@ -172,9 +173,9 @@
             </div>
 
             <div class="md:px-12">
-                <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                    <div class="bg-[#F5F9FF] bg-[url('case-img/hitta-bg.svg')] bg-cover bg-center h-[280px] md:h-[360px] overflow-hidden rounded-2xl relative">
-                        <img src="case-img/hitta-mockup.png" class="absolute md:left-10 md:top-20 left-4 top-10 h-[120%] max-w-none" alt="Hitta platform mockup">
+                <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                    <div class="bg-[#F5F9FF] bg-[url('case-img/hitta-bg.svg')] bg-cover bg-center overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16 flex items-center justify-center">
+                        <img src="case-img/hitta-mockup.png" class="block w-full h-auto md:w-auto md:max-w-full md:max-h-[70vh]" alt="Hitta platform mockup">
                     </div>
                 </div>
                
@@ -208,7 +209,7 @@
                     so one shared design could improve both at once, across two brands and two languages.</p>
 
                 <div class="md:grid md:grid-cols-2 md:gap-4 flex-col space-y-4 md:space-y-0">
-                    <div class="flex flex-col justify-between gap-10 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col justify-between gap-10 rounded-3xl bg-gray-100 p-6">
                         <img class="h-14 w-auto object-left object-contain" src="case-img/hitta-swedish.png"
                             alt="Hitta.se">
                         <div class="space-y-1">
@@ -217,7 +218,7 @@
                                 online presence and get found by local customers.</p>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-between gap-10 rounded-2xl bg-gray-100 p-6">
+                    <div class="flex flex-col justify-between gap-10 rounded-3xl bg-gray-100 p-6">
                         <img class="h-14 w-auto object-left object-contain" src="case-img/fonecta-finnish.png"
                             alt="Fonecta">
                         <div class="space-y-1">
@@ -241,13 +242,20 @@
                         <p class="text-lg text-gray-800">Owners could edit their information, but not see how it performed. The new statistics page answers their question: how often they were seen, how customers interacted, and how that compares with the industry.</p>
                     </div>
 
-                     <div class="bg-white border border-gray-200 p-2 rounded-3xl mt-4">
-                    <img src="case-img/hitta-stat.png" class="block w-full h-auto rounded-2xl"
-                        alt="Statistics page in Swedish for Hitta.se, with digital presence numbers and a 12-month chart">
-                </div>
-                <div class="flex flex-col space-y-3">
-                        <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                            <img src="case-img/hitta-6.png" class="block w-full h-auto rounded-2xl" alt="Home page statistics">
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden mt-4">
+                        <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                            <img class="w-full" src="case-img/hitta-stat.png"
+                                alt="Statistics page in Swedish for Hitta.se, with digital presence numbers and a 12-month chart">
+                        </div>
+                    </div>
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                        <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                            <img class="w-full" src="case-img/hitta-6.png" alt="Home page statistics">
+                        </div>
+                    </div>
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                        <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                            <img class="w-full rounded-xl md:rounded-3xl" src="case-img/hitta-7.png" alt="Statistics empty state">
                         </div>
                     </div>
                 </div>
@@ -264,7 +272,7 @@
                         <div class="flex flex-col space-y-3">
                             <p class="w-fit rounded-full border border-gray-300 py-1 px-3 text-sm text-gray-900">Before</p>
                             <div
-                                class="bg-white border border-gray-200 p-2 rounded-2xl md:rounded-3xl flex-1 flex flex-col overflow-hidden">
+                                class="bg-gray-100 rounded-[20px] md:rounded-[32px] p-4 md:p-8 flex-1 flex flex-col overflow-hidden">
                                 <div
                                     class="bg-white rounded-xl md:rounded-2xl flex-1 flex items-center justify-center overflow-hidden p-1">
                                     <img src="case-img/hitta-2-before.png" alt="Old Företagsnamn form">
@@ -274,7 +282,7 @@
                         <div class="flex flex-col space-y-3">
                             <p class="w-fit rounded-full border py-1 px-3 text-sm" style="color: #0057FF; border-color: #0057FF;">After</p>
                             <div
-                                class="bg-white border border-gray-200 p-2 rounded-2xl md:rounded-3xl flex-1 flex flex-col overflow-hidden">
+                                class="bg-gray-100 rounded-[20px] md:rounded-[32px] p-4 md:p-8 flex-1 flex flex-col overflow-hidden">
                                 <div
                                     class="bg-white rounded-xl md:rounded-2xl flex-1 flex items-start overflow-hidden">
                                     <div class="relative w-full">
@@ -307,9 +315,10 @@
                        
                     </div>
                     <!-- Tier badges for both brands, with a hotspot on how tiers differ -->
-                    <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                        <div class="bg-gray-100 rounded-[20px] md:rounded-[32px] p-6 md:p-16">
                         <div class="relative">
-                            <img class="w-full h-auto rounded-2xl" src="case-img/hitta-1.png"
+                            <img class="w-full rounded-xl md:rounded-3xl" src="case-img/hitta-1.png"
                                 alt="Subscription tier badges for Hitta.se and Fonecta">
                             <div class="hotspot absolute left-[50%] top-[57%]">
                                 <button type="button" class="hotspot-dot" aria-expanded="false"
@@ -324,12 +333,14 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
 
 
-                    <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                    <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                        <div class="bg-gray-100 rounded-[20px] md:rounded-[32px] p-6 md:p-16">
                         <div class="relative">
-                            <img src="case-img/hitta-3.png" class="w-full h-auto rounded-2xl" alt="The same dashboard in Swedish for Hitta.se and in Finnish for Fonecta">
+                            <img src="case-img/hitta-3.png" class="w-full rounded-xl md:rounded-3xl" alt="The same dashboard in Swedish for Hitta.se and in Finnish for Fonecta">
                             <div class="hotspot absolute left-[76%] top-[70.5%]">
                                 <button type="button" class="hotspot-dot" aria-expanded="false"
                                     aria-controls="hotspot-lang" aria-label="Why the Finnish copy wraps">
@@ -343,13 +354,15 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
 
                     <div class="flex flex-col space-y-6">
                         <div class="flex flex-col space-y-3">
-                            <div class="bg-white border border-gray-200 p-2 rounded-3xl">
+                            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px]">
+                                <div class="bg-gray-100 rounded-[20px] md:rounded-[32px] p-6 md:p-16">
                                 <div class="relative">
-                                    <img src="case-img/hitta-4.png" class="w-full h-auto rounded-2xl" alt="Onboarding checklist in Swedish for Hitta.se">
+                                    <img src="case-img/hitta-4.png" class="w-full" alt="Onboarding checklist in Swedish for Hitta.se">
                                     <div class="hotspot absolute left-[49.6%] top-[34%]">
                                         <button type="button" class="hotspot-dot" aria-expanded="false"
                                             aria-controls="hotspot-system"
@@ -365,11 +378,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                </div>
                             </div>
                         </div>
                         <div class="flex flex-col space-y-3">
-                            <div class="bg-white border border-gray-200 p-2 rounded-3xl">
-                                <img src="case-img/fonecta-4.png" class="block w-full h-auto rounded-2xl" alt="The same onboarding checklist in Finnish for Fonecta">
+                            <div data-expand class="md:-mx-12 xl:-mx-[calc(9vw+3rem)] rounded-[20px] md:rounded-[32px] overflow-hidden">
+                                <div class="bg-gray-100 overflow-hidden rounded-[20px] md:rounded-[32px] p-6 md:p-16">
+                                <img src="case-img/fonecta-4.png" class="w-full" alt="The same onboarding checklist in Finnish for Fonecta">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -542,6 +558,7 @@
 
     </div>
     <script>lucide.createIcons();</script>
+    <script src="case.js"></script>
 
     <script>
         // Hotspots: tap toggles the note (touch has no hover), tapping elsewhere closes it

@@ -1,0 +1,61 @@
+/*
+ * Shared case-page styles: image cards ([data-expand]) zoom to full screen as they
+ * reach the middle of the window, over a full-screen layer in their background colour.
+ * Behaviour lives in case.js.
+ */
+
+/* expanded cards are scaled past the window edge; don't let that add a horizontal scrollbar */
+html, body { overflow-x: clip; }
+
+[data-expand] { position: relative; transform-origin: center; will-change: transform; }
+[data-pin] > [data-expand] { position: sticky; scroll-snap-align: none; }
+
+/* the card's background colour, grown from the card out to fill the screen */
+#expand-bg { position: fixed; inset: 0; z-index: 9; pointer-events: none; visibility: hidden; }
+
+/* gently settle on an image card at full screen when scrolling stops close to it. Snapping only
+   switches on (html.snap-on, set by case.js) once the reader scrolls, so the browser never jumps
+   the page to a card by itself on load; the first card (the hero under the intro) never snaps. */
+@media (prefers-reduced-motion: no-preference) {
+    html.snap-on { scroll-snap-type: y proximity; }
+    [data-expand] { scroll-snap-align: center; }
+    [data-expand].is-first { scroll-snap-align: none; }
+}
+
+/* Desktop: an image card's resting size already fits the window (88% of its height, less the
+   panel's 2 x 64px padding), so the zoom only grows it a little instead of jumping between
+   "taller than the screen" and "shrunk to fit". */
+@media (min-width: 768px) {
+    /* an image with hotspots sits in a wrapper the hotspots are positioned against, so the
+       wrapper shrinks to the capped image instead of staying full width */
+    [data-expand] > div > div.relative {
+        width: fit-content;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    [data-expand] > div > div.relative > img,
+    [data-expand] > div > img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        max-height: calc(88vh - 8rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* a bit more room between a block of text and the image card that follows it, directly or as the
+   first thing in the next wrapper (overrides the tighter space-y gap the card would otherwise get) */
+:is(p, h2, h3, h4, div:not(:has(img, video, svg, [data-expand]))) + :is([data-expand], [data-pin]),
+:is(p, h2, h3, h4, div:not(:has(img, video, svg, [data-expand]))) + div > :is([data-expand], [data-pin]):first-child {
+    margin-top: 2rem !important;
+}
+
+@media (min-width: 768px) {
+    :is(p, h2, h3, h4, div:not(:has(img, video, svg, [data-expand]))) + :is([data-expand], [data-pin]),
+    :is(p, h2, h3, h4, div:not(:has(img, video, svg, [data-expand]))) + div > :is([data-expand], [data-pin]):first-child {
+        margin-top: 2.5rem !important;
+    }
+}
