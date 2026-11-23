@@ -16,7 +16,7 @@ html, body { overflow-x: clip; }
 /* gently settle on an image card at full screen when scrolling stops close to it. Snapping only
    switches on (html.snap-on, set by case.js) once the reader scrolls, so the browser never jumps
    the page to a card by itself on load; the first card (the hero under the intro) never snaps. */
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) and (min-width: 768px) {
     html.snap-on { scroll-snap-type: y proximity; }
     [data-expand] { scroll-snap-align: center; }
     [data-expand].is-first { scroll-snap-align: none; }
@@ -57,5 +57,69 @@ html, body { overflow-x: clip; }
     :is(p, h2, h3, h4, div:not(:has(img, video, svg, [data-expand]))) + :is([data-expand], [data-pin]),
     :is(p, h2, h3, h4, div:not(:has(img, video, svg, [data-expand]))) + div > :is([data-expand], [data-pin]):first-child {
         margin-top: 2.5rem !important;
+    }
+}
+
+/* Phones have no full-screen zoom, so the image cards take the plain white frame used for photos
+   and slides (white, thin grey border, 0.5rem padding), in place of their coloured panels */
+@media (max-width: 767px) {
+    [data-expand] {
+        background: #fff;
+        border: 1px solid rgb(229 231 235);     /* gray-200 */
+        border-radius: 1.5rem !important;       /* rounded-3xl */
+        padding: 0.5rem;
+        overflow: hidden;
+    }
+    [data-expand]:not([data-hero]) > div { background: none !important; }
+    [data-expand] > div {
+        padding: 0 !important;
+        border-radius: 1rem !important;         /* rounded-2xl */
+        overflow: hidden;
+    }
+    /* device mockups that run to their edges get more room inside the frame */
+    [data-expand][data-frame-pad] { padding: 1.25rem; }
+    /* the hero mockup under the intro keeps its look from before the zoom: its coloured panel
+       280px tall inside the white frame, the mockup centred and running off the bottom */
+    [data-expand][data-hero] { padding: 0.5rem; }
+    [data-expand][data-hero] > div {
+        position: relative;
+        height: 280px;
+    }
+    [data-expand][data-hero] > div > img {
+        position: absolute;
+        left: 50%;
+        top: 2.5rem;
+        transform: translateX(-50%);
+        width: auto !important;
+        height: 125% !important;
+        max-width: none !important;
+        border-radius: 1rem;
+    }
+    /* a hero marked data-hero-pad shows its whole mockup, with room around it on its panel */
+    [data-expand][data-hero-pad] > div {
+        height: auto;
+        padding: 1.25rem !important;
+    }
+    [data-expand][data-hero-pad] > div > img {
+        position: static;
+        transform: none;
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 0.75rem;
+    }
+    /* a card marked data-frame-each frames each of its images separately instead of as one */
+    [data-expand][data-frame-each] {
+        background: none;
+        border: 0;
+        padding: 0;
+        border-radius: 0 !important;
+        overflow: visible;
+    }
+    [data-expand][data-frame-each] > div { border-radius: 0 !important; overflow: visible; }
+    [data-expand][data-frame-each] img {
+        background: #fff;
+        border: 1px solid rgb(229 231 235);
+        border-radius: 1.5rem;
+        padding: 0.5rem;
     }
 }

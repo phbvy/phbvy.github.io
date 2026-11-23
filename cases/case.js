@@ -15,13 +15,17 @@
     readCorners();
     // each card's own background (colour plus any image, such as a gradient), read once before
     // the script ever overrides it; `colour` is the key cards are grouped by
-    const backdrop = new Map(radius.map(([card, inner]) => {
+    // (read only once the screen is wide enough for the zoom: on phones the cards wear a plain white frame)
+    let backdrop, colour;
+    const groups = [];
+    function setUp() {
+    backdrop = new Map(radius.map(([card, inner]) => {
         const cs = getComputedStyle(inner || card);
         return [card, card.dataset.expandBg
             ? { color: card.dataset.expandBg, image: 'none' }
             : { color: cs.backgroundColor, image: cs.backgroundImage }];
     }));
-    const colour = new Map([...backdrop].map(([card, b]) => [card, `${b.color} ${b.image}`]));
+    colour = new Map([...backdrop].map(([card, b]) => [card, `${b.color} ${b.image}`]));
     // cards placed directly after each other in the same colour share one background,
     // so scrolling through them keeps it full screen and only the images change
     const block = el => el.closest('[data-pin]') || el;    // a pinned card sits in its pin block
@@ -33,7 +37,6 @@
         const between = range.cloneContents();
         return !between.textContent.trim() && !between.querySelector('img, video, svg, canvas, iframe, picture');
     };
-    const groups = [];
     cards.forEach(card => {
         const last = groups[groups.length - 1];
         const prev = last && last[last.length - 1];
@@ -43,6 +46,7 @@
     // inside a run of cards the background never leaves the screen, so snapping each card would only
     // tug the page back and forth between neighbours; only cards that stand alone snap into place
     groups.forEach(g => { if (g.length > 1) g.forEach(card => { card.style.scrollSnapAlign = 'none'; }); });
+    }
     // the hero under the intro never snaps, and snapping waits for the reader's first scroll
     cards[0].classList.add('is-first');
     const startSnapping = () => {
@@ -67,6 +71,16 @@
         ticking = false;
         const vw = document.documentElement.clientWidth;
         const vh = window.innerHeight;
+        // phones keep the cards as they are: the full-screen zoom is for larger screens only
+        if (vw < 768) {
+            radius.forEach(([card, inner]) => {
+                ['transform', 'borderRadius', 'zIndex', 'backgroundColor', 'borderColor'].forEach(k => { card.style[k] = ''; });
+                if (inner) ['borderRadius', 'backgroundColor', 'backgroundImage'].forEach(k => { inner.style[k] = ''; });
+            });
+            bg.style.visibility = 'hidden';
+            return;
+        }
+        if (!backdrop) { readCorners(); setUp(); }
         const mid = vh / 2;
         const centre = el => { const r = el.getBoundingClientRect(); return r.top + r.height / 2; };
 
