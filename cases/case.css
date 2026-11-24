@@ -78,35 +78,11 @@ html, body { overflow-x: clip; }
     }
     /* device mockups that run to their edges get more room inside the frame */
     [data-expand][data-frame-pad] { padding: 1.25rem; }
-    /* the hero mockup under the intro keeps its look from before the zoom: its coloured panel
-       280px tall inside the white frame, the mockup centred and running off the bottom */
+    /* the hero under the intro shows the same picture as the case's card on the home page:
+       its full-mockup panel is for larger screens, the card-style picture (.hero-card) for phones */
     [data-expand][data-hero] { padding: 0.5rem; }
-    [data-expand][data-hero] > div {
-        position: relative;
-        height: 280px;
-    }
-    [data-expand][data-hero] > div > img {
-        position: absolute;
-        left: 50%;
-        top: 2.5rem;
-        transform: translateX(-50%);
-        width: auto !important;
-        height: 125% !important;
-        max-width: none !important;
-        border-radius: 1rem;
-    }
-    /* a hero marked data-hero-pad shows its whole mockup, with room around it on its panel */
-    [data-expand][data-hero-pad] > div {
-        height: auto;
-        padding: 1.25rem !important;
-    }
-    [data-expand][data-hero-pad] > div > img {
-        position: static;
-        transform: none;
-        width: 100% !important;
-        height: auto !important;
-        border-radius: 0.75rem;
-    }
+    [data-expand][data-hero]:has(> .hero-card) > div:first-child { display: none; }
+    [data-expand][data-hero] > .hero-card { overflow: hidden; height: 320px; max-height: none; }
     /* a card marked data-frame-each frames each of its images separately instead of as one */
     [data-expand][data-frame-each] {
         background: none;
@@ -122,4 +98,9 @@ html, body { overflow-x: clip; }
         border-radius: 1.5rem;
         padding: 0.5rem;
     }
+}
+
+/* larger screens show the hero's full mockup, not the phone picture */
+@media (min-width: 768px) {
+    [data-hero] > .hero-card { display: none; }
 }
